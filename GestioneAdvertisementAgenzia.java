@@ -57,7 +57,7 @@ public class GestioneAdvertisementAgenzia extends GestioneAdvertisement
         try
             {
                 / * Check that the ID is valid */
-                    if (pNewsID> 0) (
+                    if (pNewsID> 0) {
                             return (dbNews.cancellaNews (pNewsID));
                                      ) else (
                                              return false;
@@ -83,12 +83,12 @@ public class GestioneAdvertisementAgenzia extends GestioneAdvertisement
         try
             {
                 / * Check the data of the news */
-                    if (! ControlloDati.checkBeanNews (Pnews)) (
+                    if (! ControlloDati.checkBeanNews (Pnews)) {
                             throw new RemoteException (MessaggiErrore.ERRORE_DATI);
                             }
                 / * Check that has not been exceeded the no. Max news presets */
                                                                    int numNews = dbNews.ottieniNews (). size ();
-                if (numNews <CostantiGlobali.MAX_NEWS_ATTIVE) (
+                if (numNews <CostantiGlobali.MAX_NEWS_ATTIVE) {
                         / * Possible inclusion */
                         return (dbNews.inserisciNews (Pnews));
                                                                ) else (
@@ -114,7 +114,7 @@ public class GestioneAdvertisementAgenzia extends GestioneAdvertisement
         try
             {
                 / * Check the data of the news */
-                    if (! ControlloDati.checkBeanNews (Pnews)) (
+                    if (! ControlloDati.checkBeanNews (Pnews)) {
                             throw new RemoteException (MessaggiErrore.ERRORE_DATI);
                             }
                 return (dbNews.modificaNews (Pnews));

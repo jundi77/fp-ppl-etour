@@ -65,7 +65,7 @@ GestioneAdvertisement UnicastRemoteObject public class extends implements
             {
                 / * Load the banner and check the data */
                     banner = dbBanner.ottieniBannerDaID (pIdBanner);
-                if (! ControlloDati.checkBeanBanner (banner)) (
+                if (! ControlloDati.checkBeanBanner (banner)) {
                         throw new RemoteException (MessaggiErrore.ERRORE_DATI);
                         }
                 / * Remove the image associated with the banner */
@@ -93,7 +93,7 @@ GestioneAdvertisement UnicastRemoteObject public class extends implements
         try
             {
                 / * Performs a check on the image of the banner */
-                    if (! ControlloDati.checkImmagine (pImmagine)) (
+                    if (! ControlloDati.checkImmagine (pImmagine)) {
                             throw new RemoteException (MessaggiErrore.ERRORE_DATI);
                             }
                 / * Load the icon image */
@@ -101,7 +101,7 @@ GestioneAdvertisement UnicastRemoteObject public class extends implements
                 / * Load the data of the banner */
                       BeanBanner banner = dbBanner.ottieniBannerDaID (pBannerID);
                 / * Check the banner on the data uploaded */
-                      if (! ControlloDati.checkBeanBanner (banner)) (
+                      if (! ControlloDati.checkBeanBanner (banner)) {
                               throw new RemoteException (MessaggiErrore.ERRORE_DATI);
                               }
                 / * Rewrite the image file and returns the result of the operation */
@@ -138,9 +138,9 @@ GestioneAdvertisement UnicastRemoteObject public class extends implements
                             / * Get the list of banners for a refreshment point */
                                                                   ArrayList <BeanBanner> listaBanner = dbBanner.ottieniBanner (pIdPuntoDiRistoro);
                             / * For each banner valid list */
-                                  for (BeanBanner banner: listaBanner) (
+                                  for (BeanBanner banner: listaBanner) {
                                           / * If the banner is a valid charge in the HashMap with the image file */
-                                          if (ControlloDati.checkBeanBanner (banner)) (
+                                          if (ControlloDati.checkBeanBanner (banner)) {
                                                   / * Create the image file */
                                                   FileImmagine file = new File (banner.getPercorsoFile ());
                                                   / * Create an object ImageIcon from the image file */
@@ -178,7 +178,7 @@ GestioneAdvertisement UnicastRemoteObject public class extends implements
         try
             {
                 / * Performs a check on the image */
-                    if (! ControlloDati.checkImmagine (pImmagineBanner)) (
+                    if (! ControlloDati.checkImmagine (pImmagineBanner)) {
                             throw new RemoteException (MessaggiErrore.ERRORE_DATI);
                             }
                 / * Create an object that handles the conventions */
@@ -200,13 +200,13 @@ GestioneAdvertisement UnicastRemoteObject public class extends implements
                       String path = CostantiGlobali.SERVER_IMAGE_PATH + pIdPuntoDiRistoro;
                 int i = 0;
                 FileImg file = new File (path + "_" + i + ". Jpg");
-                while (fileImg.exists ()) (
+                while (fileImg.exists ()) {
                         i + +;
                         fileImg = new File (path + "_" + i + ". jpg");
                         }
                 / * Stores the image in the file system */
                                               BufferedImage im = (BufferedImage) pImmagineBanner.getImage ();
-                if (! ImageIO.write (im, "jpg", fileImg)) (
+                if (! ImageIO.write (im, "jpg", fileImg)) {
                         / * Write failed */
                         throw new IOException ();
                         }

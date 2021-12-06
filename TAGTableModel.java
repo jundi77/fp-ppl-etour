@@ -77,7 +77,7 @@ public class extends TAGTableModel AbstractTableModel (
          * @ Param pCol
          *
          */
-        public String getColumnName (int pCol) (
+        public String getColumnName (int pCol) {
                 return headers [pCol];
                 }
 
@@ -88,7 +88,7 @@ public class extends TAGTableModel AbstractTableModel (
          * @ Param pRow
          *
          */
-        public Object getValueAt (int prow, int pCol) (
+        public Object getValueAt (int prow, int pCol) {
                 return data.get (pRow) [pCol];
                 }
 
@@ -98,7 +98,7 @@ public class extends TAGTableModel AbstractTableModel (
          * @ Param pCol
          *
          */
-        public class getColumnClass (int pCol) (
+        public class getColumnClass (int pCol) {
                 return columnClasses [pCol];
                 }
 
@@ -111,7 +111,7 @@ public class extends TAGTableModel AbstractTableModel (
          * @ Return false
          *
          */
-        public boolean isCellEditable (int row, int col) (
+        public boolean isCellEditable (int row, int col) {
                 return false;
                 }
 
@@ -122,7 +122,7 @@ public class extends TAGTableModel AbstractTableModel (
          * @ Deprecated
          *
          */
-        public void setValueAt (Object value, int row, int col) (
+        public void setValueAt (Object value, int row, int col) {
 
                 }
 

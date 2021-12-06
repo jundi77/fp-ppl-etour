@@ -116,7 +116,7 @@ import java.util.Vector;
              * @ Return javax.swing.JPanel
              */
             getJContentPane private JPanel () {
-                    if (jContentPane == null) (
+                    if (jContentPane == null) {
                             BorderLayout BorderLayout = new BorderLayout ();
                             borderLayout.setHgap (0);
                             borderLayout.setVgap (5);
@@ -135,7 +135,7 @@ import java.util.Vector;
              * @ Return javax.swing.JToolBar
              */
             private JToolBar getJToolBar () {
-                    if (JToolBar == null) (
+                    if (JToolBar == null) {
                             JButton = new JLabel ();
                             jLabel.setText ( "Select Location");
                             jLabel.setLocation (new Point (16, 6));
@@ -157,7 +157,7 @@ import java.util.Vector;
              */
             private JComboBox getJComboBox () {
 
-                    if (JComboBox == null) (
+                    if (JComboBox == null) {
                             JComboBox = new JComboBox ();
                             jComboBox.setLocation (new Point (140, 4));
                             jComboBox.setPreferredSize (new Dimension (150, 20));
@@ -171,9 +171,9 @@ import java.util.Vector;
                     JComboBox return;
                     }
 
-            public void caricaCombo (JComboBox combo) (
+            public void caricaCombo (JComboBox combo) {
                     BeanPuntoDiRistoro [] Pr = new BeanPuntoDiRistoro [5];
-                    for (int i = 0; i <5; i + +) (
+                    for (int i = 0; i <5; i + +) {
                             Pr [i] = new BeanPuntoDiRistoro (1, 12, 3.5,
                                     "Arturo", "Vicno the sea, great view, romantic and Miao,
                                     "089203202", "mountains", "Amalfi", "Via Principe 35", "84123rd"
@@ -182,7 +182,7 @@ import java.util.Vector;
                             }
 
                     BeanBeneCulturale [] bc = new BeanBeneCulturale [5];
-                    for (int i = 0; i <5; i + +) (
+                    for (int i = 0; i <5; i + +) {
                             Bc [i] = new BeanBeneCulturale (0.120, "Castle Arechi", "Salerno", "089,723,088", "The castle stands on balbalblalbalbla, blablalblalba, balblalballab"
                                     "Salerno", "Largo castles 12", "84100th", "SA", new Punto3D (10,30,40), new Date (0,0,0,9,0), new Date (0,0, 0,23,0), "Monday",
                                     12.5,4.5);)
@@ -205,7 +205,7 @@ import java.util.Vector;
                         }
                     tabellaSiti.setModel (new ReportTableModel (Bc, Pr));
                     }
-            private boolean ��pu (JComboBox combo, String loc) (
+            private boolean ��pu (JComboBox combo, String loc) {
                     for (int i = 0; i <combo.getItemCount (); i + +)
                         if (combo.getItemAt (i) == loc)
                             return false;
@@ -219,7 +219,7 @@ import java.util.Vector;
              * @ Return javax.swing.JPanel
              */
             getCentralPanel private JPanel () {
-                    if (centralPanel == null) (
+                    if (centralPanel == null) {
                             centralPanel = new JPanel ();
                             centralPanel.setLayout (new BorderLayout ());
                             centralPanel.add (getJScrollPane (), BorderLayout.CENTER);
@@ -234,7 +234,7 @@ import java.util.Vector;
              * @ Return javax.swing.JScrollPane
              */
             private JScrollPane getJScrollPane () {
-                    if (JScrollPane == null) (
+                    if (JScrollPane == null) {
                             JScrollPane = new JScrollPane ();
                             jScrollPane.setViewportView (getTabellaSiti ());
                             }
@@ -249,7 +249,7 @@ import java.util.Vector;
             private JTable getTabellaSiti () {
 
 
-                    if (tabellas == null) (
+                    if (tabellas == null) {
                             tabellas = new JTable ();
 
 

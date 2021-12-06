@@ -25,9 +25,9 @@ public class DBNews implements IDBNews
     */
     public boolean cancellaNews (int pIdNews) throws SQLException
     {
-        if (NUM_TEST == 1) (
+        if (NUM_TEST == 1) {
                 return true;
-                            ) else if (NUM_TEST == 2) (
+                            ) else if (NUM_TEST == 2) {
                                     throw new SQLException ();
                                     }
         return true;
@@ -38,7 +38,7 @@ public class DBNews implements IDBNews
     */
     public boolean inserisciNews (BeanNews Pnews) throws SQLException
     {
-        if (NUM_TEST == 7) (
+        if (NUM_TEST == 7) {
                 return false;
                             ) else (
                                     return true;
@@ -60,8 +60,8 @@ public class DBNews implements IDBNews
     {
         <BeanNews> ToReturn ArrayList <BeanNews> = new ArrayList ();
 
-        if (NUM_TEST == 5) (
-                for (int i = 1; i <= CostantiGlobali.MAX_NEWS_ATTIVE i + +) (
+        if (NUM_TEST == 5) {
+                for (int i = 1; i <= CostantiGlobali.MAX_NEWS_ATTIVE i + +) {
                         toReturn.add (new BeanNews ());
                         }
                 toReturn return;

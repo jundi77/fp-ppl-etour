@@ -104,7 +104,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JPanel
              */
             getJContentPane private JPanel () {
-                    if (jContentPane == null) (
+                    if (jContentPane == null) {
                             jContentPane = new JPanel ();
                             jContentPane.setLayout (new BorderLayout ());
                             jContentPane.add (getRightPanel (), BorderLayout.EAST);
@@ -120,7 +120,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JPanel
              */
             getRightPanel private JPanel () {
-                    if (RightPanel == null) (
+                    if (RightPanel == null) {
                             RightPanel = new JPanel ();
                             RightPanel.setLayout (new BorderLayout ());
                             RightPanel.add (getHelpPanel (), BorderLayout.CENTER);
@@ -135,7 +135,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JToolBar
              */
             private JToolBar getToolbarPR () {
-                    if (toolbarPR == null) (
+                    if (toolbarPR == null) {
                             toolbarPR JToolBar = new ();
                             toolbarPR.setLayout (null);
                             toolbarPR.setPreferredSize (new Dimension (1, 49));
@@ -159,7 +159,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JPanel
              */
             getCentrePanel private JPanel () {
-                    if (CentrePanel == null) (
+                    if (CentrePanel == null) {
                             GridBagConstraints = GridBagConstraints new GridBagConstraints ();
                             gridBagConstraints.fill = GridBagConstraints.BOTH;
                             gridBagConstraints.weighty = 1.0;
@@ -179,7 +179,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JButton
              */
             private JButton getBtnSkeda () {
-                    if (btnSkeda == null) (
+                    if (btnSkeda == null) {
                             btnSkeda = new JButton ();
                             btnSkeda.setText ( "Point Card <html> <br> Refreshments </ html>");
                             btnSkeda.setLocation (new Point (16, 3));
@@ -187,7 +187,7 @@ import java.awt.Rectangle;
                             btnSkeda.setPreferredSize (new Dimension (130, 42));
                             btnSkeda.setIcon (new ImageIcon (getClass (). getResource ( "/ interfacceAgenzia / images / Browse 1.png ")));
                             btnSkeda.addActionListener (new ActionListener () {
-                                            public void actionPerformed (ActionEvent arg0) (
+                                            public void actionPerformed (ActionEvent arg0) {
 
                                                     }
 
@@ -202,7 +202,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JButton
              */
             private JButton getBtnModifica () {
-                    if (btnModifica == null) (
+                    if (btnModifica == null) {
                             btnModifica = new JButton ();
                             btnModifica.setText ( "<html> Edit Point <br> Refreshments </ html>");
                             btnModifica.setPreferredSize (new Dimension (130, 42));
@@ -220,7 +220,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JButton
              */
             private JButton getBtnElimina () {
-                    if (btnElimina == null) (
+                    if (btnElimina == null) {
                             btnElimina = new JButton ();
                             btnElimina.setText ( "Delete item <html> <br> Refreshments </ html>");
                             btnElimina.setPreferredSize (new Dimension (130, 42));
@@ -238,8 +238,8 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JScrollPane
              */
             private JScrollPane getJScrollPane () {
-                    if (JScrollPane == null) (
-                            if (TablePr == null) (
+                    if (JScrollPane == null) {
+                            if (TablePr == null) {
                                     / *
                                     * @ Param pId
                                     * @ Param pNumeroVoti
@@ -260,7 +260,7 @@ import java.awt.Rectangle;
                                     */
 
                                     BeanPuntoDiRistoro [] test = new BeanPuntoDiRistoro [30];
-                                    for (int i = 0; i <30; i + +) (
+                                    for (int i = 0; i <30; i + +) {
                                             test [i] = new BeanPuntoDiRistoro (1, 12, 3.5,
                                                     "Arturo", "Near the sea, great view, romantic and Miao,
                                                     "089203202", "the mountains", "Amalfi", "Via Principe 35", "84123rd"
@@ -298,7 +298,7 @@ import java.awt.Rectangle;
                                     final javax.swing.ListSelectionModel this TablePr.getSelectionModel = ();
                                     questo.addListSelectionListener (new ListSelectionListener () {
 
-                                                    public void ValueChanged (ListSelectionEvent event) (
+                                                    public void ValueChanged (ListSelectionEvent event) {
                                                             btnElimina.setEnabled (true);
                                                             btnModifica.setEnabled (true);
                                                             btnAttiva.setEnabled (true);
@@ -309,17 +309,17 @@ import java.awt.Rectangle;
 
                                     TablePr.addKeyListener (new KeyListener () {
 
-                                                    public void keyPressed (KeyEvent arg0) (
+                                                    public void keyPressed (KeyEvent arg0) {
                                                             System.out.println ( "keyPressed");
 
                                                             }
 
-                                                    public void keyReleased (KeyEvent arg0) (
+                                                    public void keyReleased (KeyEvent arg0) {
                                                             System.out.println ( "keyRelased");
 
                                                             }
 
-                                                    public void keyTyped (KeyEvent arg0) (
+                                                    public void keyTyped (KeyEvent arg0) {
                                                             System.out.println ( "keyTyped");
 
                                                             }
@@ -345,7 +345,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JPanel
              */
             getHelpPanel private JPanel () {
-                    if (HelpPanel == null) (
+                    if (HelpPanel == null) {
                             GridBagConstraints gridBagConstraints1 = new GridBagConstraints ();
                             gridBagConstraints1.fill = GridBagConstraints.BOTH;
                             gridBagConstraints1.gridy = 0;
@@ -370,7 +370,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JTextPane
              */
             private JTextPane getJTextPane () {
-                    if (jTextPane == null) (
+                    if (jTextPane == null) {
                             jTextPane = new JTextPane ();
                             jTextPane.setPreferredSize (new Dimension (6, 30));
                             }
@@ -389,7 +389,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JButton
              */
             private JButton getBtnRicerca2 () {
-                    if (btnRicerca2 == null) (
+                    if (btnRicerca2 == null) {
                             btnRicerca2 = new JButton ();
                             btnRicerca2.setPreferredSize (new Dimension (98, 26));
                             btnRicerca2.setText ( "Search");
@@ -404,7 +404,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JButton
              */
             private JButton getBtnAzzera2 () {
-                    if (btnAzzera2 == null) (
+                    if (btnAzzera2 == null) {
                             btnAzzera2 = new JButton ();
                             btnAzzera2.setPreferredSize (new Dimension (98, 26));
                             btnAzzera2.setIcon (new ImageIcon (getClass (). getResource ( "/ unisa/gps/etour/gui/operatoreagenzia/images/Azzera16.png ")));
@@ -420,7 +420,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JPanel
              */
             getRicercaPanel private JPanel () {
-                    if (RicercaPanel == null) (
+                    if (RicercaPanel == null) {
                             GridBagConstraints gridBagConstraints5 = new GridBagConstraints ();
                             gridBagConstraints5.fill = GridBagConstraints.BOTH;
                             gridBagConstraints5.gridy = 4;
@@ -486,7 +486,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JTextField
              */
             private JTextField getNomePR () {
-                    if (nomePR == null) (
+                    if (nomePR == null) {
                             nomePR = new JTextField ();
                             nomePR.setColumns (12);
                             }
@@ -499,7 +499,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JButton
              */
             private JButton getBtnAttiva () {
-                    if (btnAttiva == null) (
+                    if (btnAttiva == null) {
                             btnAttiva = new JButton ();
                             btnAttiva.setText ( "Enable <html> <br> Convention </ html>");
                             btnAttiva.setPreferredSize (new Dimension (130, 42));
@@ -518,7 +518,7 @@ import java.awt.Rectangle;
              * @ Return javax.swing.JButton
              */
             private JButton getBtnStorico () {
-                    if (btnStorico == null) (
+                    if (btnStorico == null) {
                             btnStorico = new JButton ();
                             btnStorico.setText ( "Historical <html> <br> Conventions </ html>");
                             btnStorico.setPreferredSize (new Dimension (130, 42));

@@ -60,22 +60,22 @@ public class extends ReportTableModel AbstractTableModel (
         public int GetRowCount () {
                 data.size return ();
                 }
-        public String getColumnName (int col) (
+        public String getColumnName (int col) {
                 return headers [col];
                 }
 
-        public Object getValueAt (int row, int col) (
+        public Object getValueAt (int row, int col) {
                 data.get return (row) [col];
                 }
-        public class getColumnClass (int col) (
+        public class getColumnClass (int col) {
                 return columnClasses [col];
                 }
 
-        public boolean isCellEditable (int row, int col) (
+        public boolean isCellEditable (int row, int col) {
                 return false;
                 }
-        public void setValueAt (Object value, int row, int col) (
-                if (row> = GetRowCount ()) (
+        public void setValueAt (Object value, int row, int col) {
+                if (row> = GetRowCount ()) {
                         Object [] new = new Object [headers.length];
                         New [col] = value;
                         data.add (new);
@@ -85,11 +85,11 @@ public class extends ReportTableModel AbstractTableModel (
                             }
                 }
         public void setValueAt (Object [] value, int row) throws IllegalArgumentException (
-                if (value.length! = headers.length) (
+                if (value.length! = headers.length) {
                         System.out.println (value.length);
                         System.out.println (headers.length);
                         throw new IllegalArgumentException ();)
-                                                        if (row> = GetRowCount ()) (
+                                                        if (row> = GetRowCount ()) {
                                                                 data.add (value);
                                                                 }
                                                             else (

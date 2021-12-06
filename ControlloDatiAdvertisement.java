@@ -23,10 +23,10 @@ public class ControlloDatiAdvertisement
      * @ Param pBanner bean contains the data of the banner.
      * @ Return
      */
-    public static boolean controlloBanner (BeanBanner pBanner) (
+    public static boolean controlloBanner (BeanBanner pBanner) {
             toReturn boolean = false;
 
-            if (pBanner = null) (
+            if (pBanner = null) {
                     toReturn = (pBanner.getId ()> 0 & & & & pBanner.getPercorsoFile ()!=""
                             pBanner.getIdPuntoDiRistoro ()> 0);
                     }
@@ -43,18 +43,18 @@ public class ControlloDatiAdvertisement
      * @ Param Pnews bean containing data news
      * @ Return Returns true if the bean contains consistent data
      */
-            public static boolean controlloNews (BeanNews Pnews) (
+            public static boolean controlloNews (BeanNews Pnews) {
                     toReturn boolean = false;
 
                     / * Check the validity of the general method parameter */
-                    if (Pnews = null) (
+                    if (Pnews = null) {
 
                             Date dataPubb = pNews.getDataPubblicazione () / / Released
                             Date dataScad = pNews.getDataScadenza () / / Due Date
                             PNews.getNews String news = (), / / Text of News
 
                             / * Checking the invalidity of the fields */
-                            if (dataPubb! dataScad = null & &! = null & & news = null) (
+                            if (dataPubb! dataScad = null & &! = null & & news = null) {
                                     / * Check the consistency of the dates */
                                     toReturn = dataPubb.before (dataScad);
 
