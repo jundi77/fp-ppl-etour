@@ -1,8 +1,8 @@
 	
 Class RicercaAvanzata
 java.lang.Object
-   unisa.gps.etour.control.GestioneRicerche.Ricerca
-       unisa.gps.etour.control.GestioneRicerche.RicercaAvanzata
+unisa.gps.etour.control.GestioneRicerche.Ricerca
+unisa.gps.etour.control.GestioneRicerche.RicercaAvanzata
 All Implemented Interfaces:
 IRicerca
 
@@ -12,15 +12,15 @@ public class RicercaAvanzataextends RicercaClasse for managing the Advanced Sear
 
 BENE_CULTURALE, PUNTO_DI_RISTORO
 
-RicercaAvanzata (int pIdTurista)
-           Class constructor
+    RicercaAvanzata (int pIdTurista)
+    Class constructor
 
-ottieniNumeroElementiRicerca, ottieniNumeroPagineRicerca, ottieniPaginaRisultatiBeneCulturale, ottieniPaginaRisultatiPuntoDiRistoro, search
+    ottieniNumeroElementiRicerca, ottieniNumeroPagineRicerca, ottieniPaginaRisultatiBeneCulturale, ottieniPaginaRisultatiPuntoDiRistoro, search
 
-GestioneRicerche.Ricerca
+    GestioneRicerche.Ricerca
 
-RicercaAvanzata
-public RicercaAvanzata (int pIdTurista) class constructor
+    RicercaAvanzata
+    public RicercaAvanzata (int pIdTurista) class constructor
 
-Parameters:
-pIdTurista - ID del T
+    Parameters:
+    pIdTurista - ID del T
