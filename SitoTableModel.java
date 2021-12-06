@@ -57,11 +57,11 @@ public class extends SitoTableModel AbstractTableModel (
                                                      )
                                                                       )
     
-        public int GetRowCount () (
+        public int GetRowCount () {
                 cells.length return;
                                    )
     
-        public int getColumnCount () (
+        public int getColumnCount () {
                 columnNames.length return;
                                       )
     

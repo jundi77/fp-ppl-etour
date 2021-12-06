@@ -53,11 +53,11 @@ public class extends ReportTableModel AbstractTableModel (
                 }
         }
 
-        public int getColumnCount () (
+        public int getColumnCount () {
                 headers.length return;
                 }
 
-        public int GetRowCount () (
+        public int GetRowCount () {
                 data.size return ();
                 }
         public String getColumnName (int col) (

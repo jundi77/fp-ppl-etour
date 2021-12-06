@@ -7,7 +7,7 @@ public class OperatoreAgenzia
     private String Name, Last Name, Citt�Residenza, Phone, Zip, Address, Email, Password, username;
     private Date DoB;
 
-    public OperatoreAgenzia () ()
+    public OperatoreAgenzia () {)
             public OperatoreAgenzia (String name, String name, String city, String phone, String ch, String address, String email, String pass, String user, Date date)
     {
         this.Nome = name;

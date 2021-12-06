@@ -134,7 +134,7 @@ import unisa.gps.etour.bean.util.Punto3D;
             public SchedaPR ()
             {
                 super ( "New Refreshment");
-                campoCompilato = new ActionListener () (
+                campoCompilato = new ActionListener () {
 
                         public void actionPerformed (ActionEvent actionEvent)
                         {
@@ -142,7 +142,7 @@ import unisa.gps.etour.bean.util.Punto3D;
                         }
 
                                                         );
-                validating FocusListener = new () (
+                validating FocusListener = new () {
 
                         private final ERROR_BACKGROUND Color = new Color (255, 215, 215);
                         private final WARNING_BACKGROUND Color = new Color (255, 235, 205);
@@ -248,7 +248,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return void
              */
-            private void initialize () (
+            private void initialize () {
                     this.setIconifiable (true);
                     this.setBounds (new Rectangle (0, 0, 600, 540));
                     this.setDefaultCloseOperation (WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -286,7 +286,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JPanel
              */
-            getJContentPane private JPanel () (
+            getJContentPane private JPanel () {
                     if (jContentPane == null) (
                             jContentPane = new JPanel ();
                             jContentPane.setLayout (new BorderLayout ());
@@ -303,12 +303,12 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JToggleButton
              */
-            private JToggleButton getBtnModifica () (
+            private JToggleButton getBtnModifica () {
                     if (btnModifica == null) (
                             btnModifica JToggleButton = new ();
                             btnModifica.setText ( "Change Data");
                             btnModifica.setIcon (new ImageIcon (getClass (). getResource ( "/ unisa / gps / eTour / gui / operatoreagenzia / images / modifica.png ")));
-                            btnModifica.addActionListener (new ActionListener () (
+                            btnModifica.addActionListener (new ActionListener () {
 
                                             public void actionPerformed (ActionEvent arg0) (
                                                     makeEditabled ();
@@ -328,7 +328,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JButton
              */
-            private JButton getBtnSalva () (
+            private JButton getBtnSalva () {
                     if (btnSalva == null) (
                             btnSalva = new JButton ();
                             btnSalva.setText ( "Save");
@@ -343,7 +343,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JButton
              */
-            private JButton getBtnAnnulla () (
+            private JButton getBtnAnnulla () {
                     if (btnAnnulla == null) (
                             btnAnnulla = new JButton ();
                             btnAnnulla.setText ( "Cancel");
@@ -359,7 +359,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JButton
              */
-            private JButton getBtnModificaCommento () (
+            private JButton getBtnModificaCommento () {
                     if (btnModificaCommento == null) (
                             btnModificaCommento = new JButton ();
                             btnModificaCommento.setText ( "Edit Comment");
@@ -374,7 +374,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JTabbedPane
              */
-            private JTabbedPane getJTabbedPane () (
+            private JTabbedPane getJTabbedPane () {
                     if (JTabbedPane == null) (
                             JTabbedPane = new JTabbedPane ();
                             jTabbedPane.setCursor (new Cursor (Cursor.DEFAULT_CURSOR));
@@ -391,7 +391,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JPanel
              */
-            getDatiPR private JPanel () (
+            getDatiPR private JPanel () {
                     if (datiPR == null) (
                             GridBagConstraints gridBagConstraints27 = new GridBagConstraints ();
                             gridBagConstraints27.fill = GridBagConstraints.VERTICAL;
@@ -702,7 +702,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JPanel
              */
-            getStatistiche private JPanel () (
+            getStatistiche private JPanel () {
                     if (statistics == null) (
                             GridBagConstraints gridBagConstraints4 = new GridBagConstraints ();
                             gridBagConstraints4.gridx = 0;
@@ -745,7 +745,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JPanel
              */
-            getFeedback private JPanel () (
+            getFeedback private JPanel () {
                     if (feedback == null) (
                             GridBagConstraints = GridBagConstraints new GridBagConstraints ();
                             gridBagConstraints.fill = GridBagConstraints.BOTH;
@@ -765,7 +765,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JTextField
              */
-            private JTextField getIndirizzoPR () (
+            private JTextField getIndirizzoPR () {
                     if (indirizzoPR == null) (
                             indirizzoPR = new JTextField ();
                             indirizzoPR.setColumns (12);
@@ -780,7 +780,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JComboBox
              */
-            private JComboBox getIndirizzoPR1 () (
+            private JComboBox getIndirizzoPR1 () {
                     if (indirizzoPR1 == null) (
                             indirizzoPR1 = new JComboBox ();
                             indirizzoPR1.setPreferredSize (new Dimension (60, 20));
@@ -803,7 +803,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JTextField
              */
-            private JTextField getCittaPR () (
+            private JTextField getCittaPR () {
                     if (cittaPR == null) (
                             cittaPR = new JTextField ();
                             cittaPR.setColumns (12);
@@ -817,7 +817,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JComboBox
              */
-            private JComboBox getLocalitaPR () (
+            private JComboBox getLocalitaPR () {
                     if (localitaPR == null) (
                             localitaPR = new JComboBox ();
                             localitaPR.setMinimumSize (new Dimension (80, 25));
@@ -832,7 +832,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JTextField
              */
-            private JTextField getCapPR () (
+            private JTextField getCapPR () {
                     if (capPR == null) (
                             capPR = new JTextField ();
                             capPR.setColumns (8);
@@ -846,7 +846,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JScrollPane
              */
-            private JScrollPane getJScrollPane () (
+            private JScrollPane getJScrollPane () {
                     if (JScrollPane == null) (
                             JScrollPane = new JScrollPane ();
                             jScrollPane.setVerticalScrollBarPolicy (JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
@@ -860,7 +860,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JTextArea
              */
-            getDescrizionePR private JTextArea () (
+            getDescrizionePR private JTextArea () {
                     if (descrizionePR == null) (
                             descrizionePR = new JTextArea ();
                             descrizionePR.setColumns (12);
@@ -875,7 +875,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JTextField
              */
-            private JTextField getTelefonoPR () (
+            private JTextField getTelefonoPR () {
                     if (telefonoPR == null) (
                             telefonoPR = new JTextField ();
                             telefonoPR.setColumns (12);
@@ -889,7 +889,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JComboBox
              */
-            private JComboBox getOrarioAPOrePR () (
+            private JComboBox getOrarioAPOrePR () {
                     if (orarioAPOrePR == null) (
                             orarioAPOrePR = new JComboBox ();
                             orarioAPOrePR.setPreferredSize (new Dimension (40, 20));
@@ -910,7 +910,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JComboBox
              */
-            private JComboBox getOrarioApMinPR () (
+            private JComboBox getOrarioApMinPR () {
                     if (orarioApMinPR == null) (
                             orarioApMinPR = new JComboBox ();
                             orarioApMinPR.setLightWeightPopupEnabled (true);
@@ -931,7 +931,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JComboBox
              */
-            private JComboBox getOrarioCHMinPR () (
+            private JComboBox getOrarioCHMinPR () {
                     if (orarioCHMinPR == null) (
                             orarioCHMinPR = new JComboBox ();
                             orarioCHMinPR.setPreferredSize (new Dimension (40, 20));
@@ -950,7 +950,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JTextField
              */
-            private JComboBox getProvPR () (
+            private JComboBox getProvPR () {
                     if (provPR == null) (
                             final String [] Province = ( "AG", "AL", "an", "AO", "AQ", "AR", "AP", "AT", "AV", "BA", "BL" , "BN", "BG", "BI", "BO", "BR", "BS", "BZ",
                                     "CA", "CB", "CE", "CH", "CI", "CL", "CN", "CO", "CR", "CS", "KR", "en", "FC "," FE "," FI "," FG "," FR "," GE "," GO "," GR "," IM "," IS "," LC ",
@@ -1002,7 +1002,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JTextField
              */
-            private JTextField getNomePR () (
+            private JTextField getNomePR () {
                     if (nomePR == null) (
                             nomePR = new JTextField ();
                             nomePR.setColumns (12);
@@ -1020,7 +1020,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JPanel
              */
-            getJPanel private JPanel () (
+            getJPanel private JPanel () {
                     if (JPanel == null) (
                             JPanel = new JPanel ();
                             jPanel.setLayout (new BorderLayout ());
@@ -1049,7 +1049,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JScrollPane
              */
-            private JScrollPane getJScrollPane2 () (
+            private JScrollPane getJScrollPane2 () {
                     if (jScrollPane2 == null) (
                             jScrollPane2 = new JScrollPane ();
                             jScrollPane2.setVerticalScrollBarPolicy (JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
@@ -1063,7 +1063,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JTable
              */
-            private JTable getFeedbackTable () (
+            private JTable getFeedbackTable () {
                     if (feedbackTable == null) (
                             feedbackTable = new JTable ();
                             }
@@ -1075,7 +1075,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JPanel
              */
-            getStatisticheMeseCorrente private JPanel () (
+            getStatisticheMeseCorrente private JPanel () {
                     if (statisticheMeseCorrente == null) (
                             statisticheMeseCorrente = new JPanel ();
                             statisticheMeseCorrente.setLayout (new GridBagLayout ());
@@ -1089,7 +1089,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JPanel
              */
-            getStatisticheTotali private JPanel () (
+            getStatisticheTotali private JPanel () {
                     if (statisticheTotali == null) (
                             statisticheTotali = new JPanel ();
                             statisticheTotali.setLayout (new GridBagLayout ());
@@ -1103,7 +1103,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JToolBar
              */
-            private JToolBar getToolbarSchedaPR () (
+            private JToolBar getToolbarSchedaPR () {
                     if (ToolbarSchedaPR == null) (
 
                             ToolbarSchedaPR JToolBar = new ();
@@ -1125,7 +1125,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JTextField
              */
-            private JTextField getPosGeoX () (
+            private JTextField getPosGeoX () {
                     if (posGeoX == null) (
                             posGeoX = new JTextField ();
                             }
@@ -1137,7 +1137,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JTextField
              */
-            private JTextField getPosGeoY () (
+            private JTextField getPosGeoY () {
                     if (posGeoY == null) (
                             posGeoY = new JTextField ();
                             }
@@ -1149,7 +1149,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JTextField
              */
-            private JTextField getPosGeoZ () (
+            private JTextField getPosGeoZ () {
                     if (posGeoZ == null) (
                             posGeoZ = new JTextField ();
                             }
@@ -1160,7 +1160,7 @@ import unisa.gps.etour.bean.util.Punto3D;
              *
              * @ Return javax.swing.JComboBox
              */
-            private JComboBox getOrarioCHOrePR () (
+            private JComboBox getOrarioCHOrePR () {
                     if (orarioCHOrePR == null) (
                             orarioCHOrePR = new JComboBox ();
                             orarioCHOrePR.setPreferredSize (new Dimension (40, 20));

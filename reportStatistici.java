@@ -88,7 +88,7 @@ import java.util.Vector;
             /**
              * This is the default constructor xxx
              */
-            public reportStatistici () (
+            public reportStatistici () {
                     super ();
                     initialize ();
                     }
@@ -98,7 +98,7 @@ import java.util.Vector;
              *
              * @ Return void
              */
-            private void initialize () (
+            private void initialize () {
                     this.setSize (700, 480);
                     this.setPreferredSize (new Dimension (790, 520));
                     this.setFrameIcon (new ImageIcon (getClass (). getResource ( "/ interfacceAgenzia/immagini/statistics-32x32.png ")));
@@ -115,7 +115,7 @@ import java.util.Vector;
              *
              * @ Return javax.swing.JPanel
              */
-            getJContentPane private JPanel () (
+            getJContentPane private JPanel () {
                     if (jContentPane == null) (
                             BorderLayout BorderLayout = new BorderLayout ();
                             borderLayout.setHgap (0);
@@ -134,7 +134,7 @@ import java.util.Vector;
              *
              * @ Return javax.swing.JToolBar
              */
-            private JToolBar getJToolBar () (
+            private JToolBar getJToolBar () {
                     if (JToolBar == null) (
                             JButton = new JLabel ();
                             jLabel.setText ( "Select Location");
@@ -155,7 +155,7 @@ import java.util.Vector;
              *
              * @ Return javax.swing.JComboBox
              */
-            private JComboBox getJComboBox () (
+            private JComboBox getJComboBox () {
 
                     if (JComboBox == null) (
                             JComboBox = new JComboBox ();
@@ -218,7 +218,7 @@ import java.util.Vector;
              *
              * @ Return javax.swing.JPanel
              */
-            getCentralPanel private JPanel () (
+            getCentralPanel private JPanel () {
                     if (centralPanel == null) (
                             centralPanel = new JPanel ();
                             centralPanel.setLayout (new BorderLayout ());
@@ -233,7 +233,7 @@ import java.util.Vector;
              *
              * @ Return javax.swing.JScrollPane
              */
-            private JScrollPane getJScrollPane () (
+            private JScrollPane getJScrollPane () {
                     if (JScrollPane == null) (
                             JScrollPane = new JScrollPane ();
                             jScrollPane.setViewportView (getTabellaSiti ());
@@ -246,7 +246,7 @@ import java.util.Vector;
              *
              * @ Return javax.swing.JTable
              */
-            private JTable getTabellaSiti () (
+            private JTable getTabellaSiti () {
 
 
                     if (tabellas == null) (

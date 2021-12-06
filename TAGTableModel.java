@@ -59,7 +59,7 @@ public class extends TAGTableModel AbstractTableModel (
          * Returns the number of columns
          *
          */
-        public int getColumnCount () (
+        public int getColumnCount () {
                 headers.length return;
                 }
 
@@ -67,7 +67,7 @@ public class extends TAGTableModel AbstractTableModel (
          * Returns the number of rows
          *
          */
-        public int GetRowCount () (
+        public int GetRowCount () {
                 data.size return ();
                 }
 
