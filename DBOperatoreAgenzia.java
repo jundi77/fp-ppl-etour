@@ -19,8 +19,8 @@ public class DBOperatoreAgenzia implements IDBOperatoreAgenzia
 {
 
     /* (Non-Javadoc)
-    * @ See unisa.gps.etour.repository.IDBOperatoreAgenzia # ottieniOperatoreAgenzia (int)
-    */
+     * @ See unisa.gps.etour.repository.IDBOperatoreAgenzia # ottieniOperatoreAgenzia (int)
+     */
     public BeanOperatoreAgenzia ottieniOperatoreAgenzia (String pUsername)
             throws SQLException
     {
@@ -80,8 +80,8 @@ public class DBOperatoreAgenzia implements IDBOperatoreAgenzia
     }
 
     /* (Non-Javadoc)
-    * @ See unisa.gps.etour.repository.IDBOperatoreAgenzia # modificaPassword (java.lang.String)
-    */
+     * @ See unisa.gps.etour.repository.IDBOperatoreAgenzia # modificaPassword (java.lang.String)
+     */
     public boolean modificaPassword (BeanOperatoreAgenzia poa) throws SQLException
     {
         // Connect to database

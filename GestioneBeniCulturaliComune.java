@@ -21,9 +21,9 @@ import unisa.gps.etour.util.CostantiGlobali;
 import unisa.gps.etour.util.MessaggiErrore;
 
 // Stub
-import unisa.gps.etour.control.GestioneBeniCulturali.test.stub.DBBeneCulturale / /***
-import unisa.gps.etour.control.GestioneBeniCulturali.test.stub.DBTurista / /***
-import unisa.gps.etour.control.GestioneBeniCulturali.test.stub.DBVisitaBC / /***
+import unisa.gps.etour.control.GestioneBeniCulturali.test.stub.DBBeneCulturale //***
+import unisa.gps.etour.control.GestioneBeniCulturali.test.stub.DBTurista //***
+import unisa.gps.etour.control.GestioneBeniCulturali.test.stub.DBVisitaBC //***
 
 /**
  * Class management of cultural heritage for operations common to all actors
@@ -77,11 +77,11 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
     }
 
     /*
-    * Implements the method for obtaining a cultural object by Id
-    *
-    * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliComune # ottieniBeneCulturale (int)
-            */
-            public BeanBeneCulturale ottieniBeneCulturale (int pBeneCulturaleID) throws RemoteException
+     * Implements the method for obtaining a cultural object by Id
+     *
+     * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliComune # ottieniBeneCulturale (int)
+     */
+    public BeanBeneCulturale ottieniBeneCulturale (int pBeneCulturaleID) throws RemoteException
     {
         if (! ControlloBeniCulturali.controllaIdBeneCulturale (pBeneCulturaleID))
             throw new RemoteException (MessaggiErrore.ERRORE_DATI);
@@ -105,11 +105,11 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
     }
 
     /*
-    * Implements the method for obtaining all the tags of a cultural object.
-    *
-    * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliComune # ottieniTagBeneCulturale (int)
-            */
-            <BeanTag> ottieniTagBeneCulturale public ArrayList (int pBeneCulturaleID) throws RemoteException
+     * Implements the method for obtaining all the tags of a cultural object.
+     *
+     * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliComune # ottieniTagBeneCulturale (int)
+     */
+    <BeanTag> ottieniTagBeneCulturale public ArrayList (int pBeneCulturaleID) throws RemoteException
     {
         if (! ControlloBeniCulturali.controllaIdBeneCulturale (pBeneCulturaleID))
             throw new RemoteException (MessaggiErrore.ERRORE_DATI);
@@ -133,11 +133,11 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
     }
 
     /*
-    * Implements the method to obtain the list of feedback and their username on a property
-    * Cultural specified by Id
-    *
-    * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliComune # ottieniFeedbackBeneCulturale (int)
-    */
+     * Implements the method to obtain the list of feedback and their username on a property
+     * Cultural specified by Id
+     *
+     * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliComune # ottieniFeedbackBeneCulturale (int)
+     */
     <BeanVisitaBC, String> ottieniFeedbackBeneCulturale public HashMap (int pBeneCulturaleID) throws RemoteException
     {
         if (! ControlloBeniCulturali.controllaIdBeneCulturale (pBeneCulturaleID))
@@ -169,23 +169,23 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
     }
 
     /*
-    * Implements the method to obtain statistics about a cultural past
-    * Through Id
-    *
-    * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliComune # ottieniStatisticheBeneCulturale (int)
-    */
+     * Implements the method to obtain statistics about a cultural past
+     * Through Id
+     *
+     * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliComune # ottieniStatisticheBeneCulturale (int)
+     */
     <Integer> ottieniStatisticheBeneCulturale public ArrayList (int pBeneCulturaleID) throws RemoteException
     {
         /*
-            * This method returns an ArrayList containing 5 elements (0 .. 4).
-            * For each index more 'one is the number of equivalent value your feedback
-            * Index number more 'one.
-            * Even in this case the method is not 'particularly attractive but it does its dirty work
-            * Fine.
-            */
+         * This method returns an ArrayList containing 5 elements (0 .. 4).
+         * For each index more 'one is the number of equivalent value your feedback
+         * Index number more 'one.
+         * Even in this case the method is not 'particularly attractive but it does its dirty work
+         * Fine.
+         */
 
-            if (! ControlloBeniCulturali.controllaIdBeneCulturale (pBeneCulturaleID))
-                throw new RemoteException (MessaggiErrore.ERRORE_DATI);
+        if (! ControlloBeniCulturali.controllaIdBeneCulturale (pBeneCulturaleID))
+            throw new RemoteException (MessaggiErrore.ERRORE_DATI);
 
         ArrayList <Integer> listaRisultati <Integer> = new ArrayList (5);
 
@@ -217,22 +217,22 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
     }
 
     /*
-    * Implement the method for changing a feedback on a cultural past
-    * Through Id
-    *
-    * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliComune # modificaFeedbackBeneCulturale (int, unisa.gps.etour.bean.BeanVisitaBC)
-            */
-            public boolean modificaFeedbackBeneCulturale (int pBeneCulturaleID, BeanVisitaBC pBeanVisitaBC) throws RemoteException
+     * Implement the method for changing a feedback on a cultural past
+     * Through Id
+     *
+     * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliComune # modificaFeedbackBeneCulturale (int, unisa.gps.etour.bean.BeanVisitaBC)
+     */
+    public boolean modificaFeedbackBeneCulturale (int pBeneCulturaleID, BeanVisitaBC pBeanVisitaBC) throws RemoteException
     {
         if (! ControlloBeniCulturali.controllaIdBeneCulturale (pBeneCulturaleID) | |
                 ! ControlloVisiteBeniCulturali.controllaDatiVisitaBeneCulturale (pBeanVisitaBC))
             throw new RemoteException (MessaggiErrore.ERRORE_DATI);
 
         /*
-              * Please check that the vote has not changed.
-              * If the vote is changed to an exception is raised
-              */
-              votoOk boolean = true;
+         * Please check that the vote has not changed.
+         * If the vote is changed to an exception is raised
+         */
+        votoOk boolean = true;
 
         try
             {
@@ -247,23 +247,23 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
                 throw new RemoteException (MessaggiErrore.ERRORE_SCONOSCIUTO);
             }
 
-                /*
-                * If the vote is not changed we proceed to send the message to the method of
-                * Change the layer's database.
-                */
-                if (votoOk)
-                    try
-                        {
-                            return (dbvisita.modificaVisitaBC (pBeanVisitaBC));
-                        }
-                    catch (SQLException e)
-                        {
-                            throw new RemoteException (MessaggiErrore.ERRORE_DBMS);
-                        }
-                    catch (Exception e)
-                        {
-                            throw new RemoteException (MessaggiErrore.ERRORE_SCONOSCIUTO);
-                        }
+        /*
+         * If the vote is not changed we proceed to send the message to the method of
+         * Change the layer's database.
+         */
+        if (votoOk)
+            try
+                {
+                    return (dbvisita.modificaVisitaBC (pBeanVisitaBC));
+                }
+            catch (SQLException e)
+                {
+                    throw new RemoteException (MessaggiErrore.ERRORE_DBMS);
+                }
+            catch (Exception e)
+                {
+                    throw new RemoteException (MessaggiErrore.ERRORE_SCONOSCIUTO);
+                }
 
         return false;
     }

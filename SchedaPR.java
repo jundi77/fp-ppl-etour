@@ -1,12 +1,12 @@
 /*
-* SchedaPR.java
-*
-* 1.0
-*
-* 28/05/2007
-*
-* � 2007 eTour Project - Copyright by SE @ SA Lab - DMI - University of Salerno
-*/
+ * SchedaPR.java
+ *
+ * 1.0
+ *
+ * 28/05/2007
+ *
+ * � 2007 eTour Project - Copyright by SE @ SA Lab - DMI - University of Salerno
+ */
 
 package unisa.gps.etour.gui.operatoreagenzia;
 
@@ -200,47 +200,47 @@ import unisa.gps.etour.bean.util.Punto3D;
                 descrizionePR.setText (pr.getDescrizione ());
                 StringTokenizer tokenizer = new StringTokenizer (pr.getVia ());
                 /*
-                      * IndirizzoPR1.addItem ( "Via");
-                indirizzoPR1.addItem (P.zza ");
-                indirizzoPR1.addItem ( "V.le");
-                indirizzoPR1.addItem (V.co ");
-                indirizzoPR1.addItem ( "Largo");
-                indirizzoPR1.addItem ( "Course");
-                */
-                    String [] path = ( "Street", "P.zza", "V.le", "V.co", "Largo", "Course");
-                    String string = tokenizer.nextToken ();
-                    int i;
-                    for (i = 0; i <via.length i + +)
-                        if (stringa.equalsIgnoreCase (via [i]))
-                            break;
-                    this.indirizzoPR1.setSelectedIndex (i);
-                    while (tokenizer.hasMoreTokens ())
-                        this.indirizzoPR.setText (indirizzoPR.getText () + "" + tokenizer.nextToken ());
-                    this.provPR.setSelectedItem (pr.getProvincia ());
-                    Punto3D pos = pr.getPosizione ();
-                    this.posGeoX.setText ( "" + pos.getX ());
-                    this.posGeoY.setText ( "" + pos.getY ());
-                    this.posGeoZ.setText ( "" + pos.getZ ());
-                    this.telefonoPR.setText (pr.getTelefono ());
-                    int minutes = pr.getOrarioApertura (). getMinutes ();
-                    if (minutes == 0)
-                        this.orarioApMinPR.setSelectedIndex (0);
-                    else
-                        this.orarioApMinPR.setSelectedItem (minutes);
-                    int hours = pr.getOrarioApertura (). getHours ();
-                    if (hours <10)
-                        this.orarioAPOrePR.setSelectedItem ( "0" + hours);
-                    else
-                        this.orarioAPOrePR.setSelectedItem (hours);
-                    this.orarioCHMinPR.setSelectedItem (pr.getOrarioChiusura (). getMinutes ());
-                    this.orarioAPOrePR.setSelectedItem (pr.getOrarioApertura (). getHours ());
-                    this.orarioCHOrePR.setSelectedItem (pr.getOrarioChiusura (). getHours ());
-                    if (change) {
-                        btnModifica.setSelected (true);
-                    }
-                    else (
-                            makeEditabled ();
-                            }
+                 * IndirizzoPR1.addItem ( "Via");
+                  indirizzoPR1.addItem (P.zza ");
+                  indirizzoPR1.addItem ( "V.le");
+                  indirizzoPR1.addItem (V.co ");
+                  indirizzoPR1.addItem ( "Largo");
+                  indirizzoPR1.addItem ( "Course");
+                 */
+                String [] path = ( "Street", "P.zza", "V.le", "V.co", "Largo", "Course");
+                String string = tokenizer.nextToken ();
+                int i;
+                for (i = 0; i <via.length i + +)
+                    if (stringa.equalsIgnoreCase (via [i]))
+                        break;
+                this.indirizzoPR1.setSelectedIndex (i);
+                while (tokenizer.hasMoreTokens ())
+                    this.indirizzoPR.setText (indirizzoPR.getText () + "" + tokenizer.nextToken ());
+                this.provPR.setSelectedItem (pr.getProvincia ());
+                Punto3D pos = pr.getPosizione ();
+                this.posGeoX.setText ( "" + pos.getX ());
+                this.posGeoY.setText ( "" + pos.getY ());
+                this.posGeoZ.setText ( "" + pos.getZ ());
+                this.telefonoPR.setText (pr.getTelefono ());
+                int minutes = pr.getOrarioApertura (). getMinutes ();
+                if (minutes == 0)
+                    this.orarioApMinPR.setSelectedIndex (0);
+                else
+                    this.orarioApMinPR.setSelectedItem (minutes);
+                int hours = pr.getOrarioApertura (). getHours ();
+                if (hours <10)
+                    this.orarioAPOrePR.setSelectedItem ( "0" + hours);
+                else
+                    this.orarioAPOrePR.setSelectedItem (hours);
+                this.orarioCHMinPR.setSelectedItem (pr.getOrarioChiusura (). getMinutes ());
+                this.orarioAPOrePR.setSelectedItem (pr.getOrarioApertura (). getHours ());
+                this.orarioCHOrePR.setSelectedItem (pr.getOrarioChiusura (). getHours ());
+                if (change) {
+                    btnModifica.setSelected (true);
+                }
+                else (
+                        makeEditabled ();
+                        }
 
             }
             /**

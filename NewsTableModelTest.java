@@ -36,8 +36,8 @@ public class TestCase extends NewsTableModelTest
     }
 
     /*
-    * Verify the behavior of the manufacturer with an ArrayList of BeanNews.
-    */
+     * Verify the behavior of the manufacturer with an ArrayList of BeanNews.
+     */
     public void testCostruttoreConArrayList ()
     {
         <BeanNews> ArrayList test = new ArrayList <BeanNews> ();
@@ -54,24 +54,24 @@ public class TestCase extends NewsTableModelTest
     }
 
     /*
-    * Verify the manufacturer with an ArrayList Compor zero.
-    */
+     * Verify the manufacturer with an ArrayList Compor zero.
+     */
     public void testCostruttoreConArrayListNull ()
     {
         NewsTableModel = new TableModel (null);
     }
 
     /*
-    * Verify the behavior of the manufacturer with an empty ArrayList.
-    */
+     * Verify the behavior of the manufacturer with an empty ArrayList.
+     */
     public void testCostruttoreConArrayListVuoto ()
     {
         NewsTableModel = new TableModel (<BeanNews> new ArrayList ());
     }
 
     /*
-    * Verify the behavior of the method with the correct parameters.
-    */
+     * Verify the behavior of the method with the correct parameters.
+     */
     public void testGetValueAtParametriCorretti ()
     {
         // Put bean in two model test.
@@ -86,8 +86,8 @@ public class TestCase extends NewsTableModelTest
     }
 
     /*
-    * Verify Compor the method with an index row fold.
-    */
+     * Verify Compor the method with an index row fold.
+     */
     public void testGetValueAtRigaSballata ()
     {
         try
@@ -101,8 +101,8 @@ public class TestCase extends NewsTableModelTest
     }
 
     /*
-    * Verify Compor of the method with a column index busted.
-    */
+     * Verify Compor of the method with a column index busted.
+     */
     public void testGetValueAtColonnaSballata ()
     {
         try
@@ -116,8 +116,8 @@ public class TestCase extends NewsTableModelTest
     }
 
     /*
-    * Verify Compor method with proper parameter.
-    */
+     * Verify Compor method with proper parameter.
+     */
     public void testInsertNewsParametroCorretto ()
     {
         tableModel.insertNews (aNews);
@@ -125,8 +125,8 @@ public class TestCase extends NewsTableModelTest
     }
 
     /*
-    * Verify Compor method with parameter to null
-    */
+     * Verify Compor method with parameter to null
+     */
     public void testInsertNewsParametroNull ()
     {
         try
@@ -140,8 +140,8 @@ public class TestCase extends NewsTableModelTest
     }
 
     /*
-    * Verify Compor method with proper parameter.
-    */
+     * Verify Compor method with proper parameter.
+     */
     public void testUpdateNewsParametroCorretto ()
     {
         tableModel.insertNews (aNews);
@@ -152,8 +152,8 @@ public class TestCase extends NewsTableModelTest
     }
 
     /*
-    * Verify Compor method with parameter to null
-    */
+     * Verify Compor method with parameter to null
+     */
     public void testUpdateNewsParametroNull ()
     {
 
@@ -168,8 +168,8 @@ public class TestCase extends NewsTableModelTest
     }
 
     /*
-    * Verify Compor method with proper parameter.
-    */
+     * Verify Compor method with proper parameter.
+     */
     public void testRemoveNewsParametroCorretto ()
     {
         tableModel.insertNews (aNews);
@@ -177,8 +177,8 @@ public class TestCase extends NewsTableModelTest
     }
 
     /*
-    * Verify Compor of the method with row index busted.
-    */
+     * Verify Compor of the method with row index busted.
+     */
     public void testRemoveNewsRigaSballata ()
     {
         try

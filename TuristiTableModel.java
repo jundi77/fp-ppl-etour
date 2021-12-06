@@ -1,12 +1,12 @@
 ﻿/*
-* TuristiTableModel.java
-*
-* 1.0
-*
-* 27/05/2007
-*
-* 2007 eTour Project - Copyright by SE @ SA Lab - DMI University of Salerno
-*/
+ * TuristiTableModel.java
+ *
+ * 1.0
+ *
+ * 27/05/2007
+ *
+ * 2007 eTour Project - Copyright by SE @ SA Lab - DMI University of Salerno
+ */
 package unisa.gps.etour.gui.operatoreagenzia.tables;
 
 import java.util.ArrayList;
@@ -261,25 +261,25 @@ public class extends TuristiTableModel AbstractTableModel
                         break;
                     }
             }
-        if (i! data.size = ()) / / Found
-                                       {
-                                           Object [] aRow = new Object [13];
-                                           aRow [0] = pTurista.isAttiva ();
-                                           aRow [1] = pTurista.getNome ();
-                                           aRow [2] = pTurista.getCognome ();
-                                           aRow [3] = pTurista.getEmail ();
-                                           aRow [4] = pTurista.getTelefono ();
-                                           aRow [5] = pTurista.getDataNascita ();
-                                           aRow [6] = pTurista.getCittaNascita ();
-                                           aRow [7] = pTurista.getVia ();
-                                           aRow [8] = pTurista.getCittaResidenza ();
-                                           aRow [9] = pTurista.getCap ();
-                                           aRow [10] = pTurista.getProvincia ();
-                                           aRow [11] = pTurista.getDataRegistrazione ();
-                                           aRow [12] = pTurista.getId ();
-                                           data.set (i, aRow);
-                                           fireTableDataChanged ();
-                                       }
+        if (i! data.size = ()) // Found
+            {
+                Object [] aRow = new Object [13];
+                aRow [0] = pTurista.isAttiva ();
+                aRow [1] = pTurista.getNome ();
+                aRow [2] = pTurista.getCognome ();
+                aRow [3] = pTurista.getEmail ();
+                aRow [4] = pTurista.getTelefono ();
+                aRow [5] = pTurista.getDataNascita ();
+                aRow [6] = pTurista.getCittaNascita ();
+                aRow [7] = pTurista.getVia ();
+                aRow [8] = pTurista.getCittaResidenza ();
+                aRow [9] = pTurista.getCap ();
+                aRow [10] = pTurista.getProvincia ();
+                aRow [11] = pTurista.getDataRegistrazione ();
+                aRow [12] = pTurista.getId ();
+                data.set (i, aRow);
+                fireTableDataChanged ();
+            }
 
     }
 

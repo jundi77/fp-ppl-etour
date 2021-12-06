@@ -63,18 +63,18 @@ public class DBVisitaBC implements IDBVisitaBC
                                         // FinteVisite.add (new BeanVisitaBC (2, 1, "sucks", 19, new Date (107, 5, 24)));
                                         // FinteVisite.add (new BeanVisitaBC (5, 1, "Too beautiful", 20, new Date (107, 5, 25)));
 
-                                        finteVisite return;
-                                        }
+                        finteVisite return;
+    }
 
-                                        <BeanVisitaBC> ottieniListaVisitaBCTurista public ArrayList (int pIdTurista)
-                                        throws SQLException
-                                        {
-                                        return null;
-                                        }
+    <BeanVisitaBC> ottieniListaVisitaBCTurista public ArrayList (int pIdTurista)
+            throws SQLException
+    {
+        return null;
+    }
 
-                                        public BeanVisitaBC ottieniVisitaBC (pIdBeneCulturale int, int pIdTurista)
-                                        throws SQLException
-                                        {
-                                        return null;
-                                        }
-                                        }
+    public BeanVisitaBC ottieniVisitaBC (pIdBeneCulturale int, int pIdTurista)
+            throws SQLException
+    {
+        return null;
+    }
+}

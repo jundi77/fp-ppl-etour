@@ -166,7 +166,7 @@ public class GestioneTuristiAgenzia extends GestioneTuristaComune implements
         // Check the validity of data
         if (pIdTurista <0)
             throw new RemoteException (MessaggiErrore.ERRORE_DATI);
-        BeanTurista toChange / / bean that contains the data from the tourist
+        BeanTurista toChange // bean that contains the data from the tourist
             // Disable
             // Retrieve and edit data required
             try
@@ -278,7 +278,7 @@ public class GestioneTuristiAgenzia extends GestioneTuristaComune implements
         // Check the validity of data
         if (pIdTurista <0)
             throw new RemoteException (MessaggiErrore.ERRORE_DATI);
-        ArrayList <BeanVisitaPR> toReturn / / variable return
+        ArrayList <BeanVisitaPR> toReturn // variable return
             try
                 {
                     // Insert the result in toReturn

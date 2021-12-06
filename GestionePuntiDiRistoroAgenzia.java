@@ -11,10 +11,10 @@ import unisa.gps.etour.bean.BeanTag;
 import unisa.gps.etour.bean.BeanTurista;
 import unisa.gps.etour.bean.BeanVisitaPR;
 /*
-* TEST CASE import
-* Unisa.gps.etour.control.GestionePuntiDiRistoro.test.stub.DBConvenzione;
-* Import unisa.gps.etour.control.GestionePuntiDiRistoro.test.stub.DBTurista;
-*/
+ * TEST CASE import
+ * Unisa.gps.etour.control.GestionePuntiDiRistoro.test.stub.DBConvenzione;
+ * Import unisa.gps.etour.control.GestionePuntiDiRistoro.test.stub.DBTurista;
+ */
 import unisa.gps.etour.repository.DBConvenzione;
 import unisa.gps.etour.repository.DBTurista;
 import unisa.gps.etour.repository.IDBConvenzione;

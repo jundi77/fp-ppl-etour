@@ -14,41 +14,41 @@ public class Category implements Serializable
      * Provides methods to access, modify and auxiliary methods.
      */
     private static final long serialVersionUID =-8652232946927756089L;
-    private String name; / / name of the category
-    private Hashtable <string, float[]> terms, / / list of terms and their frequencies and distance rilavanza
+    private String name; // name of the category
+    private Hashtable <string, float[]> terms, // list of terms and their frequencies and distance rilavanza
 
-        /*
-        * Manufacturer:
-        * Get the category name as a parameter to create
-        */
-        public Category (String Pnom)
+    /*
+     * Manufacturer:
+     * Get the category name as a parameter to create
+     */
+    public Category (String Pnom)
     {
         name = Pnom;
         terms <String,float[]> = new Hashtable ();
     }
 
     /*
-    * Returns the output Hashtable containing the terms
-    * With the respective values of frequency, relevance and distance
-        */
-        <string, float[]> getTermini public Hashtable ()
+     * Returns the output Hashtable containing the terms
+     * With the respective values of frequency, relevance and distance
+     */
+    <string, float[]> getTermini public Hashtable ()
     {
         return terms;
     }
 
     /*
-    * Returns the name of the output category
-    */
+     * Returns the name of the output category
+     */
     public String getName ()
     {
         return name;
     }
 
     /*
-    * Get the string as a parameter representing the term
-    * Of which you want to pick the values of frequency, range and bearing
-        */
-        public float [] getval (pTermine String) throws NullPointerException
+     * Get the string as a parameter representing the term
+     * Of which you want to pick the values of frequency, range and bearing
+     */
+    public float [] getval (pTermine String) throws NullPointerException
     {
         if (esisteTermine (pTermine))
             return termini.get (pTermine);
@@ -57,18 +57,18 @@ public class Category implements Serializable
     }
 
     /*
-    * Agiunge an end to dizinario category
-    */
+     * Agiunge an end to dizinario category
+     */
     public void addTermine (String pTermine)
     {
         termini.put (pTermine, new float [3]);
     }
 
     /*
-    * Agiunge an end to dizinario category
-    * Seven also the values of frequency, distance and rilavanza
-        */
-        public boolean addTermine (String pTermine, float [] pVal)
+     * Agiunge an end to dizinario category
+     * Seven also the values of frequency, distance and rilavanza
+     */
+    public boolean addTermine (String pTermine, float [] pVal)
     {
         if ((pVal == null) | | (pTermine.equals ("")))
             return false;
@@ -78,8 +78,8 @@ public class Category implements Serializable
     }
 
     /*
-    * Set the values for the period pTermine
-    */
+     * Set the values for the period pTermine
+     */
     public boolean setValTermine (String pTermine, float [] pVal)
             throws NullPointerException
     {
@@ -99,9 +99,9 @@ public class Category implements Serializable
     }
 
     /*
-    * Returns True if the term is present in
-    * Dictionary of Category False otherwise
-    */
+     * Returns True if the term is present in
+     * Dictionary of Category False otherwise
+     */
     public boolean esisteTermine (String pTermine)
     {
         try

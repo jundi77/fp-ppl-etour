@@ -241,25 +241,25 @@ import java.awt.Rectangle;
                 if (JScrollPane == null) {
                     if (TablePr == null) {
                         /*
-                            * @ Param pId
-                            * @ Param pNumeroVoti
-                            * @ Param Pnom
-                            * @ Param pCitta
-                            * @ Param pTelefono
-                            * @ Param pDescrizione
-                            * @ Param pLocalita
-                            * @ Param pVia
-                            * @ Param pcap
-                            * @ Param pProvincia
-                            * @ Param pPosizione
-                            * @ Param pOrarioApertura
-                            * @ Param pOrarioChiusura
-                            * @ Param pGiornoChiusura
-                            * @ Param pCostoBiglietto
-                            * @ Param pMediaVoti
-                            */
+                         * @ Param pId
+                         * @ Param pNumeroVoti
+                         * @ Param Pnom
+                         * @ Param pCitta
+                         * @ Param pTelefono
+                         * @ Param pDescrizione
+                         * @ Param pLocalita
+                         * @ Param pVia
+                         * @ Param pcap
+                         * @ Param pProvincia
+                         * @ Param pPosizione
+                         * @ Param pOrarioApertura
+                         * @ Param pOrarioChiusura
+                         * @ Param pGiornoChiusura
+                         * @ Param pCostoBiglietto
+                         * @ Param pMediaVoti
+                         */
 
-                            BeanPuntoDiRistoro [] test = new BeanPuntoDiRistoro [30];
+                        BeanPuntoDiRistoro [] test = new BeanPuntoDiRistoro [30];
                         for (int i = 0; i <30; i + +) {
                             test [i] = new BeanPuntoDiRistoro (1, 12, 3.5,
                                     "Arturo", "Near the sea, great view, romantic and Miao,
@@ -538,4 +538,4 @@ import java.awt.Rectangle;
 
 
 
-                            ) / / @ JVE: decl-index = 0: visual-constraint = "10.10"
+                            ) // @ JVE: decl-index = 0: visual-constraint = "10.10"

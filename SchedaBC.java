@@ -147,10 +147,10 @@ public class SchedaBC extends JInternalFrame implements IScheda
         addInternalFrameListener (new InternalFrameAdapter ()
             {
                 /*
-                * Inclusion of the frame on the desktop desktop retrieves bread bread
-                * And desktop manager and initializes the remote objects for managing
-                * Cultural heritage.
-                */
+                 * Inclusion of the frame on the desktop desktop retrieves bread bread
+                 * And desktop manager and initializes the remote objects for managing
+                 * Cultural heritage.
+                 */
 
                 public void internalFrameOpened (InternalFrameEvent pEvent)
                 {
@@ -164,281 +164,281 @@ public class SchedaBC extends JInternalFrame implements IScheda
                                 (IGestioneTagComune) reg.lookup (GestioneTagComune ");
                                         gestioneBC =
                                             (IGestioneBeniCulturaliAgenzia) reg.lookup (GestioneBeniCulturaliAgenzia ");
-                            // Load data.
-                            caricaTags ();
-                        }
-                            /*
-                            * Two exceptions: RemoteException and NotBoundException. The
-                            * Result is the same. The management is not operable and
-                            * After the error message window closes.
-                            */
-                            catch (Exception ex)
-                                {
-                                    JLabel error = new JLabel (
-                                            "<html> <h2> Unable to communicate with the server eTour. </ h2>"
-                                            + "<h3> <u> Card for entering a new cultural asset will be closed. </ U> </ h3>"
-                                            + "<p> <b> Possible Causes: </ b>"
-                                            + "<ul> <li> No connection to the network. </ Li>"
-                                            + "Server <li> inactive. </ Li>"
-                                            + "Server <li> clogged. </ Li> </ ul>"
-                                            + "<p> Please try again later. </ P>"
-                                            + "<p> If the error persists, please contact technical support. </ P>"
-                                            + "<p> We apologize for the inconvenience. </ Html>");
-                                    Err = new ImageIcon ImageIcon (getClass (). GetResource (
+                                                    // Load data.
+                                                    caricaTags ();
+                                                    }
+                                                    /*
+                                            * Two exceptions: RemoteException and NotBoundException. The
+                                            * Result is the same. The management is not operable and
+                                            * After the error message window closes.
+                                                    */
+                    catch (Exception ex)
+                        {
+                                                    JLabel error = new JLabel (
+                                                    "<html> <h2> Unable to communicate with the server eTour. </ h2>"
+                                                    + "<h3> <u> Card for entering a new cultural asset will be closed. </ U> </ h3>"
+                                                    + "<p> <b> Possible Causes: </ b>"
+                                                    + "<ul> <li> No connection to the network. </ Li>"
+                                                    + "Server <li> inactive. </ Li>"
+                                                    + "Server <li> clogged. </ Li> </ ul>"
+                                                    + "<p> Please try again later. </ P>"
+                                                    + "<p> If the error persists, please contact technical support. </ P>"
+                                                    + "<p> We apologize for the inconvenience. </ Html>");
+                                                    Err = new ImageIcon ImageIcon (getClass (). GetResource (
                                                     Home.URL_IMAGES + "error48.png"));
-                                    JOptionPane.showMessageDialog (frame, error,
-                                            "Error!" JOptionPane.ERROR_MESSAGE, err);
-                                    frame.dispose ();
-                                }
-                }
+                                                    JOptionPane.showMessageDialog (frame, error,
+                                                    "Error!" JOptionPane.ERROR_MESSAGE, err);
+                                                    frame.dispose ();
+                                                    }
+                                                    }
 
-                public void internalFrameClosing (InternalFrameEvent pEvent)
-                {
-                    Root = new JPanel JPanel (new BorderLayout ());
-                    JLabel message = new JLabel (
-                            "Are you sure you want to cancel the creation of a new cultural asset?");
-                    message.setFont (new Font ( "Dialog", Font.BOLD, 14));
-                    JLabel alert = new JLabel (
-                            "Warning! Unsaved data will be lost." SwingConstants.CENTER);
-                    avviso.setIcon (new ImageIcon (getClass (). getResource (
-                                            Home.URL_IMAGES + "warning16.png ")));
-                    root.add (message, BorderLayout.NORTH);
-                    root.add (notice, BorderLayout.CENTER);
-                    String [] options = ( "Close", "Cancel");
-                    int choice = JOptionPane.showInternalOptionDialog (jContentPane, root,
-                            "Confirm closure",
-                            JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, frameIcon, options, options [1]);
-                    if (choice == JOptionPane.OK_OPTION)
-                        {
-                            parent.closeScheda ((SchedaBC) pEvent.getInternalFrame ());
-                        }
-                }
-                ));
-
-        // Initialize button
-        btnModifica.setVisible (false);
-        btnSalva.setVisible (true);
-        btnAnnulla.setVisible (true);
-        btnAnnulla.setText ( "Clear");
-
-
-    }
-
-    /**
-     * This interface models the manufacturer regarding modification of data and
-     * Display of the tab of a cultural object.
-     *
-     * @ Param BeanBeneCulturale pbc - the bean contains the data of
-     * Selected cultural.
-     * @ Param boolean pModifica <ul> <li> true - the fields will be editable, and then you are
-     * To amend the data of a cultural object. <li> False - the fields will not be
-     * Edit, and then you are viewing the tab of a cultural object. </ Ul>
-     *
-     */
-    public SchedaBC (Beniculturali pParent, BeanBeneCulturale PBC, boolean pModifica)
-    {
-        super ();
-        frameIcon = new ImageIcon (getClass (). getResource (
-                        Home.URL_IMAGES + "scheda.png"));
-        closable = true;
-        resizable = false;
-        iconable = true;
-        setSize (600, 560);
-        setDefaultCloseOperation (WindowConstants.DO_NOTHING_ON_CLOSE);
-
-        // Initialize instance variables
-        bc = pbc;
-        this.parent = pParent;
-        suggestions <JLabel> = new Vector ();
-        initializeSchedaBC ();
-
-        if (pModifica) / / Are we change the cultural property.
-            {
-                btnModifica.setSelected (true);
-                btnSalva.setVisible (true);
-                btnAnnulla.setVisible (true);
-                btnAnnulla.setText ( "Reset");
-            }
-        else / / We're viewing the tab of a cultural object.
-                     {
-                         mostraNascondiSuggerimenti ();
-                         attivaDisattivaEdit ();
-                     }
-
-    }
-
-    /**
-     * This method returns the id of the cultural property for which you are viewing the
-     * Contact or changing data.
-     *
-     * @ Return int - the id of the cultural property.
-     *
-     */
-    public int getId ()
-    {
-        if (bc == null)
-            {
-                return -1;
-            }
-        bc.getId return ();
-    }
-
-    /**
-     *
-     * This method initializes the interface for display board
-     * A cultural object.
-     *
-     * @ Return void
-     */
-    private void initializeSchedaBC ()
-    {
-        setTitle (bc.getNome ());
-
-        // Dialog closed frame
-        addInternalFrameListener (new InternalFrameAdapter ()
-            {
-                /*
-                * Inclusion of the frame on the desktop desktop retrieves bread bread
-                * And desktop manager and initializes the remote objects for managing
-                * Cultural heritage.
-                */
-
-                public void internalFrameOpened (InternalFrameEvent pEvent)
-                {
-                    PEvent.getInternalFrame JInternalFrame frame = ();
-
-                    // Setting up of remote objects for the management of cultural heritage.
-                    try
-                        {
-                            Registry reg = LocateRegistry.getRegistry (Home.HOST);
-                            tag =
-                                (IGestioneTagComune) reg.lookup (GestioneTagComune ");
-                                        gestioneBC =
-                                            (IGestioneBeniCulturaliAgenzia) reg.lookup (GestioneBeniCulturaliAgenzia ");
-                            // Load data.
-                            caricaTags ();
-                            caricaStatistiche ();
-                        }
-                            /*
-                            * Two exceptions: RemoteException and NotBoundException. The
-                            * Result is the same. The management is not operable and
-                            * After the error message window closes.
-                            */
-                            catch (Exception ex)
-                                {
-                                    JLabel error = new JLabel (
-                                            "<html> <h2> Unable to communicate with the server eTour. </ h2>"
-                                            + "<h3> <u> The board of the cultural inquiry will be closed. </ U> </ h3>"
-                                            + "<p> <b> Possible Causes: </ b>"
-                                            + "<ul> <li> No connection to the network. </ Li>"
-                                            + "Server <li> inactive. </ Li>"
-                                            + "Server <li> clogged. </ Li> </ ul>"
-                                            + "<p> Please try again later. </ P>"
-                                            + "<p> If the error persists, please contact technical support. </ P>"
-                                            + "<p> We apologize for the inconvenience. </ Html>");
-                                    Err = new ImageIcon ImageIcon (getClass (). GetResource (
-                                                    Home.URL_IMAGES + "error48.png"));
-                                    JOptionPane.showMessageDialog (frame, error,
-                                            "Error!" JOptionPane.ERROR_MESSAGE, err);
-                                    frame.dispose ();
-                                }
-                }
-
-                public void internalFrameClosing (InternalFrameEvent pEvent)
-                {
-                    // If you are an amendment asks for confirmation.
-                    if (btnModifica.isSelected ())
-                        {
-                            Root = new JPanel JPanel (new BorderLayout ());
-                            JLabel message = new JLabel (
-                                    "Are you sure you want to close the tab of this cultural asset?");
-                            message.setFont (new Font ( "Dialog", Font.BOLD, 14));
-                            JLabel alert = new JLabel (
-                                    "Warning! Unsaved data will be lost." SwingConstants.CENTER);
-                            avviso.setIcon (new ImageIcon (getClass (). getResource (
+                                                    public void internalFrameClosing (InternalFrameEvent pEvent)
+                                                    {
+                                                    Root = new JPanel JPanel (new BorderLayout ());
+                                                    JLabel message = new JLabel (
+                                                    "Are you sure you want to cancel the creation of a new cultural asset?");
+                                                    message.setFont (new Font ( "Dialog", Font.BOLD, 14));
+                                                    JLabel alert = new JLabel (
+                                                    "Warning! Unsaved data will be lost." SwingConstants.CENTER);
+                                                    avviso.setIcon (new ImageIcon (getClass (). getResource (
                                                     Home.URL_IMAGES + "warning16.png ")));
-                            root.add (message, BorderLayout.NORTH);
-                            root.add (notice, BorderLayout.CENTER);
-                            String [] options = ( "Close", "Cancel");
-                            int choice = JOptionPane.showInternalOptionDialog (jContentPane, root,
-                                    "Confirm closing tab Cultural Heritage" bc.getNome + (),
-                                    JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, frameIcon, options, options [1]);
-                            if (choice == JOptionPane.OK_OPTION)
-                                {
-                                    parent.closeScheda ((SchedaBC) pEvent.getInternalFrame ());
-                                }
-                        }
-                    // Otherwise directly closes the window.
-                    else
-                        {
-                            parent.closeScheda ((SchedaBC) pEvent.getInternalFrame ());
-                        }
-                }
-                ));
+                                                    root.add (message, BorderLayout.NORTH);
+                                                    root.add (notice, BorderLayout.CENTER);
+                                                    String [] options = ( "Close", "Cancel");
+                                                    int choice = JOptionPane.showInternalOptionDialog (jContentPane, root,
+                                                    "Confirm closure",
+                                                    JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, frameIcon, options, options [1]);
+                                                    if (choice == JOptionPane.OK_OPTION)
+                                                        {
+                                                    parent.closeScheda ((SchedaBC) pEvent.getInternalFrame ());
+                                                    }
+                                                    }
+                                                                                        ));
 
-        // Initialize the content pane.
-        jContentPane = new JPanel ();
-        jContentPane.setLayout (new BorderLayout ());
-        jContentPane.add (getToolbarSchedaBC (), BorderLayout.CENTER);
-        JTabbedPane = new JTabbedPane ();
-        jTabbedPane.addTab ( "Data Cultural Heritage"
-                new ImageIcon (getClass (). getResource (
-                                Home.URL_IMAGES + "dati.png")),
-                getDatiBCForm (), null);
-        New = new JScrollPane JScrollPane (getStatistiche ());
-        nuovo.setVerticalScrollBarPolicy (JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        jTabbedPane.addTab ( "Statistics"
-                new ImageIcon (getClass (). getResource (
-                                Home.URL_IMAGES + "stat24.png")), new, null);
-        jTabbedPane.addTab ( "Feedback received"
-                new ImageIcon (getClass (). getResource (
-                                Home.URL_IMAGES + "feedback.png")),
-                getFeedback (), null);
-        jContentPane.add (JTabbedPane, BorderLayout.CENTER);
-        setContentPane (jContentPane);
-        jTabbedPane.addChangeListener (new ChangeListener ()
-            {
+                                                    // Initialize button
+                                                    btnModifica.setVisible (false);
+                                                    btnSalva.setVisible (true);
+                                                    btnAnnulla.setVisible (true);
+                                                    btnAnnulla.setText ( "Clear");
 
-                public void stateChanged (ChangeEvent pChange)
-                {
-                    // Data cultural
-                    if (jTabbedPane.getSelectedIndex () == 0)
-                        {
-                            toolbarSchedaBC.setVisible (true);
-                            btnModifica.setVisible (true);
-                            if (btnModifica.isSelected ())
-                                {
-                                    btnSalva.setVisible (true);
-                                    btnAnnulla.setVisible (true);
-                                }
-                            btnModificaCommento.setVisible (false);
-                        }
-                    // Statistics
-                    else if (jTabbedPane.getSelectedIndex () == 1)
-                        {
-                            toolbarSchedaBC.setVisible (false);
-                        }
-                    // Feedback received
-                    else
-                        {
-                            if (btnModifica.isSelected ())
-                                {
-                                    btnSalva.setVisible (false);
-                                    btnAnnulla.setVisible (false);
-                                }
-                            toolbarSchedaBC.setVisible (true);
-                            btnModificaCommento.setVisible (true);
-                            btnModifica.setVisible (false);
 
-                        }
+                                                    }
 
-                }
+                                                    /**
+                                                    * This interface models the manufacturer regarding modification of data and
+                                                    * Display of the tab of a cultural object.
+                                                    *
+                                                    * @ Param BeanBeneCulturale pbc - the bean contains the data of
+                                                    * Selected cultural.
+                                                    * @ Param boolean pModifica <ul> <li> true - the fields will be editable, and then you are
+                                                    * To amend the data of a cultural object. <li> False - the fields will not be
+                                                    * Edit, and then you are viewing the tab of a cultural object. </ Ul>
+                                                    *
+                                                    */
+                                                    public SchedaBC (Beniculturali pParent, BeanBeneCulturale PBC, boolean pModifica)
+                                                    {
+                                                    super ();
+                                                    frameIcon = new ImageIcon (getClass (). getResource (
+                                                    Home.URL_IMAGES + "scheda.png"));
+                                                    closable = true;
+                                                    resizable = false;
+                                                    iconable = true;
+                                                    setSize (600, 560);
+                                                    setDefaultCloseOperation (WindowConstants.DO_NOTHING_ON_CLOSE);
 
-                ));
+                                                    // Initialize instance variables
+                                                    bc = pbc;
+                                                    this.parent = pParent;
+                                                    suggestions <JLabel> = new Vector ();
+                                                    initializeSchedaBC ();
 
-        // Load the data of the cultural and statistics.
-        caricaDatiForm ();
-    }
+                                                    if (pModifica) // Are we change the cultural property.
+                                                        {
+                                                    btnModifica.setSelected (true);
+                                                    btnSalva.setVisible (true);
+                                                    btnAnnulla.setVisible (true);
+                                                    btnAnnulla.setText ( "Reset");
+                                                    }
+                                                    else // We're viewing the tab of a cultural object.
+                                                        {
+                                                    mostraNascondiSuggerimenti ();
+                                                    attivaDisattivaEdit ();
+                                                    }
+
+                                                    }
+
+                                                    /**
+                                                    * This method returns the id of the cultural property for which you are viewing the
+                                                    * Contact or changing data.
+                                                    *
+                                                    * @ Return int - the id of the cultural property.
+                                                    *
+                                                    */
+                                                    public int getId ()
+                                                    {
+                                                    if (bc == null)
+                                                        {
+                                                    return -1;
+                                                    }
+                                                    bc.getId return ();
+                                                    }
+
+                                                    /**
+                                                    *
+                                                    * This method initializes the interface for display board
+                                                    * A cultural object.
+                                                    *
+                                                    * @ Return void
+                                                    */
+                                                    private void initializeSchedaBC ()
+                                                    {
+                                                    setTitle (bc.getNome ());
+
+                                                    // Dialog closed frame
+                                                    addInternalFrameListener (new InternalFrameAdapter ()
+                                                        {
+                                                    /*
+                                                    * Inclusion of the frame on the desktop desktop retrieves bread bread
+                                                    * And desktop manager and initializes the remote objects for managing
+                                                    * Cultural heritage.
+                                                    */
+
+                                                    public void internalFrameOpened (InternalFrameEvent pEvent)
+                                                    {
+                                                    PEvent.getInternalFrame JInternalFrame frame = ();
+
+                                                    // Setting up of remote objects for the management of cultural heritage.
+                                                    try
+                                                        {
+                                                    Registry reg = LocateRegistry.getRegistry (Home.HOST);
+                                                    tag =
+                                                    (IGestioneTagComune) reg.lookup (GestioneTagComune ");
+                                                    gestioneBC =
+                                                            (IGestioneBeniCulturaliAgenzia) reg.lookup (GestioneBeniCulturaliAgenzia ");
+                                                    // Load data.
+                                                    caricaTags ();
+                                                    caricaStatistiche ();
+                                                        }
+                                                    /*
+                                                     * Two exceptions: RemoteException and NotBoundException. The
+                                                     * Result is the same. The management is not operable and
+                                                     * After the error message window closes.
+                                                     */
+                                                    catch (Exception ex)
+                                                        {
+                                                            JLabel error = new JLabel (
+                                                                    "<html> <h2> Unable to communicate with the server eTour. </ h2>"
+                                                                    + "<h3> <u> The board of the cultural inquiry will be closed. </ U> </ h3>"
+                                                                    + "<p> <b> Possible Causes: </ b>"
+                                                                    + "<ul> <li> No connection to the network. </ Li>"
+                                                                    + "Server <li> inactive. </ Li>"
+                                                                    + "Server <li> clogged. </ Li> </ ul>"
+                                                                    + "<p> Please try again later. </ P>"
+                                                                    + "<p> If the error persists, please contact technical support. </ P>"
+                                                                    + "<p> We apologize for the inconvenience. </ Html>");
+                                                            Err = new ImageIcon ImageIcon (getClass (). GetResource (
+                                                                            Home.URL_IMAGES + "error48.png"));
+                                                            JOptionPane.showMessageDialog (frame, error,
+                                                                    "Error!" JOptionPane.ERROR_MESSAGE, err);
+                                                            frame.dispose ();
+                                                        }
+                                                    }
+
+                                                            public void internalFrameClosing (InternalFrameEvent pEvent)
+                                                            {
+                                                                // If you are an amendment asks for confirmation.
+                                                                if (btnModifica.isSelected ())
+                                                                    {
+                                                                        Root = new JPanel JPanel (new BorderLayout ());
+                                                                        JLabel message = new JLabel (
+                                                                                "Are you sure you want to close the tab of this cultural asset?");
+                                                                        message.setFont (new Font ( "Dialog", Font.BOLD, 14));
+                                                                        JLabel alert = new JLabel (
+                                                                                "Warning! Unsaved data will be lost." SwingConstants.CENTER);
+                                                                        avviso.setIcon (new ImageIcon (getClass (). getResource (
+                                                                                                Home.URL_IMAGES + "warning16.png ")));
+                                                                        root.add (message, BorderLayout.NORTH);
+                                                                        root.add (notice, BorderLayout.CENTER);
+                                                                        String [] options = ( "Close", "Cancel");
+                                                                        int choice = JOptionPane.showInternalOptionDialog (jContentPane, root,
+                                                                                "Confirm closing tab Cultural Heritage" bc.getNome + (),
+                                                                                JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, frameIcon, options, options [1]);
+                                                                        if (choice == JOptionPane.OK_OPTION)
+                                                                            {
+                                                                                parent.closeScheda ((SchedaBC) pEvent.getInternalFrame ());
+                                                                            }
+                                                                    }
+                                                                // Otherwise directly closes the window.
+                                                                else
+                                                                    {
+                                                                        parent.closeScheda ((SchedaBC) pEvent.getInternalFrame ());
+                                                                    }
+                                                            }
+                                                            ));
+
+                                                    // Initialize the content pane.
+                                                    jContentPane = new JPanel ();
+                                                    jContentPane.setLayout (new BorderLayout ());
+                                                    jContentPane.add (getToolbarSchedaBC (), BorderLayout.CENTER);
+                                                    JTabbedPane = new JTabbedPane ();
+                                                    jTabbedPane.addTab ( "Data Cultural Heritage"
+                                                            new ImageIcon (getClass (). getResource (
+                                                                            Home.URL_IMAGES + "dati.png")),
+                                                            getDatiBCForm (), null);
+                                                    New = new JScrollPane JScrollPane (getStatistiche ());
+                                                    nuovo.setVerticalScrollBarPolicy (JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+                                                    jTabbedPane.addTab ( "Statistics"
+                                                            new ImageIcon (getClass (). getResource (
+                                                                            Home.URL_IMAGES + "stat24.png")), new, null);
+                                                    jTabbedPane.addTab ( "Feedback received"
+                                                            new ImageIcon (getClass (). getResource (
+                                                                            Home.URL_IMAGES + "feedback.png")),
+                                                            getFeedback (), null);
+                                                    jContentPane.add (JTabbedPane, BorderLayout.CENTER);
+                                                    setContentPane (jContentPane);
+                                                    jTabbedPane.addChangeListener (new ChangeListener ()
+                                                        {
+
+                                                            public void stateChanged (ChangeEvent pChange)
+                                                            {
+                                                                // Data cultural
+                                                                if (jTabbedPane.getSelectedIndex () == 0)
+                                                                    {
+                                                                        toolbarSchedaBC.setVisible (true);
+                                                                        btnModifica.setVisible (true);
+                                                                        if (btnModifica.isSelected ())
+                                                                            {
+                                                                                btnSalva.setVisible (true);
+                                                                                btnAnnulla.setVisible (true);
+                                                                            }
+                                                                        btnModificaCommento.setVisible (false);
+                                                                    }
+                                                                // Statistics
+                                                                else if (jTabbedPane.getSelectedIndex () == 1)
+                                                                    {
+                                                                        toolbarSchedaBC.setVisible (false);
+                                                                    }
+                                                                // Feedback received
+                                                                else
+                                                                    {
+                                                                        if (btnModifica.isSelected ())
+                                                                            {
+                                                                                btnSalva.setVisible (false);
+                                                                                btnAnnulla.setVisible (false);
+                                                                            }
+                                                                        toolbarSchedaBC.setVisible (true);
+                                                                        btnModificaCommento.setVisible (true);
+                                                                        btnModifica.setVisible (false);
+
+                                                                    }
+
+                                                            }
+
+                                                            ));
+
+                                                    // Load the data of the cultural and statistics.
+                                                    caricaDatiForm ();
+                                                    }
 
     /**
      *

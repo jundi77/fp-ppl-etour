@@ -35,8 +35,8 @@ public class TestCase extends TestoNewsRendererTest
     }
 
     /*
-    * Verify the behavior of the method with the correct parameters.
-    */
+     * Verify the behavior of the method with the correct parameters.
+     */
     public void testGetTableCellRendererParametriCorretti ()
     {
         NewsTableModel aModele = (NewsTableModel) aTable.getModel ();
@@ -56,9 +56,9 @@ public class TestCase extends TestoNewsRendererTest
     }
 
     /*
-    * Verification Compor the table with a table without NewsTableModel
-    * Associated.
-    */
+     * Verification Compor the table with a table without NewsTableModel
+     * Associated.
+     */
     public void testGetTabelCellRendererNoNewsModel ()
     {
 
@@ -75,8 +75,8 @@ public class TestCase extends TestoNewsRendererTest
     }
 
     /*
-    * Verify the behavior of the method with a parameter to null.
-    */
+     * Verify the behavior of the method with a parameter to null.
+     */
     public void testGetTableCellRendererParametroNull ()
     {
         try
@@ -91,8 +91,8 @@ public class TestCase extends TestoNewsRendererTest
     }
 
     /*
-    * Verify the behavior of the method with a data type unexpected.
-    */
+     * Verify the behavior of the method with a data type unexpected.
+     */
     public void testGetTableCellRendererTipoInatteso ()
     {
         try

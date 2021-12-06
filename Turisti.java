@@ -1,13 +1,13 @@
 	
 /*
-* Tourists.java
-*
-* 1.0
-*
-* 26/05/2007
-*
-* � 2007 eTour Project - Copyright by SE @ SA Lab - DMI - University of Salerno
-*/
+ * Tourists.java
+ *
+ * 1.0
+ *
+ * 26/05/2007
+ *
+ * � 2007 eTour Project - Copyright by SE @ SA Lab - DMI - University of Salerno
+ */
 package unisa.gps.etour.gui.operatoreagenzia;
 
 import java.awt.BorderLayout;
@@ -231,7 +231,7 @@ public class JInternalFrame extends Tourists
                                 {
                                     datiTurista.add (new JLabel (fields [i]), g);
                                     g.gridx + +;
-                                    if (i == 2) / / Date of Birth
+                                    if (i == 2) // Date of Birth
                                         {
                                             Date dob = (Date) tableModel.getValueAt (
                                                     selected, 5);
@@ -260,7 +260,7 @@ public class JInternalFrame extends Tourists
                             String title;
                             boolean enabled = (Boolean) tableModel.getValueAt (
                                     selected, 0);
-                            if (enabled) / / The process of decommissioning
+                            if (enabled) // The process of decommissioning
                                 {
                                     title = "Turn off the tourist"
                                         + TableModel.getValueAt (selected, 1) + ""
@@ -273,7 +273,7 @@ public class JInternalFrame extends Tourists
                                             . getResource (
                                                     "/ unisa/gps/etour/gui/operatoreagenzia/images/DisattivaTurista48.png"));
                                 }
-                            else / / The process of activation
+                            else // The process of activation
                                 {
                                     title = "Turn on the tourist"
                                         + TableModel.getValueAt (selected, 1) + ""

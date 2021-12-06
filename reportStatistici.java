@@ -459,34 +459,34 @@ import java.util.Vector;
                         jLabel20.setText ( "35");
                         jLabel19 = new JLabel ();
                         jLabel19.setText ( "Feedback" link under the sufficiency: ");
-                        GridBagConstraints gridBagConstraints24 = new GridBagConstraints ();
-                        gridBagConstraints24.gridx = 2;
-                        gridBagConstraints24.insets = new Insets (5, 5, 5, 5);
-                        gridBagConstraints24.anchor = GridBagConstraints.EAST;
-                        gridBagConstraints24.gridy = 0;
-                        jLabel18 = new JLabel ();
-                        jLabel18.setText ( "Feedback enough:");
-                        GridBagConstraints gridBagConstraints23 = new GridBagConstraints ();
-                        gridBagConstraints23.gridx = 0;
-                        gridBagConstraints23.gridwidth = 1;
-                        gridBagConstraints23.insets = new Insets (5, 5, 5, 5);
-                        gridBagConstraints23.gridy = 0;
-                        jLabel17 = new JLabel ();
-                        jLabel17.setText ( "Feedback received in full:");
-                        GridBagConstraints gridBagConstraints15 = new GridBagConstraints ();
-                        gridBagConstraints15.gridx = 0;
-                        gridBagConstraints15.gridwidth = 4;
-                        gridBagConstraints15.gridy = 4;
-                        evdStat = new JPanel ();
-                        evdStat.setLayout (new GridBagLayout ());
-                        evdStat.setEnabled (false);
-                        evdStat.add (getJPanel1 (), gridBagConstraints15);
-                        evdStat.add (jLabel17, gridBagConstraints23);
-                        evdStat.add (jLabel18, gridBagConstraints24);
-                        evdStat.add (jLabel20, gridBagConstraints26);
-                        evdStat.add (jLabel21, gridBagConstraints27);
-                        evdStat.add (jLabel22, gridBagConstraints28);
-                        evdStat.add (jLabel19, gridBagConstraints25);
+                                GridBagConstraints gridBagConstraints24 = new GridBagConstraints ();
+                                gridBagConstraints24.gridx = 2;
+                                gridBagConstraints24.insets = new Insets (5, 5, 5, 5);
+                                gridBagConstraints24.anchor = GridBagConstraints.EAST;
+                                gridBagConstraints24.gridy = 0;
+                                jLabel18 = new JLabel ();
+                                jLabel18.setText ( "Feedback enough:");
+                                GridBagConstraints gridBagConstraints23 = new GridBagConstraints ();
+                                gridBagConstraints23.gridx = 0;
+                                gridBagConstraints23.gridwidth = 1;
+                                gridBagConstraints23.insets = new Insets (5, 5, 5, 5);
+                                gridBagConstraints23.gridy = 0;
+                                jLabel17 = new JLabel ();
+                                jLabel17.setText ( "Feedback received in full:");
+                                GridBagConstraints gridBagConstraints15 = new GridBagConstraints ();
+                                gridBagConstraints15.gridx = 0;
+                                gridBagConstraints15.gridwidth = 4;
+                                gridBagConstraints15.gridy = 4;
+                                evdStat = new JPanel ();
+                                evdStat.setLayout (new GridBagLayout ());
+                                evdStat.setEnabled (false);
+                                evdStat.add (getJPanel1 (), gridBagConstraints15);
+                                evdStat.add (jLabel17, gridBagConstraints23);
+                                evdStat.add (jLabel18, gridBagConstraints24);
+                                evdStat.add (jLabel20, gridBagConstraints26);
+                                evdStat.add (jLabel21, gridBagConstraints27);
+                                evdStat.add (jLabel22, gridBagConstraints28);
+                                evdStat.add (jLabel19, gridBagConstraints25);
                     }
                 evdStat return;
             }
@@ -673,4 +673,4 @@ import java.util.Vector;
                 btnVisualizza return;
             }
 
-                            ) / / @ JVE: decl-index = 0: visual-constraint = "-7, -61" 
+                            ) // @ JVE: decl-index = 0: visual-constraint = "-7, -61" 

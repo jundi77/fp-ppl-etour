@@ -33,8 +33,8 @@ public class DBBanner implements IDBBanner
     }
 
     /* (Non-Javadoc)
-    * @ See unisa.gps.etour.repository.IDBBanner # inserisciBanner (unisa.gps.etour.bean.BeanBanner)
-    */
+     * @ See unisa.gps.etour.repository.IDBBanner # inserisciBanner (unisa.gps.etour.bean.BeanBanner)
+     */
     public boolean inserisciBanner (BeanBanner pBanner) throws SQLException
     {
         if (NUM_TEST == 1 | | NUM_TEST == 2)
@@ -47,16 +47,16 @@ public class DBBanner implements IDBBanner
     }
 
     /* (Non-Javadoc)
-    * @ See unisa.gps.etour.repository.IDBBanner # modificaBanner (unisa.gps.etour.bean.BeanBanner)
-    */
+     * @ See unisa.gps.etour.repository.IDBBanner # modificaBanner (unisa.gps.etour.bean.BeanBanner)
+     */
     public boolean modificaBanner (BeanBanner pBanner) throws SQLException
     {
         return true;
     }
 
     /* (Non-Javadoc)
-    * @ See unisa.gps.etour.repository.IDBBanner # ottieniBanner (int)
-    */
+     * @ See unisa.gps.etour.repository.IDBBanner # ottieniBanner (int)
+     */
     <BeanBanner> ottieniBanner public ArrayList (int pIdPuntoDiRistoro)
             throws SQLException
     {
@@ -65,7 +65,7 @@ public class DBBanner implements IDBBanner
         if (NUM_TEST == 1 | | NUM_TEST == 2)
             {
                 /* Must return an ArrayList with 3 elements */
-                    toReturn.add (new BeanBanner ());
+                toReturn.add (new BeanBanner ());
                 toReturn.add (new BeanBanner ());
                 toReturn.add (new BeanBanner ());
                 toReturn return;
@@ -84,8 +84,8 @@ public class DBBanner implements IDBBanner
     }
 
     /* (Non-Javadoc)
-    * @ See unisa.gps.etour.repository.IDBBanner # ottieniBannerDaID (int)
-    */
+     * @ See unisa.gps.etour.repository.IDBBanner # ottieniBannerDaID (int)
+     */
     public BeanBanner ottieniBannerDaID (int pIdBanner) throws SQLException
     {
         if (NUM_TEST == 7)
@@ -94,7 +94,7 @@ public class DBBanner implements IDBBanner
             }
         else
             {
-                return new BeanBanner (55, "c: / / ProvaBanner.jpg", 3);
+                return new BeanBanner (55, "c: // ProvaBanner.jpg", 3);
             }
     }
 

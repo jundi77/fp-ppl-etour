@@ -21,8 +21,8 @@ public class DBNews implements IDBNews
     private static int NUM_TEST = 0;
 
     /* (Non-Javadoc)
-    * @ See unisa.gps.etour.repository.IDBNews # cancellaNews (int)
-    */
+     * @ See unisa.gps.etour.repository.IDBNews # cancellaNews (int)
+     */
     public boolean cancellaNews (int pIdNews) throws SQLException
     {
         if (NUM_TEST == 1) {
@@ -34,8 +34,8 @@ public class DBNews implements IDBNews
     }
 
     /* (Non-Javadoc)
-    * @ See unisa.gps.etour.repository.IDBNews # inserisciNews (unisa.gps.etour.bean.BeanNews)
-    */
+     * @ See unisa.gps.etour.repository.IDBNews # inserisciNews (unisa.gps.etour.bean.BeanNews)
+     */
     public boolean inserisciNews (BeanNews Pnews) throws SQLException
     {
         if (NUM_TEST == 7) {
@@ -46,16 +46,16 @@ public class DBNews implements IDBNews
     }
 
     /* (Non-Javadoc)
-    * @ See unisa.gps.etour.repository.IDBNews # modificaNews (unisa.gps.etour.bean.BeanNews)
-    */
+     * @ See unisa.gps.etour.repository.IDBNews # modificaNews (unisa.gps.etour.bean.BeanNews)
+     */
     public boolean modificaNews (BeanNews Pnews) throws SQLException
     {
         return true;
     }
 
     /* (Non-Javadoc)
-    * @ See unisa.gps.etour.repository.IDBNews # ottieniNews ()
-    */
+     * @ See unisa.gps.etour.repository.IDBNews # ottieniNews ()
+     */
     <BeanNews> ottieniNews public ArrayList () throws SQLException
     {
         <BeanNews> ToReturn ArrayList <BeanNews> = new ArrayList ();

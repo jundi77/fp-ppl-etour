@@ -396,6 +396,6 @@ public class Tag extends JInternalFrame
         btnResetta return;
     }
 
-    ) / / @ JVE: decl-index = 0: visual-constraint = "10.10"
+    ) // @ JVE: decl-index = 0: visual-constraint = "10.10"
 
 

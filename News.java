@@ -92,10 +92,10 @@ public class News extends JInternalFrame
             {
 
                 /*
-                * Inclusion of the frame on the desktop desktop retrieves bread bread
-                * And desktop manager and initializes the remote objects
-                * Management of cultural heritage.
-                */
+                 * Inclusion of the frame on the desktop desktop retrieves bread bread
+                 * And desktop manager and initializes the remote objects
+                 * Management of cultural heritage.
+                 */
 
                 public void internalFrameOpened (InternalFrameEvent pEvent)
                 {
@@ -114,29 +114,29 @@ public class News extends JInternalFrame
                             // Load data.
                             caricaTabella ();
                         }
-                            /*
-                            * Two exceptions: RemoteException and NotBoundException. The
-                            * Result is the same. The management is not operable and
-                            * After the error message window closes.
-                            */
-                            catch (Exception ex)
-                                {
-                                    JLabel error = new JLabel (
-                                            "<html> <h2> Unable to communicate with the server eTour. </ h2>"
-                                            + "<h3> <u> The dialog management request is closed. </ U> </ h3>"
-                                            + "<p> <b> Possible Causes: </ b>"
-                                            + "<ul> <li> No connection to the network. </ Li>"
-                                            + "Server <li> inactive. </ Li>"
-                                            + "Server <li> clogged. </ Li> </ ul>"
-                                            + "<p> Please try again later. </ P>"
-                                            + "<p> If the error persists, please contact technical support. </ P>"
-                                            + "<p> We apologize for the inconvenience. </ Html>");
-                                    Err = new ImageIcon ImageIcon (getClass (). GetResource (
-                                                    Home.URL_IMAGES + "error48.png"));
-                                    JOptionPane.showMessageDialog (JDesktopPane, error,
-                                            "Error!" JOptionPane.ERROR_MESSAGE, err);
-                                    frame.dispose ();
-                                }
+                    /*
+                     * Two exceptions: RemoteException and NotBoundException. The
+                     * Result is the same. The management is not operable and
+                     * After the error message window closes.
+                     */
+                    catch (Exception ex)
+                        {
+                            JLabel error = new JLabel (
+                                    "<html> <h2> Unable to communicate with the server eTour. </ h2>"
+                                    + "<h3> <u> The dialog management request is closed. </ U> </ h3>"
+                                    + "<p> <b> Possible Causes: </ b>"
+                                    + "<ul> <li> No connection to the network. </ Li>"
+                                    + "Server <li> inactive. </ Li>"
+                                    + "Server <li> clogged. </ Li> </ ul>"
+                                    + "<p> Please try again later. </ P>"
+                                    + "<p> If the error persists, please contact technical support. </ P>"
+                                    + "<p> We apologize for the inconvenience. </ Html>");
+                            Err = new ImageIcon ImageIcon (getClass (). GetResource (
+                                            Home.URL_IMAGES + "error48.png"));
+                            JOptionPane.showMessageDialog (JDesktopPane, error,
+                                    "Error!" JOptionPane.ERROR_MESSAGE, err);
+                            frame.dispose ();
+                        }
                 }
                 ));
     }
@@ -193,53 +193,53 @@ public class News extends JInternalFrame
                 btnModificaN.setCursor (Cursor
                         . getPredefinedCursor (Cursor.HAND_CURSOR));
                 btnModificaN.setName (btnModifica ");
-                        btnModificaN.addMouseListener (newsHelp);
-                        btnModificaN.setEnabled (false);
-                        btnModificaN.addActionListener (new ActionListener ()
-                            {
-                                public void actionPerformed (ActionEvent pActionEvent)
+                btnModificaN.addMouseListener (newsHelp);
+                btnModificaN.setEnabled (false);
+                btnModificaN.addActionListener (new ActionListener ()
+                    {
+                        public void actionPerformed (ActionEvent pActionEvent)
+                        {
+                            int selectedRow = tableNews.getSelectedRow ();
+                            if (idNews == -1) // In this way I know if she was
+                                // Edit
                                 {
-                                    int selectedRow = tableNews.getSelectedRow ();
-                                    if (idNews == -1) / / In this way I know if she was
-                                                              // Edit
-                                                                                        {
-                                                                                            btnInsertModify.setText ( "Change");
-                                                                                            btnInsertModify.setIcon (new ImageIcon (getClass ()
-                                                                                                            . getResource (Home.URL_IMAGES + "Salva16.png ")));
-                                                                                            btnReset.setText ( "Cancel");
-                                                                                            btnReset.setIcon (new ImageIcon (getClass (). getResource (
-                                                                                                                    Home.URL_IMAGES + "Annulla16.png ")));
-                                                                                            formNews.setBorder (BorderFactory.createTitledBorder (
-                                                                                                            BorderFactory.createLineBorder (new Color (51,
-                                                                                                                            102, 255), 3), "Edit News"
-                                                                                                            TitledBorder.DEFAULT_JUSTIFICATION,
-                                                                                                            TitledBorder.DEFAULT_POSITION, new Font (
-                                                                                                                    "Dialog", Font.BOLD, 12), new Color (0,
-                                                                                                                            102, 204)));
-                                                                                        }
-                                    String text = (String) tableModel.getValueAt (selectedRow,
-                                            0);
-                                    numCaratteri int = 200 - testo.length () + 1;
-                                    labelCaratteri.setText ( "# Characters:" + numCaratteri);
-                                    Document testoNews.getDocument doctest = ();
-                                    try
-                                        {
-                                            docTesto.remove (0, docTesto.getLength ());
-                                            docTesto.insertString (0, text, null);
-                                        }
-                                    catch (BadLocationException s)
-                                        {
-                                            e.printStackTrace ();
-                                        }
-                                    Expiry date = (Date) TableModel
-                                        . getValueAt (selectedRow, 3);
-                                    durataNews.setSelectedIndex (Data.getNumDays (expires));
-                                    idNews = tableModel.getID (selectedRow);
-                                    prSlider.setValue ((Integer) tableModel.getValueAt (
-                                                    selectedRow, 1));
+                                    btnInsertModify.setText ( "Change");
+                                    btnInsertModify.setIcon (new ImageIcon (getClass ()
+                                                    . getResource (Home.URL_IMAGES + "Salva16.png ")));
+                                    btnReset.setText ( "Cancel");
+                                    btnReset.setIcon (new ImageIcon (getClass (). getResource (
+                                                            Home.URL_IMAGES + "Annulla16.png ")));
+                                    formNews.setBorder (BorderFactory.createTitledBorder (
+                                                    BorderFactory.createLineBorder (new Color (51,
+                                                                    102, 255), 3), "Edit News"
+                                                    TitledBorder.DEFAULT_JUSTIFICATION,
+                                                    TitledBorder.DEFAULT_POSITION, new Font (
+                                                            "Dialog", Font.BOLD, 12), new Color (0,
+                                                                    102, 204)));
                                 }
+                            String text = (String) tableModel.getValueAt (selectedRow,
+                                    0);
+                            numCaratteri int = 200 - testo.length () + 1;
+                            labelCaratteri.setText ( "# Characters:" + numCaratteri);
+                            Document testoNews.getDocument doctest = ();
+                            try
+                                {
+                                    docTesto.remove (0, docTesto.getLength ());
+                                    docTesto.insertString (0, text, null);
+                                }
+                            catch (BadLocationException s)
+                                {
+                                    e.printStackTrace ();
+                                }
+                            Expiry date = (Date) TableModel
+                                . getValueAt (selectedRow, 3);
+                            durataNews.setSelectedIndex (Data.getNumDays (expires));
+                            idNews = tableModel.getID (selectedRow);
+                            prSlider.setValue ((Integer) tableModel.getValueAt (
+                                            selectedRow, 1));
+                        }
 
-                                ));
+                        ));
             }
         btnModificaN return;
     }
@@ -489,79 +489,79 @@ public class News extends JInternalFrame
                                                             Home.URL_IMAGES + "error32.png ")));
                                     return;
                                 }
-                            if (idNews! = -1) / / We're making a change
-                                                      {
-                                                          // Construction of the dialog for confirmation of
-                                                          // Edit
-                                                          Root = new JPanel JPanel (new BorderLayout ());
-                                                          JLabel message = new JLabel (
-                                                                  "Changing the selected news with"
-                                                                  + "New data?");
-                                                          message.setFont (new Font ( "Dialog", Font.BOLD, 14));
-                                                          JLabel alert = new JLabel (
-                                                                  "The previous data can not be more recovered."
-                                                                  SwingConstants.CENTER);
-                                                          avviso.setIcon (new ImageIcon (getClass (). getResource (
-                                                                                  Home.URL_IMAGES + "warning16.png ")));
-                                                          root.add (message, BorderLayout.NORTH);
-                                                          root.add (notice, BorderLayout.CENTER);
-                                                          String [] options = ( "Edit", "Cancel");
-                                                          // The dialog screen appears
-                                                          int choice = JOptionPane
-                                                              . showInternalOptionDialog (
-                                                                      jContentPane,
-                                                                      root
-                                                                      "Confirmation Change News"
-                                                                      JOptionPane.YES_NO_OPTION,
-                                                                      JOptionPane.QUESTION_MESSAGE,
-                                                                      new ImageIcon (getClass (). getResource (
-                                                                                      Home.URL_IMAGES
-                                                                                      + "ModificaNews48.png")),
-                                                                      options, options [1]);
-                                                          // If you chose to confirm the change
-                                                          if (choice == JOptionPane.YES_OPTION)
-                                                              {
-                                                                  try
-                                                                      {
-                                                                          Date expires = new Date ();
-                                                                          scadenza.setDate (scadenza.getDate ()
-                                                                                  DurataNews.getSelectedIndex + ());
-                                                                          BeanNews new = new BeanNews (testoNews
-                                                                                  . getText (), new Date (), expiration
-                                                                                  prSlider.getValue (), idNews);
-                                                                          gestioneNews.modificaNews (new);
-                                                                          tableModel.updateNews (new);
-                                                                          JOptionPane
-                                                                              . showInternalMessageDialog (
-                                                                                      jContentPane,
-                                                                                      "The news has been changed successfully selected."
-                                                                                      "News changed!"
-                                                                                      JOptionPane.OK_OPTION,
-                                                                                      new ImageIcon (
-                                                                                              getClass ()
-                                                                                              . getResource (
-                                                                                                      Home.URL_IMAGES
-                                                                                                      + "Ok48.png ")));
-                                                                      }
-                                                                  catch (Exception ex)
-                                                                      {
-                                                                          JLabel error = new JLabel (
-                                                                                  "<html> <h2> Unable to communicate with the server eTour. </ h2>"
-                                                                                  + "<h3> <u> Change operation request can not be completed. </ U> </ h3>"
-                                                                                  + "<p> Please try again later. </ P>"
-                                                                                  + "<p> If the error persists, please contact technical support. </ P>"
-                                                                                  + "<p> We apologize for the inconvenience. </ Html>");
-                                                                          Err = new ImageIcon ImageIcon (
-                                                                                  getClass ()
-                                                                                  . getResource (
-                                                                                          Home.URL_IMAGES
-                                                                                          + "Error48.png"));
-                                                                          JOptionPane.showMessageDialog (JDesktopPane,
-                                                                                  error, "Error!"
-                                                                                  JOptionPane.ERROR_MESSAGE, err);
-                                                                      }
-                                                              }
-                                                      }
+                            if (idNews! = -1) // We're making a change
+                                {
+                                    // Construction of the dialog for confirmation of
+                                    // Edit
+                                    Root = new JPanel JPanel (new BorderLayout ());
+                                    JLabel message = new JLabel (
+                                            "Changing the selected news with"
+                                            + "New data?");
+                                    message.setFont (new Font ( "Dialog", Font.BOLD, 14));
+                                    JLabel alert = new JLabel (
+                                            "The previous data can not be more recovered."
+                                            SwingConstants.CENTER);
+                                    avviso.setIcon (new ImageIcon (getClass (). getResource (
+                                                            Home.URL_IMAGES + "warning16.png ")));
+                                    root.add (message, BorderLayout.NORTH);
+                                    root.add (notice, BorderLayout.CENTER);
+                                    String [] options = ( "Edit", "Cancel");
+                                    // The dialog screen appears
+                                    int choice = JOptionPane
+                                        . showInternalOptionDialog (
+                                                jContentPane,
+                                                root
+                                                "Confirmation Change News"
+                                                JOptionPane.YES_NO_OPTION,
+                                                JOptionPane.QUESTION_MESSAGE,
+                                                new ImageIcon (getClass (). getResource (
+                                                                Home.URL_IMAGES
+                                                                + "ModificaNews48.png")),
+                                                options, options [1]);
+                                    // If you chose to confirm the change
+                                    if (choice == JOptionPane.YES_OPTION)
+                                        {
+                                            try
+                                                {
+                                                    Date expires = new Date ();
+                                                    scadenza.setDate (scadenza.getDate ()
+                                                            DurataNews.getSelectedIndex + ());
+                                                    BeanNews new = new BeanNews (testoNews
+                                                            . getText (), new Date (), expiration
+                                                            prSlider.getValue (), idNews);
+                                                    gestioneNews.modificaNews (new);
+                                                    tableModel.updateNews (new);
+                                                    JOptionPane
+                                                        . showInternalMessageDialog (
+                                                                jContentPane,
+                                                                "The news has been changed successfully selected."
+                                                                "News changed!"
+                                                                JOptionPane.OK_OPTION,
+                                                                new ImageIcon (
+                                                                        getClass ()
+                                                                        . getResource (
+                                                                                Home.URL_IMAGES
+                                                                                + "Ok48.png ")));
+                                                }
+                                            catch (Exception ex)
+                                                {
+                                                    JLabel error = new JLabel (
+                                                            "<html> <h2> Unable to communicate with the server eTour. </ h2>"
+                                                            + "<h3> <u> Change operation request can not be completed. </ U> </ h3>"
+                                                            + "<p> Please try again later. </ P>"
+                                                            + "<p> If the error persists, please contact technical support. </ P>"
+                                                            + "<p> We apologize for the inconvenience. </ Html>");
+                                                    Err = new ImageIcon ImageIcon (
+                                                            getClass ()
+                                                            . getResource (
+                                                                    Home.URL_IMAGES
+                                                                    + "Error48.png"));
+                                                    JOptionPane.showMessageDialog (JDesktopPane,
+                                                            error, "Error!"
+                                                            JOptionPane.ERROR_MESSAGE, err);
+                                                }
+                                        }
+                                }
                             else
                                 // We are posting
                                 {

@@ -6,8 +6,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import unisa.gps.etour.bean.BeanTag;
 /*
-* For imported text unisa.gps.etour.control.GestioneTag.test.stub.DBTag;
-*/
+ * For imported text unisa.gps.etour.control.GestioneTag.test.stub.DBTag;
+ */
 import unisa.gps.etour.repository.DBTag;
 import unisa.gps.etour.repository.IDBTag;
 import unisa.gps.etour.util.MessaggiErrore;

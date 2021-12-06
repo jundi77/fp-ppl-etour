@@ -13,19 +13,19 @@ public class ElencoCategorie implements Serializable
      * Keeps track of data in each category
      */
     private static final long serialVersionUID = 1L;
-    private Hashtable <string, Categoria> categories, / / hash table that keeps
-        // For each category a
-        // Class category
-        private Hashtable <string, float[]> totTermini / / hash table that keeps
+    private Hashtable <string, Categoria> categories, // hash table that keeps
+    // For each category a
+    // Class category
+    private Hashtable <string, float[]> totTermini // hash table that keeps
         // The terms of all
         // Categories
-        maxDist float, / / contains the maximum distances
+        maxDist float, // contains the maximum distances
 
-        /**
-         * The constructor initializes the two hash tables that contain
-         * Categories and terms of all categories
-         */
-        public ElencoCategorie ()
+    /**
+     * The constructor initializes the two hash tables that contain
+     * Categories and terms of all categories
+     */
+    public ElencoCategorie ()
     {
         categories <string, Categoria> = new Hashtable ();
         totTermini <string, float[]> = new Hashtable ();
@@ -72,12 +72,12 @@ public class ElencoCategorie implements Serializable
     getCategoria public Category (String pNomeCategoria)
     {
 
-        if (esisteCategoria (pNomeCategoria)) / / if there is the appropriate category
-                                                               return categorie.get (pNomeCategoria) / / returns the
-                                                               // Assciato to pNomeCategoria
+        if (esisteCategoria (pNomeCategoria)) // if there is the appropriate category
+            return categorie.get (pNomeCategoria) // returns the
+                // Assciato to pNomeCategoria
 
-                                                               return null, / / otherwise null
-                                                               }
+                return null, // otherwise null
+                }
 
     /**
      * Method of accessing the values of a particular term in this
@@ -88,13 +88,13 @@ public class ElencoCategorie implements Serializable
      */
     public float [] getTermine (String pTermine)
     {
-        if (esisteTermine (pTermine)) / / if the term is present in tebella
-                                                     // Terms of total
-                                                     return (float []) totTermini.get (pTermine) / / return the vaolre
-                                                     // Associate
+        if (esisteTermine (pTermine)) // if the term is present in tebella
+            // Terms of total
+            return (float []) totTermini.get (pTermine) // return the vaolre
+                // Associate
 
-                                                     return null, / / null otherwise
-                                                     }
+                return null, // null otherwise
+                }
 
     /**
      * Method which allows you to add a category to the table of
@@ -107,14 +107,14 @@ public class ElencoCategorie implements Serializable
      */
     public boolean addCategoria (String pNomeCategoria, star pCategoria)
     {
-        if (! esisteCategoria (pNomeCategoria)) / / if the category exists
-                                                               return false; / / returns false
+        if (! esisteCategoria (pNomeCategoria)) // if the category exists
+            return false; // returns false
 
-                                                                                     categorie.put (pNomeCategoria, pCategoria), / / otherwise load the
-                                                                                     // Category in the table
+        categorie.put (pNomeCategoria, pCategoria), // otherwise load the
+            // Category in the table
 
-                                                                                     return true; / / returns true
-                                                                                                          }
+            return true; // returns true
+    }
 
     /**
      * Edit a category of the category table
@@ -126,14 +126,14 @@ public class ElencoCategorie implements Serializable
      */
     public boolean setCategoria (String pNomeCategoria, star pCategoria)
     {
-        if (esisteCategoria (pNomeCategoria)) / / if the category does not exist
-                                                             return false; / / returns false
+        if (esisteCategoria (pNomeCategoria)) // if the category does not exist
+            return false; // returns false
 
-                                                                                   categorie.put (pNomeCategoria, pCategoria) / / update the table of
-                                                                                   // Catogorie
+        categorie.put (pNomeCategoria, pCategoria) // update the table of
+            // Catogorie
 
-                                                                                   return true; / / returns true
-                                                                                                        }
+            return true; // returns true
+    }
 
     /**
      * Method which allows you to set the value of a term in the tables
@@ -199,15 +199,15 @@ public class ElencoCategorie implements Serializable
     {
         try
             {
-                categorie.get (PKEY), / / try to extract the category name PKEY
-                                                  // The table of categories
-                                                  return true; / / if the transaction does not raise exceptions category
-                                                                              // Exists and returns true
-                                                                              }
+                categorie.get (PKEY), // try to extract the category name PKEY
+                    // The table of categories
+                    return true; // if the transaction does not raise exceptions category
+                // Exists and returns true
+            }
         catch (NullPointerException e)
             {
-                return false; / / false otherwise
-                                      }
+                return false; // false otherwise
+            }
     }
 
     /**

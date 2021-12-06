@@ -1,12 +1,12 @@
 ﻿/*
-* FeedbackTableModel.java
-*
-* 1.0
-*
-* 21/05/2007
-*
-* 2007 eTour Project - Copyright by SE @ SA Lab - DMI University of Salerno
-*/
+ * FeedbackTableModel.java
+ *
+ * 1.0
+ *
+ * 21/05/2007
+ *
+ * 2007 eTour Project - Copyright by SE @ SA Lab - DMI University of Salerno
+ */
 package unisa.gps.etour.gui.operatoreagenzia.tables;
 
 import java.util.ArrayList;

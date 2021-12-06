@@ -56,33 +56,33 @@ public class Fuzzy
         // Categories
         float [] frequenzaCategoria = new float [3], frequenzaTotale = new float [3];
 
-        if (pCategoria.esisteTermine (pTermine)) / / if the term is
-                                                            // In category
-                {
-                    // Its frequency in this category is equal to the frequency
-                    // KnowledgeBase
-                    // More frequency in the search text
-                    frequenzaCategoria = pCategoria.getVal (pTermine);
-                    frequenzaCategoria [0] + = frequenzaTesto;
-                }
-            else
-                {
+        if (pCategoria.esisteTermine (pTermine)) // if the term is
+            // In category
+            {
+                // Its frequency in this category is equal to the frequency
+                // KnowledgeBase
+                // More frequency in the search text
+                frequenzaCategoria = pCategoria.getVal (pTermine);
+                frequenzaCategoria [0] + = frequenzaTesto;
+            }
+        else
+            {
 
-                    // Otherwise it is equal to the frequency of the term in the text
-                    // Analyzed
-                    frequenzaCategoria [0] = frequenzaTesto;
-                }
-        if (pTotTermini.get (pTermine)! = null) / / if the term exists in
-                                                               // Table of the total time
-                                                               frequenzaTotale = pTotTermini.get (pTermine) / / Get the value
+                // Otherwise it is equal to the frequency of the term in the text
+                // Analyzed
+                frequenzaCategoria [0] = frequenzaTesto;
+            }
+        if (pTotTermini.get (pTermine)! = null) // if the term exists in
+            // Table of the total time
+            frequenzaTotale = pTotTermini.get (pTermine) // Get the value
 
-                                                               frequenzaTotale [0] + = frequenzaTesto, / / the total frequency is given
-                                                               // Frequency in the text
-                                                               // Analizzatp
-                                                               // Plus any frequency stored in memory in the table
-                                                               // Total time
+                frequenzaTotale [0] + = frequenzaTesto, // the total frequency is given
+                // Frequency in the text
+                // Analizzatp
+                // Plus any frequency stored in memory in the table
+                // Total time
 
-                                                               return (frequenzaCategoria [0] / frequenzaTotale [0 ]);// distance is
+                return (frequenzaCategoria [0] / frequenzaTotale [0 ]);// distance is
         // Equal to
         // Frequency in
         // Category
@@ -147,7 +147,7 @@ public class Fuzzy
      */
     private static float similarity (Hashtable <string, float[]> pTermini)
     {
-        float sum = 0, / / return value
+        float sum = 0, // return value
 
             for (float [] val: pTermini.values ())// for all elements of
                 // Table
@@ -213,38 +213,38 @@ public class Fuzzy
         // Table of categories, each category will contain the value of
         // Similarity and belonging Text
         Hashtable <string, float[]> testoCategoria <string, float[]> = new Hashtable ();
-        replaceAndLower text = (text) / / delete characters and spaeciali
+        replaceAndLower text = (text) // delete characters and spaeciali
             // Returns the text by replacing
             // Uppercase with lowercase
             String [] testoSplit = testo.split ( "");
         for (int i = 0; i <testoSplit.length i + +)
-            (/ / For each end of the text
-                    float [] toPut = new float [3], / / value to assign to the string
+            (// For each end of the text
+                    float [] toPut = new float [3], // value to assign to the string
                     // In the hash table
-                    float [] valTmp / / temporary variable containing the values
+                    float [] valTmp // temporary variable containing the values
                     // Associated with the string if it already exists in the hash table
                     // If the string is present in the table picks up the values
                     // And an increase in saving them in to put
                     // Otherwise initialize the new string with frequency = 1
-                    if (testoSplit [i]. length () <= 3) / / delete undefined terms
-                                                                // As important, the inter ...
-                                                                continue;
-                    if (exists (testoSplit [i], datiTesto)) / / if the time analyzed
-                    // Is present in tebella the terms of the analyzed text
-                    {
-                        // We get the value of frequency in the table and there
-                        // Adds one
-                        valTmp = datiTesto.get (testoSplit [i]);
-                        toPut [0] = valTmp [0];
-                        toPut [0] + = (float) 1 / testoSplit.length;
+                    if (testoSplit [i]. length () <= 3) // delete undefined terms
+                        // As important, the inter ...
+                        continue;
+                    if (exists (testoSplit [i], datiTesto)) // if the time analyzed
+                        // Is present in tebella the terms of the analyzed text
+                        {
+                            // We get the value of frequency in the table and there
+                            // Adds one
+                            valTmp = datiTesto.get (testoSplit [i]);
+                            toPut [0] = valTmp [0];
+                            toPut [0] + = (float) 1 / testoSplit.length;
 
-                    }
-                        else
-                            {
-                                toPut [0] = (float) 1 / testoSplit.length;
-                                // Otherwise initialize the value of frequency to a
-                                // Fratto, the total number of terms (relative frequency)
-                            }
+                        }
+                    else
+                        {
+                            toPut [0] = (float) 1 / testoSplit.length;
+                            // Otherwise initialize the value of frequency to a
+                            // Fratto, the total number of terms (relative frequency)
+                        }
                     // Insert the new entry in the table
                     // System.out.println (toPut [0]);
                     datiTesto.put (testoSplit [i], toPut);
@@ -256,7 +256,7 @@ public class Fuzzy
             {
                 apriElenco list = ();
             }
-        catch (ClassNotFoundException e) / / error opening file kb.sbt
+        catch (ClassNotFoundException e) // error opening file kb.sbt
             {
                 throw new RemoteException (
                         "The knowledge base is missing or corrupt");
@@ -269,14 +269,14 @@ public class Fuzzy
 
         // Is taken from the base of knowledge to the table of total time
         <string, Float[]> totTermini = elenco.getTotTermini Hashtable ();
-        float maxSimilarity = -1, / / holds the value of maximum similarity
+        float maxSimilarity = -1, // holds the value of maximum similarity
             for (String CategoryName: elenco.Categorie ())
-                (/ / For all the categories in the knowledge base
-                        float [] toPut = new float [3], / / value to assign to the string
+                (// For all the categories in the knowledge base
+                        float [] toPut = new float [3], // value to assign to the string
                         // In the hash table
                         for (Enumeration <String> datiTesto.keys val = (); val
                                  . hasMoreElements ();)
-                            (/ / For all elements of the table of the terms of the text
+                            (// For all elements of the table of the terms of the text
                                     String term = val.nextElement ();
                                     // We get the value of a term
                                     float [] tmp = datiTesto.get (term);
@@ -290,26 +290,26 @@ public class Fuzzy
                         // All the terms in a category
                         toPut [0] = similarity (datiTesto);
                         testoCategoria.put (CategoryName, toPut);
-                        if (maxSimilarity <toPut [0]) / / we update the value of maximum
-                                                          // If necessary similarity
+                        if (maxSimilarity <toPut [0]) // we update the value of maximum
+                            // If necessary similarity
                             {
                                 maxSimilarity = toPut [0];
                             }
                         }
 
                     for (String CategoryName: elenco.Categorie ())
-                        (/ / For each category
+                        (// For each category
                                 // We get the value of similarity of the text with the category
                                 // Analyzed
                                 float [] tmp = testoCategoria.get (CategoryName);
-                                tmp [1] = membership (tmp [0], maxSimilarity), / / we calculate
+                                tmp [1] = membership (tmp [0], maxSimilarity), // we calculate
                                 // Membership
                                 // Text to the similarity
-                                testoCategoria.put (CategoryName, tmp), / / save everything in
+                                testoCategoria.put (CategoryName, tmp), // save everything in
                                 // Category table
                                 }
 
-                            return maxAppartenenza (testoCategoria) / / returns the name output
+                            return maxAppartenenza (testoCategoria) // returns the name output
                             // Category
                             // With the maximum degree of membership
                             }
@@ -325,18 +325,18 @@ public class Fuzzy
     private static String maxAppartenenza (
             Hashtable <string, float[]> pTestoCategoria)
     {
-        ToReturn String = null, / / return value
-            float max = -1, / / Maximum value of membership
+        ToReturn String = null, // return value
+            float max = -1, // Maximum value of membership
 
             for (Enumeration <String> pTestoCategoria.keys elm = (); elm
                      . hasMoreElements ();)
-                (/ / For all categories of the table of categories of text
+                (// For all categories of the table of categories of text
                         String category = elm.nextElement ();
                         // Values are taken of similarity and belonging associated with
                         // Category
                         float [] tmp = pTestoCategoria.get (category);
                         if (tmp [1]> max)
-                            (/ / If the degree of membership affiliation just uploaded
+                            (// If the degree of membership affiliation just uploaded
                                     // Is greater than the previous update data max and toReturn
                                     toReturn = category;
                                     max = tmp [1];
@@ -381,9 +381,9 @@ public class Fuzzy
             ClassNotFoundException
     {
         KBase file = new File ( "kb.sbt ");// you open the file kb.sbt
-        FileInputStream kBaseStream = new FileInputStream (KBase) / / creates
+        FileInputStream kBaseStream = new FileInputStream (KBase) // creates
             // A stream with the file
-            ObjectInputStream kBaseObj = new ObjectInputStream (kBaseStream), / / si
+            ObjectInputStream kBaseObj = new ObjectInputStream (kBaseStream), // si
             // Create a stream object with the file
             ElencoCategorie toReturn;
 
@@ -403,12 +403,12 @@ public class Fuzzy
             throws IOException
     {
         ObjectOutputStream toReturn;
-        File f = new File (path) / / file is created
+        File f = new File (path) // file is created
             if (f.exists ())
                 f.delete ();
 
         FileOutputStream fout = new FileOutputStream (path);
-        toReturn = new ObjectOutputStream (fOut), / / create the stream
+        toReturn = new ObjectOutputStream (fOut), // create the stream
 
             toReturn return;
     }
@@ -421,7 +421,7 @@ public class Fuzzy
     public static void training () throws RemoteException
     {
 
-        String [] elencoCategorie = new String [4] / / array contenentei names
+        String [] elencoCategorie = new String [4] // array contenentei names
             // Of categrie be analyzed
             // Knowledge base
             ElencoCategorie list = new ElencoCategorie ();
@@ -484,11 +484,11 @@ public class Fuzzy
                                 txt = replaceAndLower (txt);
                                 String [] toIterate = txt.split ( "");
                                 for (int k = 0 k <toIterate.length k + +)
-                                    (/ / For each end of the line
-                                            if (toIterate [k]. length () <= 3) / / remove the effect
-                                                                                       // Undefined terms
-                                                                                       // Relevant
-                                                                                       continue;
+                                    (// For each end of the line
+                                            if (toIterate [k]. length () <= 3) // remove the effect
+                                                // Undefined terms
+                                                // Relevant
+                                                continue;
                                             float [] valTerm, valTotTerm;
                                             // If the term is present in the table of terms
                                             // The class analyzed
@@ -524,7 +524,7 @@ public class Fuzzy
                     }
             }
         for (String CategoryName: elenco.Categorie ())
-            (/ / for each category
+            (// for each category
                     // is preflushed the table of terms
                     Hashtable elenco.getCategoria <string, float[]> terminiCategoria = (
                             CategoryName). getTermini ();
@@ -544,7 +544,7 @@ public class Fuzzy
                     elenco.getCategoria (CategoryName). setTermini (terminiCategoria);
                     }
                 try
-                    (/ / writing the results of operations on files
+                    (// writing the results of operations on files
                             elencoOut.writeObject (list);
                             }
         catch (Exception e)

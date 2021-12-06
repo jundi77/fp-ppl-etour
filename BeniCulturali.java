@@ -92,10 +92,10 @@ public class JInternalFrame extends Beniculturali
         addInternalFrameListener (new InternalFrameAdapter ()
             {
                 /*
-                * Inclusion of the frame on the desktop desktop retrieves bread bread
-                * And desktop manager and initializes the remote objects
-                * Management of cultural heritage.
-                */
+                 * Inclusion of the frame on the desktop desktop retrieves bread bread
+                 * And desktop manager and initializes the remote objects
+                 * Management of cultural heritage.
+                 */
 
                 public void internalFrameOpened (InternalFrameEvent pEvent)
                 {
@@ -111,41 +111,41 @@ public class JInternalFrame extends Beniculturali
                             gestioneBC = (IGestioneBeniCulturaliAgenzia) reg
                                 . lookup ( "GestioneBeniCulturaliAgenzia");
                             tag = (IGestioneTagComune) reg.lookup (GestioneTagComune ");
-                                    ricercaBC = (IGestioneBeniCulturaliComune) reg
-                                        . lookup ( "GestioneBeniCulturaliComune");
-                                    // Load data.
-                                    caricaTabella (false);
-                                    caricaTags ();
+                            ricercaBC = (IGestioneBeniCulturaliComune) reg
+                                . lookup ( "GestioneBeniCulturaliComune");
+                            // Load data.
+                            caricaTabella (false);
+                            caricaTags ();
                         }
-                            /*
-                            * Two exceptions: RemoteException and NotBoundException. The
-                            * Result is the same. The management is not operable and
-                            * After the error message window closes.
-                            */
-                            catch (Exception ex)
-                                {
-                                    JLabel error = new JLabel (
-                                            "<html> <h2> Unable to communicate with the server eTour. </ h2>"
-                                            + "<h3> <u> The dialog management request is closed. </ U> </ h3>"
-                                            + "<p> <b> Possible Causes: </ b>"
-                                            + "<ul> <li> No connection to the network. </ Li>"
-                                            + "Server <li> inactive. </ Li>"
-                                            + "Server <li> clogged. </ Li> </ ul>"
-                                            + "<p> Please try again later. </ P>"
-                                            + "<p> If the error persists, please contact technical support. </ P>"
-                                            + "<p> We apologize for the inconvenience. </ Html>");
-                                    Err = new ImageIcon ImageIcon (getClass (). GetResource (
-                                                    Home.URL_IMAGES + "error48.png"));
-                                    JOptionPane.showMessageDialog (JDesktopPane, error,
-                                            "Error!" JOptionPane.ERROR_MESSAGE, err);
-                                    frame.dispose ();
-                                }
+                    /*
+                     * Two exceptions: RemoteException and NotBoundException. The
+                     * Result is the same. The management is not operable and
+                     * After the error message window closes.
+                     */
+                    catch (Exception ex)
+                        {
+                            JLabel error = new JLabel (
+                                    "<html> <h2> Unable to communicate with the server eTour. </ h2>"
+                                    + "<h3> <u> The dialog management request is closed. </ U> </ h3>"
+                                    + "<p> <b> Possible Causes: </ b>"
+                                    + "<ul> <li> No connection to the network. </ Li>"
+                                    + "Server <li> inactive. </ Li>"
+                                    + "Server <li> clogged. </ Li> </ ul>"
+                                    + "<p> Please try again later. </ P>"
+                                    + "<p> If the error persists, please contact technical support. </ P>"
+                                    + "<p> We apologize for the inconvenience. </ Html>");
+                            Err = new ImageIcon ImageIcon (getClass (). GetResource (
+                                            Home.URL_IMAGES + "error48.png"));
+                            JOptionPane.showMessageDialog (JDesktopPane, error,
+                                    "Error!" JOptionPane.ERROR_MESSAGE, err);
+                            frame.dispose ();
+                        }
                 }
 
                 /*
-                * At the end of the frame displays the dialog
-                * Confirmation.
-                */
+                 * At the end of the frame displays the dialog
+                 * Confirmation.
+                 */
                 public void internalFrameClosing (InternalFrameEvent pEvent)
                 {
                     // Create the confirmation dialog.
@@ -167,17 +167,17 @@ public class JInternalFrame extends Beniculturali
                             JOptionPane.QUESTION_MESSAGE, frameIcon, options,
                             options [1]);
                     /*
-                          * If it is confirmed the closing of management, all
-                          * Classes "daughters" are closed.
-                          */
-                          if (choice == JOptionPane.OK_OPTION)
-                              {
-                                  for (int i = 0; i <figli.size (); i + +)
-                                      {
-                                          figli.get (i). dispose ();
-                                      }
-                                  pEvent.getInternalFrame (). dispose ();
-                              }
+                     * If it is confirmed the closing of management, all
+                     * Classes "daughters" are closed.
+                     */
+                    if (choice == JOptionPane.OK_OPTION)
+                        {
+                            for (int i = 0; i <figli.size (); i + +)
+                                {
+                                    figli.get (i). dispose ();
+                                }
+                            pEvent.getInternalFrame (). dispose ();
+                        }
                 }
 
                 ));
@@ -615,11 +615,11 @@ public class JInternalFrame extends Beniculturali
                         tableBC.addMouseListener (bcHelp);
                         tableBC.setName (tableBC ");
                         /*
-                              * SelectionListener - if a selected row, the buttons
-                                                             * Tab, edit and delete are active. Otherwise, are
-                                                             * Disabled.
-                                                             */
-                                                             ListSelectionModel selectionModel = tableBC.getSelectionModel ();
+                         * SelectionListener - if a selected row, the buttons
+                         * Tab, edit and delete are active. Otherwise, are
+                         * Disabled.
+                         */
+                        ListSelectionModel selectionModel = tableBC.getSelectionModel ();
                         selectionModel
                             . addListSelectionListener (new ListSelectionListener ()
                                 {
@@ -640,29 +640,29 @@ public class JInternalFrame extends Beniculturali
                                     }
                                     ));
                         /*
-                              * KeyListener <ENTER> - Details of the cultural selected.
-                              * <Backspace> - Delete the selected cultural. <space> --
-                              * Modify the cultural selected.
-                              */
-                              tableBC.addKeyListener (new KeyAdapter ()
-                                  {
-                                      public void keyPressed (KeyEvent pEvent)
-                                      {
-                                          int keyCode = pEvent.getKeyCode ();
-                                          if (keyCode == KeyEvent.VK_ENTER)
-                                              {
-                                                  btnSchedaBC.doClick ();
-                                              }
-                                          else if (keyCode == KeyEvent.VK_BACK_SPACE)
-                                              {
-                                                  btnEliminaBC.doClick ();
-                                              }
-                                          else if (keyCode == KeyEvent.VK_SPACE)
-                                              {
-                                                  btnModificaBC.doClick ();
-                                              }
-                                      }
-                                      ));
+                         * KeyListener <ENTER> - Details of the cultural selected.
+                         * <Backspace> - Delete the selected cultural. <space> --
+                         * Modify the cultural selected.
+                         */
+                        tableBC.addKeyListener (new KeyAdapter ()
+                            {
+                                public void keyPressed (KeyEvent pEvent)
+                                {
+                                    int keyCode = pEvent.getKeyCode ();
+                                    if (keyCode == KeyEvent.VK_ENTER)
+                                        {
+                                            btnSchedaBC.doClick ();
+                                        }
+                                    else if (keyCode == KeyEvent.VK_BACK_SPACE)
+                                        {
+                                            btnEliminaBC.doClick ();
+                                        }
+                                    else if (keyCode == KeyEvent.VK_SPACE)
+                                        {
+                                            btnModificaBC.doClick ();
+                                        }
+                                }
+                                ));
                     }
 
                 JScrollPane = new JScrollPane (tableBC);

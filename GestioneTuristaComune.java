@@ -85,7 +85,7 @@ GestioneTuristaComune UnicastRemoteObject public class extends implements
         // Check the validity identifier
         if (pIdTurista <0)
             throw new RemoteException (MessaggiErrore.ERRORE_DATI);
-        BeanTurista toReturn = null, / / variable return
+        BeanTurista toReturn = null, // variable return
             // Retrieve data
             try
                 {

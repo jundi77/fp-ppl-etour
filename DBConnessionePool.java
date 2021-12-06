@@ -19,15 +19,15 @@ import java.util.List;
 public class DBConnessionePool
 {
     private final static String driver = "com.mysql.jdbc.Driver";
-    private final static String urlConnessione = "jdbc: mysql: / / localhost / eTour? user = & password = mauro mauro";
+    private final static String urlConnessione = "jdbc: mysql: // localhost / eTour? user = & password = mauro mauro";
     private static List <Connection> connessioniLibere;
 
     /* Private constructor that initiates the connection to the database */
 
     /*
-    * Static initialization block is used to load the driver
-    * Memory
-    */
+     * Static initialization block is used to load the driver
+     * Memory
+     */
     static
     {
         connessioniLibere = <Connection> new ArrayList ();

@@ -47,27 +47,27 @@ public class ControlloDatiAdvertisement
         toReturn boolean = false;
 
         /* Check the validity of the general method parameter */
-              if (Pnews = null) {
+        if (Pnews = null) {
 
-                  Date dataPubb = pNews.getDataPubblicazione () / / Released
-                      Date dataScad = pNews.getDataScadenza () / / Due Date
-                      PNews.getNews String news = (), / / Text of News
+            Date dataPubb = pNews.getDataPubblicazione () // Released
+                Date dataScad = pNews.getDataScadenza () // Due Date
+                PNews.getNews String news = (), // Text of News
 
-                      /* Checking the invalidity of the fields */
-                      if (dataPubb! dataScad = null & &! = null & & news = null) {
-                          /* Check the consistency of the dates */
-                          toReturn = dataPubb.before (dataScad);
+                /* Checking the invalidity of the fields */
+                if (dataPubb! dataScad = null & &! = null & & news = null) {
+                    /* Check the consistency of the dates */
+                    toReturn = dataPubb.before (dataScad);
 
-                          /* Check that the text is not empty */
-                          toReturn = toReturn & & (news! = "");
+                    /* Check that the text is not empty */
+                    toReturn = toReturn & & (news! = "");
 
-                          /* Check that the ID is greater than 0 */
-                          toReturn = toReturn & & (pNews.getId ()> 0);
+                    /* Check that the ID is greater than 0 */
+                    toReturn = toReturn & & (pNews.getId ()> 0);
 
-                          /* Check the priority value */
-                      }
+                    /* Check the priority value */
+                }
 
-              }
+        }
 
         toReturn return;
 

@@ -1,13 +1,13 @@
 	
 /*
-* SitoTableModel.java
-*
-* 1.0
-*
-* 21/05/2007
-*
-* � 2007 eTour Project - Copyright by SE @ SA Lab - DMI - University of Salerno
-*/
+ * SitoTableModel.java
+ *
+ * 1.0
+ *
+ * 21/05/2007
+ *
+ * � 2007 eTour Project - Copyright by SE @ SA Lab - DMI - University of Salerno
+ */
 Handheld Package;
 
 import Bean.BeanPuntoDiRistoro;
@@ -36,7 +36,7 @@ public class extends SitoTableModel AbstractTableModel (
     
         SitoTableModel (BeanPuntoDiRistoro [] pr, Punto3D myLocation) {
             super ();
-            cells = new Object [pr.length] [3] / / First value = second rows = columns
+            cells = new Object [pr.length] [3] // First value = second rows = columns
                 for (int i = 0; i <pr.length i + +) {
                     Cells [i] [0] = pr [i]. getName ();
                     Cells [i] [1] = pr [i]. getCitta ();
@@ -49,7 +49,7 @@ public class extends SitoTableModel AbstractTableModel (
     
         SitoTableModel (BeanBeneCulturale [] bc, Punto3D myLocation) {
             super ();
-            cells = new Object [bc.length] [3] / / First value = second rows = columns
+            cells = new Object [bc.length] [3] // First value = second rows = columns
                 for (int i = 0; i <bc.length i + +) {
                     Cells [i] [0] = bc [i]. getName ();
                     Cells [i] [1] = bc [i]. getCitta ();
