@@ -17,7 +17,7 @@ public class Category implements Serializable
     private String name; / / name of the category
     private Hashtable <string, float[]> terms, / / list of terms and their frequencies and distance rilavanza
 
-        / *
+        /*
         * Manufacturer:
         * Get the category name as a parameter to create
         */
@@ -27,7 +27,7 @@ public class Category implements Serializable
         terms <String,float[]> = new Hashtable ();
     }
 
-    / *
+    /*
     * Returns the output Hashtable containing the terms
     * With the respective values of frequency, relevance and distance
         */
@@ -36,7 +36,7 @@ public class Category implements Serializable
         return terms;
     }
 
-    / *
+    /*
     * Returns the name of the output category
     */
     public String getName ()
@@ -44,7 +44,7 @@ public class Category implements Serializable
         return name;
     }
 
-    / *
+    /*
     * Get the string as a parameter representing the term
     * Of which you want to pick the values of frequency, range and bearing
         */
@@ -56,7 +56,7 @@ public class Category implements Serializable
         return null;
     }
 
-    / *
+    /*
     * Agiunge an end to dizinario category
     */
     public void addTermine (String pTermine)
@@ -64,7 +64,7 @@ public class Category implements Serializable
         termini.put (pTermine, new float [3]);
     }
 
-    / *
+    /*
     * Agiunge an end to dizinario category
     * Seven also the values of frequency, distance and rilavanza
         */
@@ -77,7 +77,7 @@ public class Category implements Serializable
         return true;
     }
 
-    / *
+    /*
     * Set the values for the period pTermine
     */
     public boolean setValTermine (String pTermine, float [] pVal)
@@ -98,7 +98,7 @@ public class Category implements Serializable
         Term = pTermini;
     }
 
-    / *
+    /*
     * Returns True if the term is present in
     * Dictionary of Category False otherwise
     */

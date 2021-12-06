@@ -63,7 +63,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                             puntoDiRistoro = new DBPuntoDiRistoro ();
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # cancellaPreferenzeDiRicerca (int,
@@ -102,7 +102,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
 
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # cancellaPreferenzeGeneriche (int)
@@ -128,7 +128,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
 
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # inserisciPreferenzaDiRicerca (int,
@@ -158,7 +158,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                                 }
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # inserisciPreferenzeGeneriche (unisa.gps.etour.bean.BeanPreferenzeGeneriche)
@@ -187,7 +187,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                                 }
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # inserisciTurista (unisa.gps.etour.bean.BeanTurista)
@@ -229,7 +229,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                                 }
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # modificaPreferenzeGeneriche (unisa.gps.etour.bean.BeanPreferenzeGeneriche)
@@ -258,7 +258,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                                 }
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # ottieniPreferenzeDiRicerca (int)
@@ -270,11 +270,11 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
 
                             try
                                 {
-                                    // ** Convert ArrayList (return type of method "ottieniPreferenzeDiRicerca") to simple array **
+                                    //** Convert ArrayList (return type of method "ottieniPreferenzeDiRicerca") to simple array **
                                     ArrayList <BeanPreferenzaDiRicerca> listaPreferenze = prefRicTurista.ottieniPreferenzeDiRicercaDelTurista (pIdTurista);
                                     preferences = new BeanPreferenzaDiRicerca [listaPreferenze.size ()];
                                     = listaPreferenze.toArray preferences (preferences);
-                                    // ** ** End Conversion
+                                    //** ** End Conversion
                                 }
                             catch (SQLException e)
                                 {
@@ -287,7 +287,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
 
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # ottieniPreferenzeGeneriche (int)
@@ -306,7 +306,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                                 }
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.GestioneTuristaComune # modificaTurista (unisa.gps.etour.bean.BeanTurista)
@@ -337,7 +337,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
 
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # ottieniBeniCulturaliVisitati (int)
@@ -366,7 +366,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                             return visit;
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # ottieniPuntiDiRistoroVisitati (int)
@@ -396,7 +396,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                             return visit;
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # inserisciBeneCulturaleVisitato (unisa.gps.etour.bean.BeanVisitaBC)
@@ -422,7 +422,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                             return false;
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # inserisciPuntoDiRistoroVisitato (unisa.gps.etour.bean.BeanVisitaPR)
@@ -447,7 +447,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                             return false;
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # inserisciBeneCulturalePreferito (int,
@@ -474,7 +474,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                             return false;
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # inserisciPuntoDiRistoroPreferito (int,
@@ -501,7 +501,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                             return false;
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # cancellaBeneCulturalePreferito (int,
@@ -528,7 +528,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                             return false;
                         }
 
-                        / *
+                        /*
                         * (Non-Javadoc)
                         *
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # cancellaPuntoDiRistoroPreferito (int,
@@ -555,7 +555,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                             return false;
                         }
 
-                        / * (Non-Javadoc)
+                        /* (Non-Javadoc)
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # ottieniBeniCulturaliPreferiti (int)
                         */
                         public BeanBeneCulturale [] ottieniBeniCulturaliPreferiti (int pIdTurista) throws RemoteException
@@ -590,7 +590,7 @@ public class GestioneTuristaClient extends GestioneTuristaComune implements
                             return null;
                         }
 
-                        / * (Non-Javadoc)
+                        /* (Non-Javadoc)
                         * @ See unisa.gps.etour.control.GestioneUtentiRegistrati.IGestioneTuristaClient # ottieniPuntiDiRistoroPreferiti (int)
                         */
                         public BeanPuntoDiRistoro [] ottieniPuntiDiRistoroPreferiti (int pIdTurista) throws RemoteException

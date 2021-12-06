@@ -21,9 +21,9 @@ import unisa.gps.etour.util.CostantiGlobali;
 import unisa.gps.etour.util.MessaggiErrore;
 
 // Stub
-import unisa.gps.etour.control.GestioneBeniCulturali.test.stub.DBBeneCulturale / / ***
-import unisa.gps.etour.control.GestioneBeniCulturali.test.stub.DBTurista / / ***
-import unisa.gps.etour.control.GestioneBeniCulturali.test.stub.DBVisitaBC / / ***
+import unisa.gps.etour.control.GestioneBeniCulturali.test.stub.DBBeneCulturale / /***
+import unisa.gps.etour.control.GestioneBeniCulturali.test.stub.DBTurista / /***
+import unisa.gps.etour.control.GestioneBeniCulturali.test.stub.DBVisitaBC / /***
 
 /**
  * Class management of cultural heritage for operations common to all actors
@@ -76,7 +76,7 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
             }
     }
 
-    / *
+    /*
     * Implements the method for obtaining a cultural object by Id
     *
     * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliComune # ottieniBeneCulturale (int)
@@ -104,7 +104,7 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
         bbc return;
     }
 
-    / *
+    /*
     * Implements the method for obtaining all the tags of a cultural object.
     *
     * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliComune # ottieniTagBeneCulturale (int)
@@ -132,7 +132,7 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
         btag return;
     }
 
-    / *
+    /*
     * Implements the method to obtain the list of feedback and their username on a property
     * Cultural specified by Id
     *
@@ -168,7 +168,7 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
         mappaRitorno return;
     }
 
-    / *
+    /*
     * Implements the method to obtain statistics about a cultural past
     * Through Id
     *
@@ -176,7 +176,7 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
     */
     <Integer> ottieniStatisticheBeneCulturale public ArrayList (int pBeneCulturaleID) throws RemoteException
     {
-        / *
+        /*
             * This method returns an ArrayList containing 5 elements (0 .. 4).
             * For each index more 'one is the number of equivalent value your feedback
             * Index number more 'one.
@@ -216,7 +216,7 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
         listaRisultati return;
     }
 
-    / *
+    /*
     * Implement the method for changing a feedback on a cultural past
     * Through Id
     *
@@ -228,7 +228,7 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
                 ! ControlloVisiteBeniCulturali.controllaDatiVisitaBeneCulturale (pBeanVisitaBC))
             throw new RemoteException (MessaggiErrore.ERRORE_DATI);
 
-        / *
+        /*
               * Please check that the vote has not changed.
               * If the vote is changed to an exception is raised
               */
@@ -247,7 +247,7 @@ GestioneBeniCulturaliComune UnicastRemoteObject public class extends implements
                 throw new RemoteException (MessaggiErrore.ERRORE_SCONOSCIUTO);
             }
 
-                / *
+                /*
                 * If the vote is not changed we proceed to send the message to the method of
                 * Change the layer's database.
                 */

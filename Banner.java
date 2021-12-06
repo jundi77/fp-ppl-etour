@@ -95,7 +95,7 @@ public class JInternalFrame extends Banner
         setContentPane (getJContentPane ());
         addInternalFrameListener (new InternalFrameAdapter ()
             {
-                / *
+                /*
                 * Inclusion of the frame on the desktop retrieves the bread
                 * Link to the desktop pane.
                 */
@@ -113,15 +113,15 @@ public class JInternalFrame extends Banner
                             gestioneBanner =
                                 (IGestioneAdvertisementAgenzia) reg.lookup (GestioneBeniCulturaliAgenzia ");
                                         tag =
-                                        (IGestioneTagComune) reg.lookup (GestioneTagComune ");
+                                            (IGestioneTagComune) reg.lookup (GestioneTagComune ");
                             gestionePuntiRistoro =
                                 (IGestionePuntiDiRistoroAgenzia) reg.lookup (GestionePuntiDiRistoroAgenzia ");
 
                                         // Load data.
-                            createTree ();
-                            caricaTags ();
+                                        createTree ();
+                                        caricaTags ();
                         }
-                            / *
+                            /*
                             * Two exceptions: RemoteException and NotBoundException. The
                             * Result is the same. The management is not operable and
                             * After the error message window closes.
@@ -480,7 +480,7 @@ public class JInternalFrame extends Banner
                 textGuida.setName (textGuida ");
                         textGuida.addMouseListener (bannerHelp);
                         helpPanel.add (textGuida, BorderLayout.CENTER);
-                        }
+            }
                         helpPanel return;
                         }
 
@@ -501,7 +501,7 @@ public class JInternalFrame extends Banner
                         Research Refreshment "
                         TitledBorder.DEFAULT_JUSTIFICATION,
                         TitledBorder.DEFAULT_POSITION, new Font ( "Dialog",
-                                Font.BOLD, 12), new Color (0, 102, 204)));
+                        Font.BOLD, 12), new Color (0, 102, 204)));
         GridBagConstraints g = new GridBagConstraints ();
         g.anchor = GridBagConstraints.CENTER;
         g.gridx = 0;

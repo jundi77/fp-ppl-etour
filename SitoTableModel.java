@@ -1,5 +1,5 @@
 	
-/ *
+/*
 * SitoTableModel.java
 *
 * 1.0
@@ -35,49 +35,49 @@ public class extends SitoTableModel AbstractTableModel (
         Punto3D myLocation;
     
         SitoTableModel (BeanPuntoDiRistoro [] pr, Punto3D myLocation) {
-                super ();
-                cells = new Object [pr.length] [3] / / First value = second rows = columns
+            super ();
+            cells = new Object [pr.length] [3] / / First value = second rows = columns
                 for (int i = 0; i <pr.length i + +) {
-                        Cells [i] [0] = pr [i]. getName ();
-                        Cells [i] [1] = pr [i]. getCitta ();
+                    Cells [i] [0] = pr [i]. getName ();
+                    Cells [i] [1] = pr [i]. getCitta ();
             
             
             
             
-                                                     )
-                                                                       )
+                    )
+                )
     
         SitoTableModel (BeanBeneCulturale [] bc, Punto3D myLocation) {
-                super ();
-                cells = new Object [bc.length] [3] / / First value = second rows = columns
+            super ();
+            cells = new Object [bc.length] [3] / / First value = second rows = columns
                 for (int i = 0; i <bc.length i + +) {
-                        Cells [i] [0] = bc [i]. getName ();
-                        Cells [i] [1] = bc [i]. getCitta ();
+                    Cells [i] [0] = bc [i]. getName ();
+                    Cells [i] [1] = bc [i]. getCitta ();
             
-                                                     )
-                                                                      )
+                    )
+                )
     
         public int GetRowCount () {
-                cells.length return;
-                                   )
+            cells.length return;
+            )
     
         public int getColumnCount () {
-                columnNames.length return;
-                                      )
+            columnNames.length return;
+            )
     
         public Object getValueAt (int r, int c) {
-                if (c <columnNames.length - 1)
-                    return cells [r] [c];
-                else (
-                        double value = miaPosizione.distanza (posizioneSito);
-                        return new Double (value);
-                      )
+            if (c <columnNames.length - 1)
+                return cells [r] [c];
+            else (
+                    double value = miaPosizione.distanza (posizioneSito);
+                    return new Double (value);
+                  )
         
-                                                 )
+                     )
     
         public String getColumnName (int c) {
-                return columnNames [c];
-                                             )
+            return columnNames [c];
+            )
         }
 
 

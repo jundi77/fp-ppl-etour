@@ -18,7 +18,7 @@ import unisa.gps.etour.bean.BeanOperatoreAgenzia;
 public class DBOperatoreAgenzia implements IDBOperatoreAgenzia
 {
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.repository.IDBOperatoreAgenzia # ottieniOperatoreAgenzia (int)
     */
     public BeanOperatoreAgenzia ottieniOperatoreAgenzia (String pUsername)
@@ -79,7 +79,7 @@ public class DBOperatoreAgenzia implements IDBOperatoreAgenzia
 
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.repository.IDBOperatoreAgenzia # modificaPassword (java.lang.String)
     */
     public boolean modificaPassword (BeanOperatoreAgenzia poa) throws SQLException

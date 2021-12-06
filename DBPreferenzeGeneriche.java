@@ -176,31 +176,31 @@ public class DBPreferenzeGeneriche implements IDBPreferenzeGeneriche
                         pref.setId (result.getInt ( "Id"));
                         pref.setIdTurista (result.getInt (IdTurista "));
                                         pref.setDimensioneFont (result.getInt (DimensioneFont "));
-                        pref.setFont (result.getString ( "Font"));
-                        pref.setTema (result.getString ( "Theme"));
-                    }
-                return pref;
-            }
-        // Finally block that contains the instructions to close the connections
-        // Hyenas run in any case
+                                                        pref.setFont (result.getString ( "Font"));
+                                                        pref.setTema (result.getString ( "Theme"));
+                                                        }
+                                                        return pref;
+                                                        }
+                                                        // Finally block that contains the instructions to close the connections
+                                                        // Hyenas run in any case
         finally
             {
-                // This closes the result set only if and 'the query was made
-                if (result! = null)
-                    {
-                        result.close ();
-                    }
-                // This closes the if statement and 'opened
-                if (stat = null)
-                    {
-                        stat.close ();
-                    }
-                // It returns the connection to the pool if and 'opened
-                if (conn! = null)
-                    {
-                        DBConnessionePool.rilasciaConnessione (conn);
-                    }
-            }
-    }
+                                                        // This closes the result set only if and 'the query was made
+                                                        if (result! = null)
+                                                            {
+                                                        result.close ();
+                                                        }
+                                                        // This closes the if statement and 'opened
+                                                        if (stat = null)
+                                                            {
+                                                        stat.close ();
+                                                        }
+                                                        // It returns the connection to the pool if and 'opened
+                                                        if (conn! = null)
+                                                            {
+                                                        DBConnessionePool.rilasciaConnessione (conn);
+                                                        }
+                                                        }
+                                                        }
 
-}
+                                                        }

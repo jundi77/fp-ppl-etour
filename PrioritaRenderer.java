@@ -1,4 +1,4 @@
-﻿/ *
+﻿/*
 * PrioritaRenderer.java
 *
 * 1.0

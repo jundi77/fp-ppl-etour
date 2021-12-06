@@ -58,20 +58,20 @@ GestioneAdvertisement UnicastRemoteObject public class extends implements
      */
     public boolean cancellaBanner (int pIdBanner) throws RemoteException
     {
-        / * Bean containing the data of the banner */
+        /* Bean containing the data of the banner */
             BeanBanner banner;
 
         try
             {
-                / * Load the banner and check the data */
+                /* Load the banner and check the data */
                     banner = dbBanner.ottieniBannerDaID (pIdBanner);
                 if (! ControlloDati.checkBeanBanner (banner)) {
-                        throw new RemoteException (MessaggiErrore.ERRORE_DATI);
-                        }
-                / * Remove the image associated with the banner */
+                    throw new RemoteException (MessaggiErrore.ERRORE_DATI);
+                }
+                /* Remove the image associated with the banner */
                                                                   Image file = new File (banner.getPercorsoFile ());
                 immagine.delete ();
-                / * Clear the whole bean banner */
+                /* Clear the whole bean banner */
                       return (dbBanner.cancellaBanner (pIdBanner));
             }
         catch (SQLException e) {
@@ -92,19 +92,19 @@ GestioneAdvertisement UnicastRemoteObject public class extends implements
 
         try
             {
-                / * Performs a check on the image of the banner */
+                /* Performs a check on the image of the banner */
                     if (! ControlloDati.checkImmagine (pImmagine)) {
-                            throw new RemoteException (MessaggiErrore.ERRORE_DATI);
-                            }
-                / * Load the icon image */
+                        throw new RemoteException (MessaggiErrore.ERRORE_DATI);
+                    }
+                /* Load the icon image */
                                                                        BufferedImage buffImg = (BufferedImage) pImmagine.getImage ();
-                / * Load the data of the banner */
+                /* Load the data of the banner */
                       BeanBanner banner = dbBanner.ottieniBannerDaID (pBannerID);
-                / * Check the banner on the data uploaded */
+                /* Check the banner on the data uploaded */
                       if (! ControlloDati.checkBeanBanner (banner)) {
-                              throw new RemoteException (MessaggiErrore.ERRORE_DATI);
-                              }
-                / * Rewrite the image file and returns the result of the operation */
+                          throw new RemoteException (MessaggiErrore.ERRORE_DATI);
+                      }
+                /* Rewrite the image file and returns the result of the operation */
                                                                         Imgfile file = new File (banner.getPercorsoFile ());
                 return (ImageIO.write (buffImg, "jpg", Imgfile));
             }
@@ -130,25 +130,25 @@ GestioneAdvertisement UnicastRemoteObject public class extends implements
      */
     <BeanBanner,ImageIcon> ottieniBannersDaID public HashMap (int pIdPuntoDiRistoro)
             throws RemoteException (
-                    / * Create a HashMap that will hold the banner and associated images */
+                    /* Create a HashMap that will hold the banner and associated images */
                     <BeanBanner,ImageIcon> ToReturn HashMap <BeanBanner, ImageIcon> = new HashMap ();
 
                     try
                         {
-                            / * Get the list of banners for a refreshment point */
+                            /* Get the list of banners for a refreshment point */
                                                                   ArrayList <BeanBanner> listaBanner = dbBanner.ottieniBanner (pIdPuntoDiRistoro);
-                            / * For each banner valid list */
+                            /* For each banner valid list */
                                   for (BeanBanner banner: listaBanner) {
-                                          / * If the banner is a valid charge in the HashMap with the image file */
+                                      /* If the banner is a valid charge in the HashMap with the image file */
                                           if (ControlloDati.checkBeanBanner (banner)) {
-                                                  / * Create the image file */
+                                              /* Create the image file */
                                                   FileImmagine file = new File (banner.getPercorsoFile ());
-                                                  / * Create an object ImageIcon from the image file */
-                                                  ImageIcon icon = new ImageIcon (ImageIO.read (fileImmagine));
-                                                  / * Add the banner and the image all'HashMap */
-                                                  toReturn.put (banner, icon);
-                                                  }
+                                              /* Create an object ImageIcon from the image file */
+                                                    ImageIcon icon = new ImageIcon (ImageIO.read (fileImmagine));
+                                              /* Add the banner and the image all'HashMap */
+                                                    toReturn.put (banner, icon);
                                           }
+                                  }
                             toReturn return;
                         }
                     catch (SQLException e) {
@@ -177,43 +177,43 @@ GestioneAdvertisement UnicastRemoteObject public class extends implements
 
         try
             {
-                / * Performs a check on the image */
+                /* Performs a check on the image */
                     if (! ControlloDati.checkImmagine (pImmagineBanner)) {
-                            throw new RemoteException (MessaggiErrore.ERRORE_DATI);
-                            }
-                / * Create an object that handles the conventions */
+                        throw new RemoteException (MessaggiErrore.ERRORE_DATI);
+                    }
+                /* Create an object that handles the conventions */
                                                                              IDBConvenzione dbConvenzione = new DBConvenzione ();
-                / * Load the data of the convention of a refreshment point */
+                /* Load the data of the convention of a refreshment point */
                       BeanConvenzione Convention dbConvenzione.ottieniConvezioneAttiva = (pIdPuntoDiRistoro);
-                / * Get the number of banners displayed by the Convention Masssimo */
+                /* Get the number of banners displayed by the Convention Masssimo */
                       int maxBanner = convenzione.getMaxBanner ();
-                / * Load the list of banners for a refreshment and stores the number */
+                /* Load the list of banners for a refreshment and stores the number */
                                                        int numBanner = (dbBanner.ottieniBanner (pIdPuntoDiRistoro)). size ();
-                / * Check that the maximum number of banners is not reached */
+                /* Check that the maximum number of banners is not reached */
                       if (! (numBanner <maxBanner))
                           {
                               throw new Exception (MessaggiErrore.ERRORE_NUM_BANNER);
                           }
-                              / * Create a blank banner */
+                              /* Create a blank banner */
                               Banner BeanBanner = new BeanBanner ();
-                / * Create a unique file name */
+                /* Create a unique file name */
                       String path = CostantiGlobali.SERVER_IMAGE_PATH + pIdPuntoDiRistoro;
                 int i = 0;
                 FileImg file = new File (path + "_" + i + ". Jpg");
                 while (fileImg.exists ()) {
-                        i + +;
-                        fileImg = new File (path + "_" + i + ". jpg");
-                        }
-                / * Stores the image in the file system */
+                    i + +;
+                    fileImg = new File (path + "_" + i + ". jpg");
+                }
+                /* Stores the image in the file system */
                                               BufferedImage im = (BufferedImage) pImmagineBanner.getImage ();
                 if (! ImageIO.write (im, "jpg", fileImg)) {
-                        / * Write failed */
+                    /* Write failed */
                         throw new IOException ();
-                        }
-                / * Loads the data in the banner */
+                }
+                /* Loads the data in the banner */
                                                               banner.setIdPuntoDiRistoro (pIdPuntoDiRistoro);
                 banner.setPercorsoFile (fileImg.getPath ());
-                / * Insert the banner in the database */
+                /* Insert the banner in the database */
                       return (dbBanner.inserisciBanner (banner));
             }
         catch (SQLException e)
@@ -228,7 +228,7 @@ GestioneAdvertisement UnicastRemoteObject public class extends implements
             {
                 if (e.getMessage (). equals (MessaggiErrore.ERRORE_NUM_BANNER))
                     {
-                        / * Has been reached on most of banner inserted num */
+                        /* Has been reached on most of banner inserted num */
                             throw new RemoteException (MessaggiErrore.ERRORE_NUM_BANNER);
                         ) else
                     {

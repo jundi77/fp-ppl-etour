@@ -25,7 +25,7 @@ public class ControlServerLauncher
      */
     public static void main (String [] args)
     {
-        // *** WARNING *** *** WARNING *** EXPERIMENTAL EXPERIMENTAL
+        //*** WARNING *** *** WARNING *** EXPERIMENTAL EXPERIMENTAL
 
         try
             {
@@ -40,7 +40,7 @@ public class ControlServerLauncher
                 // There shall call the register (default is on localhost) and "bind" (alloy)
                 Registry registry = LocateRegistry.getRegistry ();
                 registry.bind (IGestioneBeniCulturaliComune "stubGBCC);
-            }
+                        }
         catch (Exception e)
             {
                 System.out.println ( "Exception:" + e.getLocalizedMessage ());

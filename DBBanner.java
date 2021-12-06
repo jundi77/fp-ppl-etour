@@ -32,7 +32,7 @@ public class DBBanner implements IDBBanner
             }
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.repository.IDBBanner # inserisciBanner (unisa.gps.etour.bean.BeanBanner)
     */
     public boolean inserisciBanner (BeanBanner pBanner) throws SQLException
@@ -46,7 +46,7 @@ public class DBBanner implements IDBBanner
             }
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.repository.IDBBanner # modificaBanner (unisa.gps.etour.bean.BeanBanner)
     */
     public boolean modificaBanner (BeanBanner pBanner) throws SQLException
@@ -54,7 +54,7 @@ public class DBBanner implements IDBBanner
         return true;
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.repository.IDBBanner # ottieniBanner (int)
     */
     <BeanBanner> ottieniBanner public ArrayList (int pIdPuntoDiRistoro)
@@ -64,7 +64,7 @@ public class DBBanner implements IDBBanner
 
         if (NUM_TEST == 1 | | NUM_TEST == 2)
             {
-                / * Must return an ArrayList with 3 elements */
+                /* Must return an ArrayList with 3 elements */
                     toReturn.add (new BeanBanner ());
                 toReturn.add (new BeanBanner ());
                 toReturn.add (new BeanBanner ());
@@ -83,7 +83,7 @@ public class DBBanner implements IDBBanner
             }
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.repository.IDBBanner # ottieniBannerDaID (int)
     */
     public BeanBanner ottieniBannerDaID (int pIdBanner) throws SQLException

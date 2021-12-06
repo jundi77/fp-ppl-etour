@@ -276,7 +276,7 @@ public class ControlloDati
     {
         toReturn boolean = false;
 
-        / * Check the validity of the general method parameter */
+        /* Check the validity of the general method parameter */
               if (Pnews = null)
                   {
 
@@ -286,16 +286,16 @@ public class ControlloDati
                           PNews.getNews String news = (), / / Text of News
                           int priority = pNews.getPriorita ();
 
-                      / * Checking the invalidity of the fields */
+                      /* Checking the invalidity of the fields */
                             if (dataPubb! dataScad = null & &! = null & & news = null)
                                 {
-                                    / * Check the consistency of the dates */
+                                    /* Check the consistency of the dates */
                                         toReturn = dataPubb.before (dataScad);
-                                    / * Check that the text is not empty */
+                                    /* Check that the text is not empty */
                                           toReturn = toReturn & & (news! = "");
-                                    / * Check that the ID is greater than 0 */
+                                    /* Check that the ID is greater than 0 */
                                           toReturn = toReturn & & (pNews.getId ()> 0);
-                                    / * Check the priority value */
+                                    /* Check the priority value */
                                           toReturn = toReturn
                                           & & (Priority <= CostantiGlobali.MAX_PRIORITY_NEWS)
                                           & & (Priority> = CostantiGlobali.MIN_PRIORITY_NEWS);

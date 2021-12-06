@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import unisa.gps.etour.bean.BeanNews;
-/ * Import the stub */
+/* Import the stub */
   // import unisa.gps.etour.control.GestioneAdvertisement.test.stubs.DBNews;
 import unisa.gps.etour.repository.DBNews;
 import unisa.gps.etour.repository.IDBNews;
@@ -56,12 +56,12 @@ public class GestioneAdvertisementAgenzia extends GestioneAdvertisement
 
         try
             {
-                / * Check that the ID is valid */
+                /* Check that the ID is valid */
                     if (pNewsID> 0) {
-                            return (dbNews.cancellaNews (pNewsID));
-                                     ) else (
-                                             return false;
-                                             }
+                        return (dbNews.cancellaNews (pNewsID));
+                        ) else (
+                                return false;
+                                }
             } catch (SQLException e) {
             throw new RemoteException (MessaggiErrore.ERRORE_CONNESSIONE_DBMS);
         }
@@ -82,19 +82,19 @@ public class GestioneAdvertisementAgenzia extends GestioneAdvertisement
     {
         try
             {
-                / * Check the data of the news */
+                /* Check the data of the news */
                     if (! ControlloDati.checkBeanNews (Pnews)) {
-                            throw new RemoteException (MessaggiErrore.ERRORE_DATI);
-                            }
-                / * Check that has not been exceeded the no. Max news presets */
+                        throw new RemoteException (MessaggiErrore.ERRORE_DATI);
+                    }
+                /* Check that has not been exceeded the no. Max news presets */
                                                                    int numNews = dbNews.ottieniNews (). size ();
                 if (numNews <CostantiGlobali.MAX_NEWS_ATTIVE) {
-                        / * Possible inclusion */
+                    /* Possible inclusion */
                         return (dbNews.inserisciNews (Pnews));
-                                                               ) else (
-                                                                       / * Insertion is not possible */
-                                                                       return false;
-                                                                       }
+                    ) else (
+                            /* Insertion is not possible */
+                            return false;
+                            }
             } catch (SQLException e) {
             throw new RemoteException (MessaggiErrore.ERRORE_CONNESSIONE_DBMS);
         }
@@ -113,10 +113,10 @@ public class GestioneAdvertisementAgenzia extends GestioneAdvertisement
 
         try
             {
-                / * Check the data of the news */
+                /* Check the data of the news */
                     if (! ControlloDati.checkBeanNews (Pnews)) {
-                            throw new RemoteException (MessaggiErrore.ERRORE_DATI);
-                            }
+                        throw new RemoteException (MessaggiErrore.ERRORE_DATI);
+                    }
                 return (dbNews.modificaNews (Pnews));
             } catch (SQLException e) {
             throw new RemoteException (MessaggiErrore.ERRORE_CONNESSIONE_DBMS);

@@ -35,7 +35,7 @@ public class TestCase extends NewsTableModelTest
         NewsTableModel = new TableModel ();
     }
 
-    / *
+    /*
     * Verify the behavior of the manufacturer with an ArrayList of BeanNews.
     */
     public void testCostruttoreConArrayList ()
@@ -53,7 +53,7 @@ public class TestCase extends NewsTableModelTest
 
     }
 
-    / *
+    /*
     * Verify the manufacturer with an ArrayList Compor zero.
     */
     public void testCostruttoreConArrayListNull ()
@@ -61,7 +61,7 @@ public class TestCase extends NewsTableModelTest
         NewsTableModel = new TableModel (null);
     }
 
-    / *
+    /*
     * Verify the behavior of the manufacturer with an empty ArrayList.
     */
     public void testCostruttoreConArrayListVuoto ()
@@ -69,7 +69,7 @@ public class TestCase extends NewsTableModelTest
         NewsTableModel = new TableModel (<BeanNews> new ArrayList ());
     }
 
-    / *
+    /*
     * Verify the behavior of the method with the correct parameters.
     */
     public void testGetValueAtParametriCorretti ()
@@ -85,7 +85,7 @@ public class TestCase extends NewsTableModelTest
         assertSame (aNewsModificata.getPriorita (), tableModel.getValueAt (1, 1));
     }
 
-    / *
+    /*
     * Verify Compor the method with an index row fold.
     */
     public void testGetValueAtRigaSballata ()
@@ -100,7 +100,7 @@ public class TestCase extends NewsTableModelTest
             }
     }
 
-    / *
+    /*
     * Verify Compor of the method with a column index busted.
     */
     public void testGetValueAtColonnaSballata ()
@@ -115,7 +115,7 @@ public class TestCase extends NewsTableModelTest
             }
     }
 
-    / *
+    /*
     * Verify Compor method with proper parameter.
     */
     public void testInsertNewsParametroCorretto ()
@@ -124,7 +124,7 @@ public class TestCase extends NewsTableModelTest
         assertSame (aNews.getId (), tableModel.getID (0));
     }
 
-    / *
+    /*
     * Verify Compor method with parameter to null
     */
     public void testInsertNewsParametroNull ()
@@ -139,7 +139,7 @@ public class TestCase extends NewsTableModelTest
             }
     }
 
-    / *
+    /*
     * Verify Compor method with proper parameter.
     */
     public void testUpdateNewsParametroCorretto ()
@@ -151,7 +151,7 @@ public class TestCase extends NewsTableModelTest
         assertSame (aNewsModificata.getId (), tableModel.getID (0));
     }
 
-    / *
+    /*
     * Verify Compor method with parameter to null
     */
     public void testUpdateNewsParametroNull ()
@@ -167,7 +167,7 @@ public class TestCase extends NewsTableModelTest
             }
     }
 
-    / *
+    /*
     * Verify Compor method with proper parameter.
     */
     public void testRemoveNewsParametroCorretto ()
@@ -176,7 +176,7 @@ public class TestCase extends NewsTableModelTest
         assertSame (aNews.getId (), tableModel.removeNews (0));
     }
 
-    / *
+    /*
     * Verify Compor of the method with row index busted.
     */
     public void testRemoveNewsRigaSballata ()

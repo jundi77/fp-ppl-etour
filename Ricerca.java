@@ -53,7 +53,7 @@ public class Search extends UnicastRemoteObject implements IRicerca
     private int numeroPagineRisultati = -1;
     private int numeroElementiRicerca = -1;
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     Unisa.gps.etour.control.GestioneRicerche.IRicerca * @ see # search (int, java.lang.String, int [], double, int, unisa.gps.etour.util.Punto3D, byte)
     */
     public int search (int pIdTurista, pParoleChiave String, int [] pTagsId,
@@ -103,7 +103,7 @@ public class Search extends UnicastRemoteObject implements IRicerca
 
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.control.GestioneRicerche.IRicerca # ottieniPaginaRisultatiBeneCulturale (int)
     */
     public BeanBeneCulturale [] ottieniPaginaRisultatiBeneCulturale (int pPagina)
@@ -126,7 +126,7 @@ public class Search extends UnicastRemoteObject implements IRicerca
             return null;
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.control.GestioneRicerche.IRicerca # ottieniPaginaRisultatiPuntoDiRistoro (int)
     */
     public BeanPuntoDiRistoro [] ottieniPaginaRisultatiPuntoDiRistoro (int pPagina)
@@ -150,7 +150,7 @@ public class Search extends UnicastRemoteObject implements IRicerca
             return null;
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.control.GestioneRicerche.IRicerca # ottieniNumeroElementiRicerca ()
     */
     public int ottieniNumeroElementiRicerca () throws RemoteException
@@ -158,7 +158,7 @@ public class Search extends UnicastRemoteObject implements IRicerca
         numeroElementiRicerca return;
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.control.GestioneRicerche.IRicerca # ottieniNumeroPagineRicerca ()
     */
     public int ottieniNumeroPagineRicerca () throws RemoteException

@@ -53,8 +53,8 @@ public class DBVisitaPR implements IDBVisitaPR
                     {
                         average = result.getDouble ( "MediaVoti");
                         numeroVoti = result.getInt (NumeroVoti ");
-                        average = ((average * numeroVoti) + pVisita.getVoto ())
-                            / + + NumeroVoti;
+                                average = ((average * numeroVoti) + pVisita.getVoto ())
+                                    / + + NumeroVoti;
                     }
                 // Query for the insertion
                 String query = "INSERT INTO visitapr (IdTurista, IdPuntoDiRistoro, DataVisita, Vote, Comment) VALUES ("

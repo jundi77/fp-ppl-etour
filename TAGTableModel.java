@@ -1,5 +1,5 @@
 	
-/ *
+/*
 * TAGTableModel.java
 *
 * 1.0
@@ -60,16 +60,16 @@ public class extends TAGTableModel AbstractTableModel (
          *
          */
         public int getColumnCount () {
-                headers.length return;
-                }
+            headers.length return;
+        }
 
         /**
          * Returns the number of rows
          *
          */
         public int GetRowCount () {
-                data.size return ();
-                }
+            data.size return ();
+        }
 
         /**
          * Returns the column heading i_esima
@@ -78,8 +78,8 @@ public class extends TAGTableModel AbstractTableModel (
          *
          */
         public String getColumnName (int pCol) {
-                return headers [pCol];
-                }
+            return headers [pCol];
+        }
 
         /**
          * Returns the coordinates given by the pair of row, column
@@ -89,8 +89,8 @@ public class extends TAGTableModel AbstractTableModel (
          *
          */
         public Object getValueAt (int prow, int pCol) {
-                return data.get (pRow) [pCol];
-                }
+            return data.get (pRow) [pCol];
+        }
 
         /**
          * Returns the column pCol
@@ -99,8 +99,8 @@ public class extends TAGTableModel AbstractTableModel (
          *
          */
         public class getColumnClass (int pCol) {
-                return columnClasses [pCol];
-                }
+            return columnClasses [pCol];
+        }
 
         /**
          * Always returns false because the cells in the table are not editable
@@ -112,8 +112,8 @@ public class extends TAGTableModel AbstractTableModel (
          *
          */
         public boolean isCellEditable (int row, int col) {
-                return false;
-                }
+            return false;
+        }
 
         /**
          * This method is empty.
@@ -124,6 +124,6 @@ public class extends TAGTableModel AbstractTableModel (
          */
         public void setValueAt (Object value, int row, int col) {
 
-                }
+        }
 
         }

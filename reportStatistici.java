@@ -89,9 +89,9 @@ import java.util.Vector;
              * This is the default constructor xxx
              */
             public reportStatistici () {
-                    super ();
-                    initialize ();
-                    }
+                super ();
+                initialize ();
+            }
 
             /**
              * This method initializes this
@@ -99,16 +99,16 @@ import java.util.Vector;
              * @ Return void
              */
             private void initialize () {
-                    this.setSize (700, 480);
-                    this.setPreferredSize (new Dimension (790, 520));
-                    this.setFrameIcon (new ImageIcon (getClass (). getResource ( "/ interfacceAgenzia/immagini/statistics-32x32.png ")));
-                    this.setIconifiable (true);
-                    this.setMaximizable (true);
-                    this.setClosable (true);
-                    this.setTitle ( "Statistical Report");
-                    this.setContentPane (getJContentPane ());
-                    caricaCombo (this.getJComboBox ());
-                    }
+                this.setSize (700, 480);
+                this.setPreferredSize (new Dimension (790, 520));
+                this.setFrameIcon (new ImageIcon (getClass (). getResource ( "/ interfacceAgenzia/immagini/statistics-32x32.png ")));
+                this.setIconifiable (true);
+                this.setMaximizable (true);
+                this.setClosable (true);
+                this.setTitle ( "Statistical Report");
+                this.setContentPane (getJContentPane ());
+                caricaCombo (this.getJComboBox ());
+            }
 
             /**
              * This method initializes jContentPane
@@ -116,18 +116,18 @@ import java.util.Vector;
              * @ Return javax.swing.JPanel
              */
             getJContentPane private JPanel () {
-                    if (jContentPane == null) {
-                            BorderLayout BorderLayout = new BorderLayout ();
-                            borderLayout.setHgap (0);
-                            borderLayout.setVgap (5);
-                            jContentPane = new JPanel ();
-                            jContentPane.setLayout (BorderLayout);
-                            jContentPane.add (getJToolBar (), BorderLayout.NORTH);
-                            jContentPane.add (getCentralPanel (), BorderLayout.CENTER);
-                            jContentPane.add (getSouthPanel (), BorderLayout.CENTER);
-                            }
-                    jContentPane return;
-                    }
+                if (jContentPane == null) {
+                    BorderLayout BorderLayout = new BorderLayout ();
+                    borderLayout.setHgap (0);
+                    borderLayout.setVgap (5);
+                    jContentPane = new JPanel ();
+                    jContentPane.setLayout (BorderLayout);
+                    jContentPane.add (getJToolBar (), BorderLayout.NORTH);
+                    jContentPane.add (getCentralPanel (), BorderLayout.CENTER);
+                    jContentPane.add (getSouthPanel (), BorderLayout.CENTER);
+                }
+                jContentPane return;
+            }
 
             /**
              * This method initializes JToolBar
@@ -135,20 +135,20 @@ import java.util.Vector;
              * @ Return javax.swing.JToolBar
              */
             private JToolBar getJToolBar () {
-                    if (JToolBar == null) {
-                            JButton = new JLabel ();
-                            jLabel.setText ( "Select Location");
-                            jLabel.setLocation (new Point (16, 6));
-                            JToolBar JToolBar = new ();
-                            jToolBar.setFloatable (false);
-                            jToolBar.setLayout (new GridBagLayout ());
-                            jToolBar.setPreferredSize (new Dimension (1, 30));
-                            jToolBar.add (JLabel);
-                            jToolBar.addSeparator ();
-                            jToolBar.add (getJComboBox ());
-                            }
-                    JToolBar return;
-                    }
+                if (JToolBar == null) {
+                    JButton = new JLabel ();
+                    jLabel.setText ( "Select Location");
+                    jLabel.setLocation (new Point (16, 6));
+                    JToolBar JToolBar = new ();
+                    jToolBar.setFloatable (false);
+                    jToolBar.setLayout (new GridBagLayout ());
+                    jToolBar.setPreferredSize (new Dimension (1, 30));
+                    jToolBar.add (JLabel);
+                    jToolBar.addSeparator ();
+                    jToolBar.add (getJComboBox ());
+                }
+                JToolBar return;
+            }
 
             /**
              * This method initializes JComboBox
@@ -157,37 +157,37 @@ import java.util.Vector;
              */
             private JComboBox getJComboBox () {
 
-                    if (JComboBox == null) {
-                            JComboBox = new JComboBox ();
-                            jComboBox.setLocation (new Point (140, 4));
-                            jComboBox.setPreferredSize (new Dimension (150, 20));
-                            jComboBox.setSize (new Dimension (140, 20));
-                            // jComboBox.addItem ( "Salerno");
+                if (JComboBox == null) {
+                    JComboBox = new JComboBox ();
+                    jComboBox.setLocation (new Point (140, 4));
+                    jComboBox.setPreferredSize (new Dimension (150, 20));
+                    jComboBox.setSize (new Dimension (140, 20));
+                    // jComboBox.addItem ( "Salerno");
 
-                            this.setTitle ( "Statistical Report - Salerno");
+                    this.setTitle ( "Statistical Report - Salerno");
 
 
-                            }
-                    JComboBox return;
-                    }
+                }
+                JComboBox return;
+            }
 
             public void caricaCombo (JComboBox combo) {
-                    BeanPuntoDiRistoro [] Pr = new BeanPuntoDiRistoro [5];
-                    for (int i = 0; i <5; i + +) {
-                            Pr [i] = new BeanPuntoDiRistoro (1, 12, 3.5,
-                                    "Arturo", "Vicno the sea, great view, romantic and Miao,
-                                    "089203202", "mountains", "Amalfi", "Via Principe 35", "84123rd"
-                                    "NA", "1234567898741", new Punto3D (12,324,3),
-                                    new Date (2,23,3), new Date (3,3,4), "Monday");
-                            }
+                BeanPuntoDiRistoro [] Pr = new BeanPuntoDiRistoro [5];
+                for (int i = 0; i <5; i + +) {
+                    Pr [i] = new BeanPuntoDiRistoro (1, 12, 3.5,
+                            "Arturo", "Vicno the sea, great view, romantic and Miao,
+                            "089203202", "mountains", "Amalfi", "Via Principe 35", "84123rd"
+                            "NA", "1234567898741", new Punto3D (12,324,3),
+                            new Date (2,23,3), new Date (3,3,4), "Monday");
+                }
 
-                    BeanBeneCulturale [] bc = new BeanBeneCulturale [5];
-                    for (int i = 0; i <5; i + +) {
-                            Bc [i] = new BeanBeneCulturale (0.120, "Castle Arechi", "Salerno", "089,723,088", "The castle stands on balbalblalbalbla, blablalblalba, balblalballab"
-                                    "Salerno", "Largo castles 12", "84100th", "SA", new Punto3D (10,30,40), new Date (0,0,0,9,0), new Date (0,0, 0,23,0), "Monday",
-                                    12.5,4.5);)
+                BeanBeneCulturale [] bc = new BeanBeneCulturale [5];
+                for (int i = 0; i <5; i + +) {
+                    Bc [i] = new BeanBeneCulturale (0.120, "Castle Arechi", "Salerno", "089,723,088", "The castle stands on balbalblalbalbla, blablalblalba, balblalballab"
+                            "Salerno", "Largo castles 12", "84100th", "SA", new Punto3D (10,30,40), new Date (0,0,0,9,0), new Date (0,0, 0,23,0), "Monday",
+                            12.5,4.5);)
 
-                                                     <String> ArrayList list = null;
+                    <String> ArrayList list = null;
                     for (int i = 0; i <Pr.length i + +)
                         {
 
@@ -204,13 +204,13 @@ import java.util.Vector;
                             }
                         }
                     tabellaSiti.setModel (new ReportTableModel (Bc, Pr));
-                    }
+            }
             private boolean ��pu (JComboBox combo, String loc) {
-                    for (int i = 0; i <combo.getItemCount (); i + +)
-                        if (combo.getItemAt (i) == loc)
-                            return false;
-                    return true;
-                    }
+                for (int i = 0; i <combo.getItemCount (); i + +)
+                    if (combo.getItemAt (i) == loc)
+                        return false;
+                return true;
+            }
 
 
             /**
@@ -219,14 +219,14 @@ import java.util.Vector;
              * @ Return javax.swing.JPanel
              */
             getCentralPanel private JPanel () {
-                    if (centralPanel == null) {
-                            centralPanel = new JPanel ();
-                            centralPanel.setLayout (new BorderLayout ());
-                            centralPanel.add (getJScrollPane (), BorderLayout.CENTER);
-                            centralPanel.add (getJPanel (), BorderLayout.EAST);
-                            }
-                    centralPanel return;
-                    }
+                if (centralPanel == null) {
+                    centralPanel = new JPanel ();
+                    centralPanel.setLayout (new BorderLayout ());
+                    centralPanel.add (getJScrollPane (), BorderLayout.CENTER);
+                    centralPanel.add (getJPanel (), BorderLayout.EAST);
+                }
+                centralPanel return;
+            }
 
             /**
              * This method initializes JScrollPane
@@ -234,12 +234,12 @@ import java.util.Vector;
              * @ Return javax.swing.JScrollPane
              */
             private JScrollPane getJScrollPane () {
-                    if (JScrollPane == null) {
-                            JScrollPane = new JScrollPane ();
-                            jScrollPane.setViewportView (getTabellaSiti ());
-                            }
-                    JScrollPane return;
-                    }
+                if (JScrollPane == null) {
+                    JScrollPane = new JScrollPane ();
+                    jScrollPane.setViewportView (getTabellaSiti ());
+                }
+                JScrollPane return;
+            }
 
             /**
              * This method initializes tabellas
@@ -249,14 +249,14 @@ import java.util.Vector;
             private JTable getTabellaSiti () {
 
 
-                    if (tabellas == null) {
-                            tabellas = new JTable ();
+                if (tabellas == null) {
+                    tabellas = new JTable ();
 
 
 
-                            }
-                    tabellas return;
-                    }
+                }
+                tabellas return;
+            }
 
             /**
              * This method initializes southPanel

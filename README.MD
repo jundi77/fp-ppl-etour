@@ -23,6 +23,6 @@ ditata dengan jindent (https://ptolemy.berkeley.edu/java/jindent.htm)
 ```sh
 for file in ./*
 do
-        jindent  $file
+jindent  $file
 done
 ```

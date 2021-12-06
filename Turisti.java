@@ -1,5 +1,5 @@
 	
-/ *
+/*
 * Tourists.java
 *
 * 1.0

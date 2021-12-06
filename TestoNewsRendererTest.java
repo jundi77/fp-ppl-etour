@@ -34,7 +34,7 @@ public class TestCase extends TestoNewsRendererTest
         aTable = new JTable (new NewsTableModel ());
     }
 
-    / *
+    /*
     * Verify the behavior of the method with the correct parameters.
     */
     public void testGetTableCellRendererParametriCorretti ()
@@ -55,7 +55,7 @@ public class TestCase extends TestoNewsRendererTest
 
     }
 
-    / *
+    /*
     * Verification Compor the table with a table without NewsTableModel
     * Associated.
     */
@@ -74,7 +74,7 @@ public class TestCase extends TestoNewsRendererTest
             }
     }
 
-    / *
+    /*
     * Verify the behavior of the method with a parameter to null.
     */
     public void testGetTableCellRendererParametroNull ()
@@ -90,7 +90,7 @@ public class TestCase extends TestoNewsRendererTest
             }
     }
 
-    / *
+    /*
     * Verify the behavior of the method with a data type unexpected.
     */
     public void testGetTableCellRendererTipoInatteso ()

@@ -146,7 +146,7 @@ public class SchedaBC extends JInternalFrame implements IScheda
         // Dialog closure to close the entry window.
         addInternalFrameListener (new InternalFrameAdapter ()
             {
-                / *
+                /*
                 * Inclusion of the frame on the desktop desktop retrieves bread bread
                 * And desktop manager and initializes the remote objects for managing
                 * Cultural heritage.
@@ -163,11 +163,11 @@ public class SchedaBC extends JInternalFrame implements IScheda
                             tag =
                                 (IGestioneTagComune) reg.lookup (GestioneTagComune ");
                                         gestioneBC =
-                                        (IGestioneBeniCulturaliAgenzia) reg.lookup (GestioneBeniCulturaliAgenzia ");
+                                            (IGestioneBeniCulturaliAgenzia) reg.lookup (GestioneBeniCulturaliAgenzia ");
                             // Load data.
                             caricaTags ();
                         }
-                            / *
+                            /*
                             * Two exceptions: RemoteException and NotBoundException. The
                             * Result is the same. The management is not operable and
                             * After the error message window closes.
@@ -297,7 +297,7 @@ public class SchedaBC extends JInternalFrame implements IScheda
         // Dialog closed frame
         addInternalFrameListener (new InternalFrameAdapter ()
             {
-                / *
+                /*
                 * Inclusion of the frame on the desktop desktop retrieves bread bread
                 * And desktop manager and initializes the remote objects for managing
                 * Cultural heritage.
@@ -314,12 +314,12 @@ public class SchedaBC extends JInternalFrame implements IScheda
                             tag =
                                 (IGestioneTagComune) reg.lookup (GestioneTagComune ");
                                         gestioneBC =
-                                        (IGestioneBeniCulturaliAgenzia) reg.lookup (GestioneBeniCulturaliAgenzia ");
+                                            (IGestioneBeniCulturaliAgenzia) reg.lookup (GestioneBeniCulturaliAgenzia ");
                             // Load data.
                             caricaTags ();
                             caricaStatistiche ();
                         }
-                            / *
+                            /*
                             * Two exceptions: RemoteException and NotBoundException. The
                             * Result is the same. The management is not operable and
                             * After the error message window closes.

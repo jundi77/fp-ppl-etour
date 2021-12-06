@@ -91,7 +91,7 @@ public class News extends JInternalFrame
         addInternalFrameListener (new InternalFrameAdapter ()
             {
 
-                / *
+                /*
                 * Inclusion of the frame on the desktop desktop retrieves bread bread
                 * And desktop manager and initializes the remote objects
                 * Management of cultural heritage.
@@ -114,7 +114,7 @@ public class News extends JInternalFrame
                             // Load data.
                             caricaTabella ();
                         }
-                            / *
+                            /*
                             * Two exceptions: RemoteException and NotBoundException. The
                             * Result is the same. The management is not operable and
                             * After the error message window closes.
@@ -193,53 +193,53 @@ public class News extends JInternalFrame
                 btnModificaN.setCursor (Cursor
                         . getPredefinedCursor (Cursor.HAND_CURSOR));
                 btnModificaN.setName (btnModifica ");
-                btnModificaN.addMouseListener (newsHelp);
-                btnModificaN.setEnabled (false);
-                btnModificaN.addActionListener (new ActionListener ()
-                    {
-                        public void actionPerformed (ActionEvent pActionEvent)
-                        {
-                            int selectedRow = tableNews.getSelectedRow ();
-                            if (idNews == -1) / / In this way I know if she was
-                                                      // Edit
-                                                                                {
-                                                                                    btnInsertModify.setText ( "Change");
-                                                                                    btnInsertModify.setIcon (new ImageIcon (getClass ()
-                                                                                                    . getResource (Home.URL_IMAGES + "Salva16.png ")));
-                                                                                    btnReset.setText ( "Cancel");
-                                                                                    btnReset.setIcon (new ImageIcon (getClass (). getResource (
-                                                                                                            Home.URL_IMAGES + "Annulla16.png ")));
-                                                                                    formNews.setBorder (BorderFactory.createTitledBorder (
-                                                                                                    BorderFactory.createLineBorder (new Color (51,
-                                                                                                                    102, 255), 3), "Edit News"
-                                                                                                    TitledBorder.DEFAULT_JUSTIFICATION,
-                                                                                                    TitledBorder.DEFAULT_POSITION, new Font (
-                                                                                                            "Dialog", Font.BOLD, 12), new Color (0,
-                                                                                                                    102, 204)));
-                                                                                }
-                            String text = (String) tableModel.getValueAt (selectedRow,
-                                    0);
-                            numCaratteri int = 200 - testo.length () + 1;
-                            labelCaratteri.setText ( "# Characters:" + numCaratteri);
-                            Document testoNews.getDocument doctest = ();
-                            try
+                        btnModificaN.addMouseListener (newsHelp);
+                        btnModificaN.setEnabled (false);
+                        btnModificaN.addActionListener (new ActionListener ()
+                            {
+                                public void actionPerformed (ActionEvent pActionEvent)
                                 {
-                                    docTesto.remove (0, docTesto.getLength ());
-                                    docTesto.insertString (0, text, null);
+                                    int selectedRow = tableNews.getSelectedRow ();
+                                    if (idNews == -1) / / In this way I know if she was
+                                                              // Edit
+                                                                                        {
+                                                                                            btnInsertModify.setText ( "Change");
+                                                                                            btnInsertModify.setIcon (new ImageIcon (getClass ()
+                                                                                                            . getResource (Home.URL_IMAGES + "Salva16.png ")));
+                                                                                            btnReset.setText ( "Cancel");
+                                                                                            btnReset.setIcon (new ImageIcon (getClass (). getResource (
+                                                                                                                    Home.URL_IMAGES + "Annulla16.png ")));
+                                                                                            formNews.setBorder (BorderFactory.createTitledBorder (
+                                                                                                            BorderFactory.createLineBorder (new Color (51,
+                                                                                                                            102, 255), 3), "Edit News"
+                                                                                                            TitledBorder.DEFAULT_JUSTIFICATION,
+                                                                                                            TitledBorder.DEFAULT_POSITION, new Font (
+                                                                                                                    "Dialog", Font.BOLD, 12), new Color (0,
+                                                                                                                            102, 204)));
+                                                                                        }
+                                    String text = (String) tableModel.getValueAt (selectedRow,
+                                            0);
+                                    numCaratteri int = 200 - testo.length () + 1;
+                                    labelCaratteri.setText ( "# Characters:" + numCaratteri);
+                                    Document testoNews.getDocument doctest = ();
+                                    try
+                                        {
+                                            docTesto.remove (0, docTesto.getLength ());
+                                            docTesto.insertString (0, text, null);
+                                        }
+                                    catch (BadLocationException s)
+                                        {
+                                            e.printStackTrace ();
+                                        }
+                                    Expiry date = (Date) TableModel
+                                        . getValueAt (selectedRow, 3);
+                                    durataNews.setSelectedIndex (Data.getNumDays (expires));
+                                    idNews = tableModel.getID (selectedRow);
+                                    prSlider.setValue ((Integer) tableModel.getValueAt (
+                                                    selectedRow, 1));
                                 }
-                            catch (BadLocationException s)
-                                {
-                                    e.printStackTrace ();
-                                }
-                            Expiry date = (Date) TableModel
-                                . getValueAt (selectedRow, 3);
-                            durataNews.setSelectedIndex (Data.getNumDays (expires));
-                            idNews = tableModel.getID (selectedRow);
-                            prSlider.setValue ((Integer) tableModel.getValueAt (
-                                            selectedRow, 1));
-                        }
 
-                        ));
+                                ));
             }
         btnModificaN return;
     }

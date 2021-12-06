@@ -9,7 +9,7 @@ import java.util.Iterator;
 import unisa.gps.etour.bean.BeanPuntoDiRistoro;
 import unisa.gps.etour.bean.BeanTag;
 import unisa.gps.etour.bean.BeanVisitaPR;
-/ *
+/*
 * For import junit tests
 * Unisa.gps.etour.control.GestionePuntiDiRistoro.test.stub.DBPuntoDiRistoro;
 * Import unisa.gps.etour.control.GestionePuntiDiRistoro.test.stub.DBVisitaPR;
@@ -62,7 +62,7 @@ GestionePuntiDiRistoroComune UnicastRemoteObject public class extends implements
             }
     }
 
-    / *
+    /*
     * Method which allows to obtain a BeanPuntoDiRistoro through
     * Connect to database
     */

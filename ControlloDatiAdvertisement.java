@@ -24,15 +24,15 @@ public class ControlloDatiAdvertisement
      * @ Return
      */
     public static boolean controlloBanner (BeanBanner pBanner) {
-            toReturn boolean = false;
+        toReturn boolean = false;
 
-            if (pBanner = null) {
-                    toReturn = (pBanner.getId ()> 0 & & & & pBanner.getPercorsoFile ()!=""
-                            pBanner.getIdPuntoDiRistoro ()> 0);
-                    }
+        if (pBanner = null) {
+            toReturn = (pBanner.getId ()> 0 & & & & pBanner.getPercorsoFile ()!=""
+                    pBanner.getIdPuntoDiRistoro ()> 0);
+        }
 
-            toReturn return;
-            }
+        toReturn return;
+    }
     /**
      * Method that performs consistency checks and
      * Correctness of the information contained in the bean past
@@ -43,33 +43,33 @@ public class ControlloDatiAdvertisement
      * @ Param Pnews bean containing data news
      * @ Return Returns true if the bean contains consistent data
      */
-            public static boolean controlloNews (BeanNews Pnews) {
-                    toReturn boolean = false;
+    public static boolean controlloNews (BeanNews Pnews) {
+        toReturn boolean = false;
 
-                    / * Check the validity of the general method parameter */
-                    if (Pnews = null) {
+        /* Check the validity of the general method parameter */
+              if (Pnews = null) {
 
-                            Date dataPubb = pNews.getDataPubblicazione () / / Released
-                            Date dataScad = pNews.getDataScadenza () / / Due Date
-                            PNews.getNews String news = (), / / Text of News
+                  Date dataPubb = pNews.getDataPubblicazione () / / Released
+                      Date dataScad = pNews.getDataScadenza () / / Due Date
+                      PNews.getNews String news = (), / / Text of News
 
-                            / * Checking the invalidity of the fields */
-                            if (dataPubb! dataScad = null & &! = null & & news = null) {
-                                    / * Check the consistency of the dates */
-                                    toReturn = dataPubb.before (dataScad);
+                      /* Checking the invalidity of the fields */
+                      if (dataPubb! dataScad = null & &! = null & & news = null) {
+                          /* Check the consistency of the dates */
+                          toReturn = dataPubb.before (dataScad);
 
-                                    / * Check that the text is not empty */
-                                    toReturn = toReturn & & (news! = "");
+                          /* Check that the text is not empty */
+                          toReturn = toReturn & & (news! = "");
 
-                                    / * Check that the ID is greater than 0 */
-                                    toReturn = toReturn & & (pNews.getId ()> 0);
+                          /* Check that the ID is greater than 0 */
+                          toReturn = toReturn & & (pNews.getId ()> 0);
 
-                                    / * Check the priority value */
-                                    }
+                          /* Check the priority value */
+                      }
 
-                            }
+              }
 
-                    toReturn return;
+        toReturn return;
 
-                    }
+    }
 }

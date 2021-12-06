@@ -1,4 +1,4 @@
-﻿/ *
+﻿/*
 * FeedbackTableModel.java
 *
 * 1.0

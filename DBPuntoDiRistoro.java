@@ -444,7 +444,7 @@ public BeanPuntoDiRistoro ottieniPuntoDiRistoro (int pid)
                             . getDouble ( "Elevation"));
                     Date orarioApertura = new Date (result.getTime (OrarioApertura ")
                                     . getTime ());
-                                    Date orarioChiusura = new Date (result.getTime (OrarioChiusura ")
+                    Date orarioChiusura = new Date (result.getTime (OrarioChiusura ")
                             . getTime ());
                     // This generates the resting spot of bean
                     BeanPuntoDiRistoro puntoTemp = new BeanPuntoDiRistoro (result
@@ -573,7 +573,7 @@ public ArrayList <BeanPuntoDiRistoro> search (String pKeyword,
                     . getDouble ( "Elevation"));
             Date orarioApertura = new Date (result.getTime (OrarioApertura ")
                             . getTime ());
-                            Date orarioChiusura = new Date (result.getTime (OrarioChiusura ")
+            Date orarioChiusura = new Date (result.getTime (OrarioChiusura ")
                     . getTime ());
             // Build the refreshment
             BeanPuntoDiRistoro puntoTemp = new BeanPuntoDiRistoro (result
@@ -593,7 +593,7 @@ public ArrayList <BeanPuntoDiRistoro> search (String pKeyword,
     return list;
 }
                                                              // Always runs and takes care to close the Result, the Statement
-// And Connection
+                                                             // And Connection
 finally
     {
         if (result! = null)
@@ -718,7 +718,7 @@ while (result.next ())
                 . getDouble ( "Elevation"));
         Date orarioApertura = new Date (result.getTime (OrarioApertura ")
                         . getTime ());
-                        Date orarioChiusura = new Date (result.getTime (OrarioChiusura ")
+        Date orarioChiusura = new Date (result.getTime (OrarioChiusura ")
                 . getTime ());
         // This creates the cultural
         BeanPuntoDiRistoro beneTemp = new BeanPuntoDiRistoro (result
@@ -784,7 +784,7 @@ finally
                             . getDouble ( "Elevation"));
                     Date orarioApertura = new Date (result.getTime (OrarioApertura ")
                                     . getTime ());
-                                    Date orarioChiusura = new Date (result.getTime (OrarioChiusura ")
+                    Date orarioChiusura = new Date (result.getTime (OrarioChiusura ")
                             . getTime ());
                     // Build the refreshment
                     BeanPuntoDiRistoro puntoTemp = new BeanPuntoDiRistoro (result

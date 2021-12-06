@@ -5,7 +5,7 @@ import java.rmi.server.UnicastRemoteObject;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import unisa.gps.etour.bean.BeanTag;
-/ *
+/*
 * For imported text unisa.gps.etour.control.GestioneTag.test.stub.DBTag;
 */
 import unisa.gps.etour.repository.DBTag;

@@ -22,9 +22,9 @@ public class DBConnessionePool
     private final static String urlConnessione = "jdbc: mysql: / / localhost / eTour? user = & password = mauro mauro";
     private static List <Connection> connessioniLibere;
 
-    / * Private constructor that initiates the connection to the database */
+    /* Private constructor that initiates the connection to the database */
 
-    / *
+    /*
     * Static initialization block is used to load the driver
     * Memory
     */

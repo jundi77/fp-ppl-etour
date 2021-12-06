@@ -8,7 +8,7 @@ public class OperatoreAgenzia
     private Date DoB;
 
     public OperatoreAgenzia () {)
-            public OperatoreAgenzia (String name, String name, String city, String phone, String ch, String address, String email, String pass, String user, Date date)
+    public OperatoreAgenzia (String name, String name, String city, String phone, String ch, String address, String email, String pass, String user, Date date)
     {
         this.Nome = name;
         this.Cognome = surname;

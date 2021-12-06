@@ -19,7 +19,7 @@ import unisa.gps.etour.util.MessaggiErrore;
 public class GestioneBeniCulturaliAgenzia extends GestioneBeniCulturaliComune
     implements IGestioneBeniCulturaliAgenzia
 {
-    / *
+    /*
     * Constructor of class, richicama and initializes the class of common management
         */
         public GestioneBeniCulturaliAgenzia () throws RemoteException
@@ -27,7 +27,7 @@ public class GestioneBeniCulturaliAgenzia extends GestioneBeniCulturaliComune
         super ();
     }
 
-    / *
+    /*
     * Implements the method for the elimination of a cultural system.
     *
     * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliAgenzia # cancellaBeneCulturale (int)
@@ -52,7 +52,7 @@ public class GestioneBeniCulturaliAgenzia extends GestioneBeniCulturaliComune
             }
     }
 
-    / *
+    /*
     * Implement the method for the insertion of a new cultural object.
     *
     * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliAgenzia # inserisciBeneCulturale (unisa.gps.etour.bean.BeanBeneCulturale)
@@ -77,7 +77,7 @@ public class GestioneBeniCulturaliAgenzia extends GestioneBeniCulturaliComune
             }
     }
 
-    / *
+    /*
     * Implements the method for obtaining all the cultural assets currently in the system.
     *
     * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliAgenzia # ottieniBeniCulturali ()
@@ -98,7 +98,7 @@ public class GestioneBeniCulturaliAgenzia extends GestioneBeniCulturaliComune
             }
     }
 
-    / *
+    /*
     * Implement the method for changing a cultural asset in the system.
     *
     * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliAgenzia # modificaBeneCulturale (unisa.gps.etour.bean.BeanBeneCulturale)
@@ -123,7 +123,7 @@ public class GestioneBeniCulturaliAgenzia extends GestioneBeniCulturaliComune
             }
     }
 
-    / *
+    /*
     * Implements the method for adding a tag to a cultural object.
     *
     * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliAgenzia # aggiungiTagBeneCulturale (int, int)
@@ -133,12 +133,12 @@ public class GestioneBeniCulturaliAgenzia extends GestioneBeniCulturaliComune
         if (! ControlloBeniCulturali.controllaIdBeneCulturale (pBeneCulturaleID) | |! (pTagID> 0))
             throw new RemoteException (MessaggiErrore.ERRORE_DATI);
 
-        / *
+        /*
               * This segment of code that actually controls the cultural speficiato
               * Have the tag defined.
               */
 
-              / *
+              /*
               * Get all tags to the cultural past for parameter
               */
               ArrayList <BeanTag> tempTag = null;
@@ -154,7 +154,7 @@ public class GestioneBeniCulturaliAgenzia extends GestioneBeniCulturaliComune
                 throw new RemoteException (MessaggiErrore.ERRORE_DBMS);
             }
 
-                / *
+                /*
                 * Here we iterate to find the tag that speficiato, if it is you set a sentry
                                                                              * In order not to add a tag twice for the same cultural object.
                                                                                                                            */
@@ -179,7 +179,7 @@ public class GestioneBeniCulturaliAgenzia extends GestioneBeniCulturaliComune
         return false;
     }
 
-    / *
+    /*
     * Implement the method for removing a tag from a cultural object.
     *
     * @ See unisa.gps.etour.control.GestioneBeniCulturali.IGestioneBeniCulturaliAgenzia # rimuoviTagBeneCulturale (int, int)
@@ -189,12 +189,12 @@ public class GestioneBeniCulturaliAgenzia extends GestioneBeniCulturaliComune
         if (! ControlloBeniCulturali.controllaIdBeneCulturale (pBeneCulturaleID) | |! (pTagID> 0))
             throw new RemoteException (MessaggiErrore.ERRORE_DATI);
 
-        / *
+        /*
               * This segment of code that actually controls the cultural speficiato
               * Has the specified tag.
               */
 
-              / *
+              /*
               * Get all tags to the cultural past for parameter
               */
               ArrayList <BeanTag> tempTag = null;
@@ -208,7 +208,7 @@ public class GestioneBeniCulturaliAgenzia extends GestioneBeniCulturaliComune
                 throw new RemoteException (MessaggiErrore.ERRORE_DBMS);
             }
 
-                / *
+                /*
                 * Here we iterate to find the tag that speficiato, if you found the transaction is made
                                                                               * Removal of the tag and returns control
                                                                               */

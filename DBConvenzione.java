@@ -19,7 +19,7 @@ import unisa.gps.etour.repository.IDBConvenzione;
 public class DBConvenzione implements IDBConvenzione
 {
     private static int NUM_TEST = 1;
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.repository.IDBConvenzione # cancellaConvenzione (int)
     */
     public boolean cancellaConvenzione (int pIdConvenzione) throws SQLException
@@ -28,7 +28,7 @@ public class DBConvenzione implements IDBConvenzione
         return false;
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.repository.IDBConvenzione # getStoricoConvenzione (int)
     */
     <BeanConvenzione> ottieniStoricoConvenzione public ArrayList (int idPuntoDiRistoro)
@@ -38,7 +38,7 @@ public class DBConvenzione implements IDBConvenzione
         return null;
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.repository.IDBConvenzione # inserisciConvenzione (unisa.gps.etour.bean.BeanConvenzione)
     */
     public boolean inserisciConvenzione (BeanConvenzione pConvenzione)
@@ -48,7 +48,7 @@ public class DBConvenzione implements IDBConvenzione
         return false;
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.repository.IDBConvenzione # modificaConvenzione (unisa.gps.etour.bean.BeanConvenzione)
     */
     public boolean modificaConvenzione (BeanConvenzione pConvenzione)
@@ -58,7 +58,7 @@ public class DBConvenzione implements IDBConvenzione
         return false;
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.repository.IDBConvenzione # ottieniConvezioneAttiva (int)
     */
     public BeanConvenzione ottieniConvezioneAttiva (int pIdPuntoDiRistoro)
@@ -74,13 +74,13 @@ public class DBConvenzione implements IDBConvenzione
 
         if (NUM_TEST == 1)
             {
-                / * Test banners allowed */
+                /* Test banners allowed */
                     convenzione.setMaxBanner (4);
                 return agreement;
             }
         else if (NUM_TEST == 2)
             {
-                / * Test banners not allowed */
+                /* Test banners not allowed */
                     convenzione.setMaxBanner (3);
                 return agreement;
                 ) else (
@@ -88,7 +88,7 @@ public class DBConvenzione implements IDBConvenzione
                         }
     }
 
-    / * (Non-Javadoc)
+    /* (Non-Javadoc)
     * @ See unisa.gps.etour.repository.IDBConvenzione # ottieniListaConvenzioneAttivaPR ()
     */
     <BeanPuntoDiRistoro> ottieniListaConvenzioneAttivaPR public ArrayList ()

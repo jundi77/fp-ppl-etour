@@ -91,7 +91,7 @@ public class JInternalFrame extends Beniculturali
         <SchedaBC> children = new ArrayList ();
         addInternalFrameListener (new InternalFrameAdapter ()
             {
-                / *
+                /*
                 * Inclusion of the frame on the desktop desktop retrieves bread bread
                 * And desktop manager and initializes the remote objects
                 * Management of cultural heritage.
@@ -111,13 +111,13 @@ public class JInternalFrame extends Beniculturali
                             gestioneBC = (IGestioneBeniCulturaliAgenzia) reg
                                 . lookup ( "GestioneBeniCulturaliAgenzia");
                             tag = (IGestioneTagComune) reg.lookup (GestioneTagComune ");
-                            ricercaBC = (IGestioneBeniCulturaliComune) reg
-                                . lookup ( "GestioneBeniCulturaliComune");
-                            // Load data.
-                            caricaTabella (false);
-                            caricaTags ();
+                                    ricercaBC = (IGestioneBeniCulturaliComune) reg
+                                        . lookup ( "GestioneBeniCulturaliComune");
+                                    // Load data.
+                                    caricaTabella (false);
+                                    caricaTags ();
                         }
-                            / *
+                            /*
                             * Two exceptions: RemoteException and NotBoundException. The
                             * Result is the same. The management is not operable and
                             * After the error message window closes.
@@ -142,7 +142,7 @@ public class JInternalFrame extends Beniculturali
                                 }
                 }
 
-                / *
+                /*
                 * At the end of the frame displays the dialog
                 * Confirmation.
                 */
@@ -166,7 +166,7 @@ public class JInternalFrame extends Beniculturali
                             JOptionPane.OK_CANCEL_OPTION,
                             JOptionPane.QUESTION_MESSAGE, frameIcon, options,
                             options [1]);
-                    / *
+                    /*
                           * If it is confirmed the closing of management, all
                           * Classes "daughters" are closed.
                           */
@@ -614,7 +614,7 @@ public class JInternalFrame extends Beniculturali
                         tableBC.setColumnSelectionAllowed (false);
                         tableBC.addMouseListener (bcHelp);
                         tableBC.setName (tableBC ");
-                        / *
+                        /*
                               * SelectionListener - if a selected row, the buttons
                                                              * Tab, edit and delete are active. Otherwise, are
                                                              * Disabled.
@@ -639,7 +639,7 @@ public class JInternalFrame extends Beniculturali
                                             }
                                     }
                                     ));
-                        / *
+                        /*
                               * KeyListener <ENTER> - Details of the cultural selected.
                               * <Backspace> - Delete the selected cultural. <space> --
                               * Modify the cultural selected.

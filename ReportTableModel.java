@@ -1,4 +1,4 @@
-/ * ReportTableModel.java
+/* ReportTableModel.java
 *
 * 1.0
 *
@@ -54,47 +54,47 @@ public class extends ReportTableModel AbstractTableModel (
         }
 
         public int getColumnCount () {
-                headers.length return;
-                }
+            headers.length return;
+        }
 
         public int GetRowCount () {
-                data.size return ();
-                }
+            data.size return ();
+        }
         public String getColumnName (int col) {
-                return headers [col];
-                }
+            return headers [col];
+        }
 
         public Object getValueAt (int row, int col) {
-                data.get return (row) [col];
-                }
+            data.get return (row) [col];
+        }
         public class getColumnClass (int col) {
-                return columnClasses [col];
-                }
+            return columnClasses [col];
+        }
 
         public boolean isCellEditable (int row, int col) {
-                return false;
-                }
+            return false;
+        }
         public void setValueAt (Object value, int row, int col) {
-                if (row> = GetRowCount ()) {
-                        Object [] new = new Object [headers.length];
-                        New [col] = value;
-                        data.add (new);
-                        }
-                    else (
-                            data.get (row) [col] = value;
-                            }
-                }
+            if (row> = GetRowCount ()) {
+                Object [] new = new Object [headers.length];
+                New [col] = value;
+                data.add (new);
+            }
+            else (
+                    data.get (row) [col] = value;
+                    }
+        }
         public void setValueAt (Object [] value, int row) throws IllegalArgumentException (
                 if (value.length! = headers.length) {
-                        System.out.println (value.length);
-                        System.out.println (headers.length);
-                        throw new IllegalArgumentException ();)
-                                                        if (row> = GetRowCount ()) {
-                                                                data.add (value);
-                                                                }
-                                                            else (
-                                                                    data.remove (row);
-                                                                    data.add (row, value);
-                                                                    }
+                    System.out.println (value.length);
+                    System.out.println (headers.length);
+                    throw new IllegalArgumentException ();)
+                if (row> = GetRowCount ()) {
+                    data.add (value);
+                }
+                else (
+                        data.remove (row);
+                        data.add (row, value);
+                        }
                 }
         }
