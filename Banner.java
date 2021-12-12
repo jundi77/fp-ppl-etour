@@ -477,9 +477,9 @@ public class JInternalFrame extends Banner
                 textGuida.setText ( "<html> Move your mouse pointer over a control" +
                         "of interest to display the context-sensitive help. </ html>");
                 textGuida.setEditable (false);
-                textGuida.setName (textGuida ");
-                        textGuida.addMouseListener (bannerHelp);
-                        helpPanel.add (textGuida, BorderLayout.CENTER);
+                textGuida.setName ("textGuida ");
+                textGuida.addMouseListener (bannerHelp);
+                helpPanel.add (textGuida, BorderLayout.CENTER);
             }
         helpPanel return;
     }
